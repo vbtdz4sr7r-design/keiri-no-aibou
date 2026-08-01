@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="受取利息とは何か、どのような収益を受取利息として処理するのか、仕訳例や売上高・支払利息との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    受取利息とは？該当するもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          受取利息
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            収益の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            受取利息
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            うけとりりそく
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            普通預金や定期預金、
+            貸付金などから受け取った利息を
+            管理するときに使用する収益の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              収益
+            </span>
+
+            <span>
+              預金・貸付金
+            </span>
+
+            <span>
+              利息収入
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            預金や貸付金から受け取った<br>
+            利息を表す科目。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            通帳への入金額だけでなく、
+            税金が差し引かれていないかも確認します。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                受取利息とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                普通預金や定期預金、
+                貸付金などから受け取った利息を
+                管理するときに使う
+                収益の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              受取利息は、
+              預金や貸付金などから受け取った
+              次のような利息収入に使用されます。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    普通預金の利息
+                  </h3>
+
+                  <p>
+                    銀行の普通預金口座に
+                    入金された預金利息
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    定期預金の利息
+                  </h3>
+
+                  <p>
+                    定期預金の満期時などに
+                    銀行から受け取った利息
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    貸付金の利息
+                  </h3>
+
+                  <p>
+                    取引先や役員などへ貸し付けたお金について
+                    受け取った利息
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    債券などの利息
+                  </h3>
+
+                  <p>
+                    保有している債券などから
+                    受け取った利息
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                受取利息は、
+                商品やサービスの販売による売上ではなく、
+                預金や貸付金などから得た利息収入です。
+
+                入金時に税金が差し引かれている場合は、
+                通帳や利息計算書を確認して処理します。
+
+              </p>
+
+            </div>
+
+          </section>          <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  受取利息との違い 01
+                </p>
+
+                <h3>
+                  売上高
+                </h3>
+
+                <p>
+
+                  売上高は、
+                  商品の販売やサービスの提供など、
+                  会社の本業によって得た収益を
+                  管理する勘定科目です。
+
+                  一方、受取利息は、
+                  預金や貸付金などから得た
+                  利息収入を管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  本業による収益か、預金や貸付金の利息か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  受取利息との違い 02
+                </p>
+
+                <h3>
+                  支払利息
+                </h3>
+
+                <p>
+
+                  支払利息は、
+                  借入金などに対して支払った利息を
+                  管理する費用の勘定科目です。
+
+                  受取利息は利息を受け取ったときの収益、
+                  支払利息は利息を支払ったときの費用です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  利息を受け取ったのか、支払ったのか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  受取利息との違い 03
+                </p>
+
+                <h3>
+                  雑収入
+                </h3>
+
+                <p>
+
+                  雑収入は、
+                  本業以外で一時的に得た少額な収益を
+                  管理するときに使用する勘定科目です。
+
+                  預金や貸付金から発生した利息であることが
+                  明確な場合は、
+                  受取利息として処理することが一般的です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  利息として内容を明確に分類できるか
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              受取利息のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  普通預金の利息は受取利息ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    はい。
+
+                    銀行の普通預金口座へ入金された利息は、
+                    受取利息として処理することが一般的です。
+
+                    税金が差し引かれている場合は、
+                    税引前の利息額も確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  受取利息と支払利息はどう違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    受取利息は、
+                    預金や貸付金などから受け取った
+                    利息収入を表す収益の勘定科目です。
+
+                    支払利息は、
+                    借入金などに対して支払った
+                    利息を表す費用の勘定科目です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  税金が差し引かれた利息はどう処理しますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    税引前の利息総額を
+                    受取利息として計上し、
+                    実際の入金額との差額を
+                    仮払法人税等などで処理することがあります。
+
+                    法人と個人事業主では処理が異なる場合があるため、
+                    利息計算書や会計ルールを確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  貸付金の利息が未入金の場合はどうしますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    利息を受け取る権利が確定しているものの、
+                    まだ入金されていない場合は、
+                    未収収益などを使用して
+                    受取利息を計上することがあります。
+
+                    契約書で利率や対象期間、
+                    支払日を確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  受取利息を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  預金や貸付金などから発生した利息か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  税引前の利息総額を確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  税金が差し引かれていないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  売上高や雑収入など他の科目に該当しないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  通帳や利息計算書と帳簿が一致しているか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li>
+                <a href="#summary">
+                  <span>
+                    01
+                  </span>
+                  まずは一言で
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>
+                    02
+                  </span>
+                  使用例
+                </a>
+              </li>
+
+              <li>
+                <a href="#judgment">
+                  <span>
+                    03
+                  </span>
+                  判断ポイント
+                </a>
+              </li>
+
+              <li>
+                <a href="#amount">
+                  <span>
+                    04
+                  </span>
+                  金額の考え方
+                </a>
+              </li>
+
+              <li>
+                <a href="#journal">
+                  <span>
+                    05
+                  </span>
+                  仕訳例
+                </a>
+              </li>
+
+              <li>
+                <a href="#difference">
+                  <span>
+                    06
+                  </span>
+                  似た科目との違い
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>
+                    07
+                  </span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#check">
+                  <span>
+                    08
+                  </span>
+                  最終チェック
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">
+          ホーム
+        </a>
+
+        <a href="../index.html#search">
+          逆引き検索
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../index.html#columns">
+          初心者コラム
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

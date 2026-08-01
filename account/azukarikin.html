@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="預り金とは何か、どのような取引を預り金として処理するのか、仕訳例や前受金・仮受金との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    預り金とは？該当するもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          預り金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            負債の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            預り金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            あずかりきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            従業員や取引先などから一時的に預かり、
+            後日、国や自治体などへ納付したり、
+            本人へ返したりするお金を
+            管理するときに使用する負債の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              負債
+            </span>
+
+            <span>
+              一時的な預かり
+            </span>
+
+            <span>
+              納付・返還
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            会社のお金ではなく<br>
+            一時的に預かっているお金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            源泉所得税や住民税などを納付すると、
+            預り金の残高を減らします。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                預り金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                従業員や取引先などから一時的に預かり、
+                後日、国や自治体などへ納付したり、
+                本人へ返したりする金額を
+                管理する負債の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              預り金は、
+              会社が一時的に預かり、
+              後日納付または返還する
+              次のようなお金に使用されます。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    源泉所得税
+                  </h3>
+
+                  <p>
+                    従業員の給与や報酬などから差し引き、
+                    後日税務署へ納付する税金
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    住民税
+                  </h3>
+
+                  <p>
+                    従業員の給与から差し引き、
+                    後日自治体へ納付する住民税
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    社会保険料
+                  </h3>
+
+                  <p>
+                    従業員の給与から差し引いた
+                    健康保険料や厚生年金保険料など
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    一時的に預かった保証金など
+                  </h3>
+
+                  <p>
+                    後日返還する予定で、
+                    従業員や取引先などから一時的に預かったお金
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                預り金は、
+                会社が自由に使える収益ではありません。
+
+                納付先や返還先が決まっているため、
+                種類ごとに残高と期限を管理することが大切です。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              預り金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    会社が一時的に預かっているお金か
+                  </h3>
+
+                  <p>
+
+                    従業員や取引先などから預かり、
+                    後日、国や自治体へ納付したり、
+                    本人へ返還したりするお金であるかを確認します。
+
+                    会社が自由に使える売上や収益ではない点が
+                    大きな特徴です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    納付先や返還先が決まっているか
+                  </h3>
+
+                  <p>
+
+                    源泉所得税や住民税、
+                    社会保険料など、
+                    預かったお金を誰へ渡すのかを確認します。
+
+                    納付先や返還先が明確である場合は、
+                    預り金として管理することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    種類ごとの金額と期限を確認しているか
+                  </h3>
+
+                  <p>
+
+                    預り金は、
+                    源泉所得税、住民税、社会保険料など、
+                    種類によって納付期限が異なります。
+
+                    補助科目を設定し、
+                    種類ごとの残高と期限を
+                    分けて管理しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    納付後の残高を確認しているか
+                  </h3>
+
+                  <p>
+
+                    税金や保険料などを納付したときは、
+                    預り金の残高を減らします。
+
+                    納付後も残高が残っている場合は、
+                    未納付や仕訳漏れがないかを確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              給与から差し引いたお金はすべて預り金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  給与から差し引いた金額であっても、
+                  何のために差し引いたのかによって
+                  使用する勘定科目が異なる場合があります。
+
+                </p>
+
+                <p>
+
+                  源泉所得税、住民税、
+                  従業員負担分の社会保険料など、
+                  後日納付する金額は
+                  預り金として処理することが一般的です。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    後日納付・返還する
+                  </span>
+
+                  <strong>
+                    預り金
+                  </strong>
+
+                  <p>
+                    源泉所得税、住民税、社会保険料など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    会社の収益として受け取る
+                  </span>
+
+                  <strong>
+                    他の勘定科目
+                  </strong>
+
+                  <p>
+                    売上、雑収入など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※給与から控除したという事実だけで判断せず、
+              控除内容、納付先、納付期限、
+              会社の会計ルールを確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              預り金の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  給与から源泉所得税を差し引いた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                従業員への給与総額300,000円から、
+                源泉所得税10,000円を差し引き、
+                残額290,000円を普通預金から支払いました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="給与から源泉所得税を差し引いたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        給料手当
+                      </td>
+
+                      <td>
+                        300,000円
+                      </td>
+
+                      <td>
+                        普通預金<br>
+                        預り金
+                      </td>
+
+                      <td>
+                        290,000円<br>
+                        10,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  給与総額を借方の「給料手当」に記載します。
+
+                  実際に支払った290,000円は
+                  貸方の「普通預金」、
+                  後日納付する源泉所得税10,000円は
+                  「預り金」として計上します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  預かった源泉所得税を納付した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                従業員の給与から預かっていた
+                源泉所得税10,000円を
+                普通預金から納付しました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="預かった源泉所得税を納付したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        預り金
+                      </td>
+
+                      <td>
+                        10,000円
+                      </td>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        10,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  預かっていた源泉所得税を納付したため、
+                  預り金という負債が減少します。
+
+                  借方に「預り金」を記載し、
+                  普通預金から納付したため、
+                  貸方には「普通預金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  預り金との違い 01
+                </p>
+
+                <h3>
+                  前受金
+                </h3>
+
+                <p>
+
+                  前受金は、
+                  商品やサービスを提供する前に
+                  お客様から受け取った代金を
+                  管理する勘定科目です。
+
+                  一方、預り金は、
+                  後日納付したり返還したりするために
+                  一時的に預かっているお金を管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  商品・サービスの代金か、一時的な預かり金か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  預り金との違い 02
+                </p>
+
+                <h3>
+                  仮受金
+                </h3>
+
+                <p>
+
+                  仮受金は、
+                  入金はあったものの、
+                  内容や相手先がまだ確定していない場合に
+                  一時的に使用する勘定科目です。
+
+                  預り金は、
+                  納付先や返還先、
+                  金額などが明確になっている点が異なります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  内容が確定しているかどうか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  預り金との違い 03
+                </p>
+
+                <h3>
+                  未払金
+                </h3>
+
+                <p>
+
+                  未払金は、
+                  備品や設備などを購入し、
+                  後日支払う予定の代金を
+                  管理する勘定科目です。
+
+                  預り金は、
+                  他人から一時的に預かったお金を
+                  管理する負債である点が異なります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  支払う義務がある代金か、一時的に預かっているお金か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              預り金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  預り金は会社の収益になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    いいえ。
+
+                    預り金は会社が一時的に預かっているお金であり、
+                    後日納付または返還する必要があります。
+
+                    そのため、
+                    売上や収益にはなりません。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  預り金はいつ減りますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    税金や社会保険料などを
+                    国や自治体へ納付したとき、
+                    または預かったお金を本人へ返還したときに、
+                    預り金は減少します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  仮受金との違いは何ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    仮受金は、
+                    入金内容がまだ分からない場合に
+                    一時的に使用する勘定科目です。
+
+                    預り金は、
+                    納付先や返還先、
+                    金額などが確定している場合に使用します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  預り金はどのように管理すると良いですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    源泉所得税、
+                    住民税、
+                    社会保険料など、
+                    種類ごとに補助科目を設定し、
+                    納付期限や残高を管理すると、
+                    納付漏れや仕訳ミスを防ぎやすくなります。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  預り金を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  一時的に預かっているお金か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  納付先または返還先が決まっているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  預り金の種類ごとに管理しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  前受金や仮受金など他の勘定科目ではないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  納付後の残高を確認したか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li><a href="#summary"><span>01</span>まずは一言で</a></li>
+              <li><a href="#examples"><span>02</span>使用例</a></li>
+              <li><a href="#judgment"><span>03</span>判断ポイント</a></li>
+              <li><a href="#amount"><span>04</span>金額の考え方</a></li>
+              <li><a href="#journal"><span>05</span>仕訳例</a></li>
+              <li><a href="#difference"><span>06</span>似た科目との違い</a></li>
+              <li><a href="#faq"><span>07</span>よくある疑問</a></li>
+              <li><a href="#check"><span>08</span>最終チェック</a></li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#search">逆引き検索</a>
+        <a href="../dictionary.html">勘定科目辞典</a>
+        <a href="../index.html#columns">初心者コラム</a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

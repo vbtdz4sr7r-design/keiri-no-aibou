@@ -1,0 +1,1556 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="地代家賃とは何か、どのような支出を地代家賃として処理するのか、仕訳例や支払手数料との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    地代家賃とは？使えるもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          地代家賃
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            費用の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            地代家賃
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            ちだいやちん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            事務所や店舗、駐車場などを借りるために
+            支払う家賃や土地の賃借料を処理するときに
+            使用する勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              費用
+            </span>
+
+            <span>
+              毎月発生しやすい
+            </span>
+
+            <span>
+              固定費
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            事務所や店舗などを<br>
+            借りるときに登場しやすい科目。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            敷金や保証金などは、
+            地代家賃とは異なる処理になる場合があります。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                地代家賃とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                会社が事務所や店舗、
+                倉庫、駐車場などを借りるために支払う
+                家賃や賃借料を処理するときに使う
+                費用の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              地代家賃は、会社が土地や建物などを借りるために
+              支払う次のような費用に
+              使用されることが一般的です。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    事務所の家賃
+                  </h3>
+
+                  <p>
+                    オフィスや事務所を借りるために
+                    毎月支払う賃料
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    店舗・テナントの家賃
+                  </h3>
+
+                  <p>
+                    飲食店や小売店などの
+                    店舗賃料やテナント料
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    駐車場の賃料
+                  </h3>
+
+                  <p>
+                    社用車用の月極駐車場や
+                    契約駐車場の利用料
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    倉庫・土地の賃借料
+                  </h3>
+
+                  <p>
+                    倉庫や資材置場、
+                    土地を借りるための賃料
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                敷金・保証金・礼金などは、
+                地代家賃とは異なる処理になることがあります。
+                契約内容を確認して処理しましょう。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              地代家賃か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    土地や建物を借りるための支出か
+                  </h3>
+
+                  <p>
+
+                    事務所や店舗、倉庫、駐車場など、
+                    土地や建物を利用するために支払う
+                    賃料であれば、地代家賃として
+                    処理することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    毎月継続して発生する支出か
+                  </h3>
+
+                  <p>
+
+                    家賃は毎月継続して発生する
+                    固定費であることが多い勘定科目です。
+
+                    単発の費用なのか、
+                    継続的な賃料なのかを確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    敷金・保証金ではないか
+                  </h3>
+
+                  <p>
+
+                    契約時に支払う敷金や保証金は、
+                    後日返還される場合があるため、
+                    地代家賃とは異なる勘定科目で
+                    処理することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    会社の会計ルールを確認する
+                  </h3>
+
+                  <p>
+
+                    共益費や管理費などは、
+                    地代家賃に含める会社もあれば、
+                    別の勘定科目で管理する会社もあります。
+
+                    社内ルールに従って処理しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              家賃はすべて地代家賃？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  多くの場合は該当します。
+                </p>
+
+                <p>
+
+                  事務所や店舗などを借りるための
+                  毎月の賃料であれば、
+                  地代家賃として処理することが一般的です。
+
+                </p>
+
+                <p>
+
+                  ただし、敷金・保証金・礼金や
+                  契約内容によって処理方法が異なる費用もあるため、
+                  契約書を確認して判断しましょう。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    毎月支払う賃料
+                  </span>
+
+                  <strong>
+                    地代家賃
+                  </strong>
+
+                  <p>
+                    事務所・店舗・倉庫・駐車場など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    契約時の預け金など
+                  </span>
+
+                  <strong>
+                    別科目で処理
+                  </strong>
+
+                  <p>
+                    敷金・保証金など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※契約内容によって処理方法が異なるため、
+              必ず契約書や会社の会計ルールを確認しましょう。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              地代家賃の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  事務所の家賃を普通預金から支払った
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                事務所の家賃120,000円が
+                普通預金から引き落とされました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="事務所家賃支払い時の仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        地代家賃
+                      </td>
+
+                      <td>
+                        120,000円
+                      </td>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        120,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  事務所を借りるための費用が発生したため、
+                  借方に「地代家賃」を記載します。
+
+                  普通預金が減少するため、
+                  貸方は「普通預金」となります。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  店舗家賃を未払いで計上した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                月末時点で店舗家賃80,000円が未払いだったため、
+                当月の費用として計上しました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="店舗家賃を未払い計上したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        地代家賃
+                      </td>
+
+                      <td>
+                        80,000円
+                      </td>
+
+                      <td>
+                        未払金
+                      </td>
+
+                      <td>
+                        80,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  当月に発生した家賃を費用計上するため、
+                  借方は「地代家賃」とします。
+
+                  まだ支払っていないため、
+                  貸方は「未払金」で処理します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  地代家賃との違い 01
+                </p>
+
+                <h3>
+                  賃借料
+                </h3>
+
+                <p>
+
+                  コピー機やパソコン、機械、備品などを
+                  借りるための費用は、
+                  賃借料で処理することが一般的です。
+
+                  土地や建物を借りる費用は地代家賃、
+                  物品や設備を借りる費用は賃借料と
+                  考えると分かりやすくなります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  借りているものが土地・建物か、物品・設備か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  地代家賃との違い 02
+                </p>
+
+                <h3>
+                  敷金・保証金
+                </h3>
+
+                <p>
+
+                  契約時に支払い、
+                  契約終了後に返還される可能性がある
+                  敷金や保証金は、費用ではなく
+                  資産として処理することが一般的です。
+
+                  毎月の賃料とは分けて考えます。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  将来返還される可能性がある支出か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  地代家賃との違い 03
+                </p>
+
+                <h3>
+                  支払手数料
+                </h3>
+
+                <p>
+
+                  不動産会社へ支払う仲介手数料や、
+                  家賃の振込手数料などは、
+                  支払手数料で処理することがあります。
+
+                  土地や建物そのものの賃料ではない場合は、
+                  地代家賃と分けて処理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  賃料そのものか、契約や支払いに伴う手数料か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              地代家賃のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  駐車場代も地代家賃になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    月極駐車場など、
+                    継続して土地を借りるために支払う費用は、
+                    地代家賃で処理することが一般的です。
+
+                    一時的なコインパーキング代は、
+                    旅費交通費などで処理する場合があります。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  共益費や管理費も地代家賃に含めますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    家賃と一緒に請求される共益費や管理費は、
+                    地代家賃に含めて処理する場合があります。
+
+                    会社によっては別の勘定科目を使用するため、
+                    過去の仕訳や社内ルールを確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  敷金や保証金も地代家賃になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    原則として、地代家賃とは分けて処理します。
+
+                    将来返還される可能性がある敷金や保証金は、
+                    差入保証金などの資産科目を
+                    使用することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  自宅の家賃を地代家賃にできますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    自宅の一部を事業に使用している場合は、
+                    事業で使用している割合に応じて
+                    家賃の一部を経費にできることがあります。
+
+                    全額を地代家賃にするのではなく、
+                    使用面積や使用時間などをもとに
+                    合理的に按分します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  地代家賃を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  土地や建物を借りるための支出か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  毎月支払う賃料か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  敷金・保証金・礼金ではないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  共益費や管理費の処理方法を確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  契約書や会社の会計ルールを確認したか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li>
+                <a href="#summary">
+                  <span>
+                    01
+                  </span>
+                  まずは一言で
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>
+                    02
+                  </span>
+                  使用例
+                </a>
+              </li>
+
+              <li>
+                <a href="#judgment">
+                  <span>
+                    03
+                  </span>
+                  判断ポイント
+                </a>
+              </li>
+
+              <li>
+                <a href="#amount">
+                  <span>
+                    04
+                  </span>
+                  金額の考え方
+                </a>
+              </li>
+
+              <li>
+                <a href="#journal">
+                  <span>
+                    05
+                  </span>
+                  仕訳例
+                </a>
+              </li>
+
+              <li>
+                <a href="#difference">
+                  <span>
+                    06
+                  </span>
+                  似た科目との違い
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>
+                    07
+                  </span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#check">
+                  <span>
+                    08
+                  </span>
+                  最終チェック
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">
+          ホーム
+        </a>
+
+        <a href="../index.html#search">
+          逆引き検索
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../index.html#columns">
+          初心者コラム
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

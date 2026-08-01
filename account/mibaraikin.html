@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="未払金とは何か、どのような取引を未払金として処理するのか、仕訳例や買掛金・未払費用との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    未払金とは？該当するもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          未払金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            負債の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            未払金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            みばらいきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            備品や消耗品などを購入し、
+            代金を後日支払う約束をしたときに
+            使用する負債の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              負債
+            </span>
+
+            <span>
+              後払い
+            </span>
+
+            <span>
+              本業以外
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            商品以外を後払いで購入したときの<br>
+            未払い代金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            買掛金との違いは、
+            「本業の仕入れかどうか」が
+            判断のポイントです。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                未払金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                備品や消耗品など、
+                本業以外の取引で発生した
+                まだ支払っていない代金を
+                管理する負債の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              未払金は、
+              商品や原材料の仕入れ以外で発生した
+              後払いの取引に使用されます。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    備品の購入
+                  </h3>
+
+                  <p>
+                    パソコンや机、
+                    ロッカーなどを後払いで購入した場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    消耗品の購入
+                  </h3>
+
+                  <p>
+                    文房具やコピー用紙などを
+                    後日支払う契約で購入した場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    車両や設備の購入
+                  </h3>
+
+                  <p>
+                    業務用車両や設備を購入し、
+                    代金を後日支払う場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    クレジットカード決済
+                  </h3>
+
+                  <p>
+                    備品や消耗品をカードで購入し、
+                    カード会社へ後日支払う場合
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                未払金は、
+                本業以外の取引で発生した未払い代金です。
+
+                商品や原材料など、
+                本業の仕入れによる未払いは
+                買掛金を使用することが一般的です。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              未払金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    本業以外の取引で発生した未払いか
+                  </h3>
+
+                  <p>
+
+                    備品や消耗品、車両、設備など、
+                    商品や原材料の仕入れ以外で発生した
+                    未払い代金であるかを確認します。
+
+                    本業の仕入れによる未払いは、
+                    買掛金を使用することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    商品やサービスをすでに受け取っているか
+                  </h3>
+
+                  <p>
+
+                    備品や消耗品などをすでに受け取り、
+                    代金だけを後日支払う状態であるかを確認します。
+
+                    まだ商品やサービスを受けていない段階で
+                    先に支払った金額は、
+                    前払金など別の勘定科目を
+                    使用することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    支払金額と期限が確定しているか
+                  </h3>
+
+                  <p>
+
+                    未払金は、
+                    支払う金額や支払期限が
+                    確定している場合に使用します。
+
+                    金額がまだ確定していない継続的な費用は、
+                    未払費用などを使用することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    支払先ごとに残高を管理しているか
+                  </h3>
+
+                  <p>
+
+                    未払金は、
+                    支払先ごとの金額や支払予定日を
+                    正しく管理することが大切です。
+
+                    クレジットカード会社や購入先ごとに
+                    補助科目を設定すると、
+                    支払漏れや二重払いを防ぎやすくなります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              後払いならすべて未払金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  後払いであっても、
+                  何を購入したのか、
+                  どのような取引で発生したのかによって
+                  使用する勘定科目が異なります。
+
+                </p>
+
+                <p>
+
+                  備品や消耗品など本業以外の未払いは未払金、
+                  商品や原材料など本業の仕入れによる未払いは
+                  買掛金を使用することが一般的です。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    本業以外の未払い
+                  </span>
+
+                  <strong>
+                    未払金
+                  </strong>
+
+                  <p>
+                    備品・消耗品・車両・カード利用など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    本業の仕入れによる未払い
+                  </span>
+
+                  <strong>
+                    買掛金
+                  </strong>
+
+                  <p>
+                    商品・原材料などの掛け仕入れ
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※「後払い」という点だけで判断せず、
+              購入した内容、本業との関係、
+              支払金額や期限が確定しているかを確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              未払金の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  業務用パソコンを後払いで購入した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                業務用パソコン220,000円を購入し、
+                代金は翌月支払うことになりました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="業務用パソコンを後払いで購入したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        工具器具備品
+                      </td>
+
+                      <td>
+                        220,000円
+                      </td>
+
+                      <td>
+                        未払金
+                      </td>
+
+                      <td>
+                        220,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  長期間使用する業務用パソコンを購入したため、
+                  借方に「工具器具備品」を記載します。
+
+                  代金をまだ支払っていないため、
+                  貸方に「未払金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  未払金を普通預金から支払った
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                翌月、
+                未払金220,000円を
+                普通預金から支払いました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="未払金を普通預金から支払ったときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        未払金
+                      </td>
+
+                      <td>
+                        220,000円
+                      </td>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        220,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  代金を支払ったため、
+                  未払金という負債が減少します。
+
+                  借方に「未払金」を記載し、
+                  普通預金が減少するため、
+                  貸方には「普通預金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未払金との違い 01
+                </p>
+
+                <h3>
+                  買掛金
+                </h3>
+
+                <p>
+
+                  買掛金は、
+                  商品や原材料など、
+                  本業の仕入れによって発生した
+                  未払い代金を管理する勘定科目です。
+
+                  備品や消耗品、車両など、
+                  本業以外の取引による未払いは
+                  未払金を使用することが一般的です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  本業の仕入れか、本業以外の取引か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未払金との違い 02
+                </p>
+
+                <h3>
+                  未払費用
+                </h3>
+
+                <p>
+
+                  未払費用は、
+                  継続して受けているサービスのうち、
+                  すでに発生しているものの
+                  まだ支払っていない費用を管理する勘定科目です。
+
+                  購入した備品などの代金が確定している場合は未払金、
+                  時間の経過に応じて発生する費用は
+                  未払費用を使用することがあります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  確定した購入代金か、継続的に発生する費用か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未払金との違い 03
+                </p>
+
+                <h3>
+                  借入金
+                </h3>
+
+                <p>
+
+                  借入金は、
+                  金融機関や個人などから
+                  お金を借りたときに使用する
+                  負債の勘定科目です。
+
+                  未払金は、
+                  備品や消耗品などを購入したものの、
+                  まだ代金を支払っていない場合に使用します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  お金を借りたのか、購入代金を後払いにしたのか
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              未払金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  クレジットカードで購入した場合は未払金ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    法人クレジットカードで
+                    備品や消耗品などを購入し、
+                    代金が後日引き落とされる場合は、
+                    未払金として処理することが一般的です。
+
+                    引き落とし時に未払金を減らし、
+                    普通預金などを減少させます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  未払金と買掛金はどう違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    商品や原材料など、
+                    本業の仕入れによる未払いは
+                    買掛金を使用します。
+
+                    備品や消耗品、車両など、
+                    本業以外の取引による未払いは
+                    未払金を使用することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  水道光熱費の未払いも未払金ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    水道光熱費など、
+                    継続して受けるサービスについて
+                    すでに発生している未払い分は、
+                    未払費用として処理することがあります。
+
+                    会社の会計方針によっては
+                    未払金を使用する場合もあるため、
+                    過去の仕訳や社内ルールを確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  未払金はいつ減りますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    現金や普通預金などで
+                    購入先やクレジットカード会社へ
+                    代金を支払った時点で、
+                    未払金は減少します。
+
+                    支払後は、
+                    請求額と帳簿残高が一致しているかも
+                    確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  未払金を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  本業以外の取引による未払いか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  商品やサービスをすでに受け取っているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  支払金額と期限が確定しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  買掛金や未払費用など他の科目に該当しないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  支払先ごとの残高と支払予定日を確認したか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li>
+                <a href="#summary">
+                  <span>
+                    01
+                  </span>
+                  まずは一言で
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>
+                    02
+                  </span>
+                  使用例
+                </a>
+              </li>
+
+              <li>
+                <a href="#judgment">
+                  <span>
+                    03
+                  </span>
+                  判断ポイント
+                </a>
+              </li>
+
+              <li>
+                <a href="#amount">
+                  <span>
+                    04
+                  </span>
+                  金額の考え方
+                </a>
+              </li>
+
+              <li>
+                <a href="#journal">
+                  <span>
+                    05
+                  </span>
+                  仕訳例
+                </a>
+              </li>
+
+              <li>
+                <a href="#difference">
+                  <span>
+                    06
+                  </span>
+                  似た科目との違い
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>
+                    07
+                  </span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#check">
+                  <span>
+                    08
+                  </span>
+                  最終チェック
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">
+          ホーム
+        </a>
+
+        <a href="../index.html#search">
+          逆引き検索
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../index.html#columns">
+          初心者コラム
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

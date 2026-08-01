@@ -1,0 +1,1581 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="売掛金とは何か、どのような取引を売掛金として処理するのか、仕訳例や未収金・前受金との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    売掛金とは？該当する取引・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          売掛金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            資産の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            売掛金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            うりかけきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            商品やサービスを先に提供し、
+            代金を後日受け取る取引で発生した
+            未回収の代金を管理する勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              資産
+            </span>
+
+            <span>
+              後払い取引
+            </span>
+
+            <span>
+              回収管理が重要
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            売上は発生したけれど<br>
+            まだ受け取っていない代金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            入金されたら売掛金を減らし、
+            現金や普通預金の増加として処理します。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                売掛金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                商品やサービスを提供して売上が発生したものの、
+                代金をまだ受け取っていないときに、
+                将来受け取る予定の金額を管理する
+                資産の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              売掛金は、商品やサービスを先に提供し、
+              代金を後日受け取る
+              次のような取引に使用されることが一般的です。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    商品の掛け売り
+                  </h3>
+
+                  <p>
+                    商品を取引先へ引き渡し、
+                    代金を翌月などに受け取る取引
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    サービス代金の後日請求
+                  </h3>
+
+                  <p>
+                    制作、コンサルティング、
+                    修理などのサービスを提供し後日請求する取引
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    月末締め・翌月払いの売上
+                  </h3>
+
+                  <p>
+                    当月に発生した売上代金を、
+                    翌月以降にまとめて受け取る取引
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    クレジットカード・決済売上
+                  </h3>
+
+                  <p>
+                    売上は発生しているものの、
+                    決済会社からの入金が後日になる取引
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                売掛金は「まだ受け取っていない売上代金」です。
+
+                商品やサービスの売上以外で発生した未回収金額は、
+                未収金など別の勘定科目を使用することがあります。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              売掛金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    本業の売上代金か
+                  </h3>
+
+                  <p>
+
+                    商品の販売やサービスの提供など、
+                    会社の通常の営業取引によって発生した
+                    未回収の代金であるかを確認します。
+
+                    本業以外の取引で発生した未回収金額は、
+                    未収金など別の勘定科目を
+                    使用する場合があります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    売上はすでに発生しているか
+                  </h3>
+
+                  <p>
+
+                    商品の引き渡しやサービスの提供が完了し、
+                    売上を計上する条件を満たしているかを
+                    確認します。
+
+                    まだ商品やサービスを提供していない段階で
+                    代金を先に受け取った場合は、
+                    前受金などを使用することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    代金をまだ受け取っていないか
+                  </h3>
+
+                  <p>
+
+                    売上は発生しているものの、
+                    現金や普通預金への入金が
+                    まだ行われていないかを確認します。
+
+                    代金を受け取ったときは、
+                    売掛金を減らして
+                    現金や普通預金の増加として処理します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    取引先ごとに残高を管理しているか
+                  </h3>
+
+                  <p>
+
+                    売掛金は、
+                    取引先ごとの請求額や入金状況を
+                    正しく管理することが大切です。
+
+                    補助科目や売掛金台帳を使用し、
+                    未回収残高や入金期日を確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              売上があれば必ず売掛金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  売上が発生しても、
+                  その場で現金を受け取った場合は現金、
+                  普通預金へすぐ入金された場合は
+                  普通預金として処理します。
+
+                </p>
+
+                <p>
+
+                  商品やサービスを提供した後、
+                  代金を後日受け取る予定の場合に
+                  売掛金を使用します。
+
+                  支払方法や入金時期を確認して
+                  判断しましょう。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    代金を後日受け取る
+                  </span>
+
+                  <strong>
+                    売掛金
+                  </strong>
+
+                  <p>
+                    掛け売り、翌月払い、決済会社からの後日入金など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    代金をすぐ受け取る
+                  </span>
+
+                  <strong>
+                    現金・普通預金
+                  </strong>
+
+                  <p>
+                    現金販売、即時振込など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※売上の計上時期や入金時期だけでなく、
+              契約内容、請求書、取引先ごとの入金条件、
+              会社の会計ルールも確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              売掛金の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  商品を掛けで販売した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                取引先へ商品を販売し、
+                代金55,000円を翌月受け取ることになりました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="商品を掛けで販売したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        売掛金
+                      </td>
+
+                      <td>
+                        55,000円
+                      </td>
+
+                      <td>
+                        売上
+                      </td>
+
+                      <td>
+                        55,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  商品の販売によって売上が発生しましたが、
+                  代金はまだ受け取っていません。
+
+                  将来受け取る権利である売掛金が増えるため、
+                  借方に「売掛金」、
+                  貸方に「売上」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  売掛金が普通預金へ振り込まれた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                取引先から売掛金55,000円が
+                普通預金口座へ振り込まれました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="売掛金が普通預金へ振り込まれたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        55,000円
+                      </td>
+
+                      <td>
+                        売掛金
+                      </td>
+
+                      <td>
+                        55,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  取引先から代金が入金されたため、
+                  普通預金が増加します。
+
+                  借方に「普通預金」を記載し、
+                  回収した売掛金を減らすため、
+                  貸方に「売掛金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  売掛金との違い 01
+                </p>
+
+                <h3>
+                  未収金
+                </h3>
+
+                <p>
+
+                  未収金は、
+                  固定資産の売却代金など、
+                  会社の通常の営業取引以外で発生した
+                  未回収の金額を管理する勘定科目です。
+
+                  商品販売やサービス提供など、
+                  本業の売上代金は売掛金、
+                  本業以外の未回収金額は
+                  未収金と考えると分かりやすくなります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  本業の売上代金か、本業以外の未回収金額か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  売掛金との違い 02
+                </p>
+
+                <h3>
+                  前受金
+                </h3>
+
+                <p>
+
+                  前受金は、
+                  商品の引き渡しやサービスの提供前に
+                  代金を先に受け取ったときに使用する
+                  負債の勘定科目です。
+
+                  売上が発生した後に代金を受け取る場合は売掛金、
+                  売上が発生する前に代金を受け取った場合は
+                  前受金を使用します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  売上発生後の未回収か、売上発生前の受け取りか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  売掛金との違い 03
+                </p>
+
+                <h3>
+                  普通預金
+                </h3>
+
+                <p>
+
+                  普通預金は、
+                  銀行の普通預金口座にあるお金を
+                  管理する勘定科目です。
+
+                  売掛金はまだ受け取っていない売上代金、
+                  普通預金は実際に銀行口座へ
+                  入金されたお金を表します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  まだ未回収か、すでに口座へ入金されたか
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              売掛金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  クレジットカード売上も売掛金ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    商品やサービスの売上は発生しているものの、
+                    決済会社からの入金が後日になる場合は、
+                    売掛金として処理することがあります。
+
+                    入金時には、
+                    決済手数料を差し引いた金額との
+                    差額にも注意しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  売掛金と未収金はどう違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    商品販売やサービス提供など、
+                    通常の営業取引で発生した未回収代金は
+                    売掛金を使用します。
+
+                    固定資産の売却など、
+                    本業以外の取引で発生した未回収金額は
+                    未収金を使用することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  売掛金の入金が遅れているときはどうしますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    請求書、入金期日、取引先との契約内容を確認し、
+                    未入金の理由を調べます。
+
+                    売掛金台帳などを使って
+                    取引先ごとの残高と入金状況を管理し、
+                    必要に応じて取引先へ確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  回収できない売掛金はどう処理しますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    売掛金が回収不能となった場合は、
+                    一定の条件を満たしたうえで
+                    貸倒損失などとして処理することがあります。
+
+                    税務上の取り扱いも関係するため、
+                    回収状況や根拠資料を確認して判断しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  売掛金を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  本業の商品販売やサービス提供による売上代金か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  売上はすでに発生しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  代金をまだ受け取っていないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  取引先ごとの残高と入金期日を確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  未収金や前受金など他の科目に該当しないか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li>
+                <a href="#summary">
+                  <span>
+                    01
+                  </span>
+                  まずは一言で
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>
+                    02
+                  </span>
+                  使用例
+                </a>
+              </li>
+
+              <li>
+                <a href="#judgment">
+                  <span>
+                    03
+                  </span>
+                  判断ポイント
+                </a>
+              </li>
+
+              <li>
+                <a href="#amount">
+                  <span>
+                    04
+                  </span>
+                  金額の考え方
+                </a>
+              </li>
+
+              <li>
+                <a href="#journal">
+                  <span>
+                    05
+                  </span>
+                  仕訳例
+                </a>
+              </li>
+
+              <li>
+                <a href="#difference">
+                  <span>
+                    06
+                  </span>
+                  似た科目との違い
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>
+                    07
+                  </span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#check">
+                  <span>
+                    08
+                  </span>
+                  最終チェック
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">
+          ホーム
+        </a>
+
+        <a href="../index.html#search">
+          逆引き検索
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../index.html#columns">
+          初心者コラム
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

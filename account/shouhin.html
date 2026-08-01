@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="商品とは何か、どのような資産を商品として処理するのか、仕訳例や製品・原材料・貯蔵品との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    商品とは？該当するもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          商品
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            資産の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            商品
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            しょうひん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            販売することを目的として仕入れ、
+            決算日時点でまだ販売していない品物を
+            管理するときに使用する勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              資産
+            </span>
+
+            <span>
+              販売目的
+            </span>
+
+            <span>
+              棚卸資産
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            販売するために仕入れた<br>
+            まだ売れていない品物。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            会社で使用する備品や消耗品ではなく、
+            お客様へ販売することが目的かを確認します。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                商品とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                販売することを目的として外部から仕入れた品物のうち、
+                決算日時点でまだ販売していないものを
+                管理するときに使う資産の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              商品は、会社が販売することを目的として
+              外部から仕入れた
+              次のような品物を管理するときに使用します。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    小売店で販売する品物
+                  </h3>
+
+                  <p>
+                    衣類、食品、雑貨、
+                    家電など販売目的で仕入れた品物
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    通販サイトで販売する品物
+                  </h3>
+
+                  <p>
+                    ECサイトやオンラインショップで
+                    お客様へ販売するための在庫
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    卸売業で販売する品物
+                  </h3>
+
+                  <p>
+                    他の会社や店舗へ販売するために
+                    仕入れた商品
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    決算日時点の売れ残り
+                  </h3>
+
+                  <p>
+                    期末棚卸で確認した、
+                    まだ販売していない商品の在庫
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                商品は、会社が使用するためのものではなく、
+                お客様へ販売することを目的として
+                仕入れた品物です。
+
+                自社で製造したものは、
+                製品として処理することがあります。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              商品か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    販売することを目的として仕入れたか
+                  </h3>
+
+                  <p>
+
+                    外部から仕入れた品物を、
+                    お客様や取引先へ販売することを
+                    目的としているかを確認します。
+
+                    会社が自社で使用するために購入したものは、
+                    商品ではなく消耗品費や
+                    工具器具備品などで処理します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    外部から仕入れた品物か
+                  </h3>
+
+                  <p>
+
+                    商品は、
+                    基本的に外部から仕入れたものを
+                    そのまま販売する場合に使用します。
+
+                    自社で製造・加工したものは、
+                    製品など別の勘定科目を
+                    使用することがあります。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    決算日時点でまだ販売していないか
+                  </h3>
+
+                  <p>
+
+                    決算日時点で在庫として残っている商品は、
+                    棚卸を行って数量と金額を確認します。
+
+                    まだ販売していない商品は、
+                    当期の費用ではなく
+                    資産として翌期へ繰り越します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    在庫数量と帳簿残高が一致しているか
+                  </h3>
+
+                  <p>
+
+                    商品台帳や在庫管理表の数量と、
+                    実際に保管している商品の数量を
+                    定期的に照合します。
+
+                    破損、紛失、入力漏れなどによる
+                    差異がないかも確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              仕入れたものはすべて商品？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  外部から購入したものであっても、
+                  販売目的ではなく会社で使用するためのものは、
+                  商品には該当しません。
+
+                </p>
+
+                <p>
+
+                  お客様へ販売するために仕入れた品物は商品、
+                  会社で使用する文房具や備品は
+                  消耗品費や工具器具備品など、
+                  使用目的に応じて判断します。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    販売するために仕入れた
+                  </span>
+
+                  <strong>
+                    商品
+                  </strong>
+
+                  <p>
+                    小売品、通販在庫、卸売商品など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    会社で使用するために購入
+                  </span>
+
+                  <strong>
+                    他の勘定科目
+                  </strong>
+
+                  <p>
+                    消耗品費、工具器具備品など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※購入した品物の名称だけで判断せず、
+              販売目的か自社使用目的か、
+              在庫として残っているかを確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              商品の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  販売用の商品を掛けで仕入れた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                販売するための商品を
+                仕入先から110,000円で仕入れ、
+                代金は翌月支払うことになりました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="販売用の商品を掛けで仕入れたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        仕入
+                      </td>
+
+                      <td>
+                        110,000円
+                      </td>
+
+                      <td>
+                        買掛金
+                      </td>
+
+                      <td>
+                        110,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  三分法では、
+                  商品を仕入れたときに
+                  借方へ「仕入」を記載します。
+
+                  代金をまだ支払っていないため、
+                  貸方には「買掛金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  決算で期末商品を計上した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                決算時に棚卸を行った結果、
+                期末に残っている商品の金額が
+                80,000円であることが分かりました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="決算で期末商品を計上したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        商品
+                      </td>
+
+                      <td>
+                        80,000円
+                      </td>
+
+                      <td>
+                        仕入
+                      </td>
+
+                      <td>
+                        80,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  決算日時点でまだ販売していない商品は、
+                  当期の費用ではなく資産として翌期へ繰り越します。
+
+                  借方に「商品」を記載し、
+                  貸方の「仕入」を減らします。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  商品との違い 01
+                </p>
+
+                <h3>
+                  製品
+                </h3>
+
+                <p>
+
+                  製品は、
+                  自社で製造・加工して完成したものを
+                  管理する勘定科目です。
+
+                  一方、商品は、
+                  外部から仕入れたものを
+                  そのまま販売する場合に使用します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  外部から仕入れたものか、自社で製造したものか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  商品との違い 02
+                </p>
+
+                <h3>
+                  原材料
+                </h3>
+
+                <p>
+
+                  原材料は、
+                  製品を製造するために使用する
+                  材料や部品などを管理する勘定科目です。
+
+                  販売するために仕入れた品物は商品、
+                  製造に使用するものは
+                  原材料として区別します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  販売目的か、製造目的か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  商品との違い 03
+                </p>
+
+                <h3>
+                  貯蔵品
+                </h3>
+
+                <p>
+
+                  貯蔵品は、
+                  切手や収入印紙、
+                  コピー用紙など、
+                  会社で使用するために保管しているものを
+                  管理する勘定科目です。
+
+                  お客様へ販売するための在庫は商品、
+                  自社で使用するものは
+                  貯蔵品として管理することがあります。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  販売目的か、自社使用目的か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              商品のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  商品と仕入は何が違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    「商品」は販売前の在庫という資産を表します。
+
+                    一方、「仕入」は商品を仕入れた際に使用する費用科目です。
+
+                    三分法では、仕入時は「仕入」を使用し、
+                    決算時に期末在庫を「商品」として計上します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  商品が売れたら商品勘定は減りますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    三分法では、
+                    商品が売れてもその都度商品勘定は動かしません。
+
+                    決算時に棚卸を行い、
+                    売れ残った商品の金額を
+                    商品として資産計上します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  商品の数量が帳簿と合わない場合はどうしますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    実際の在庫数量と
+                    商品台帳や在庫管理表を照合し、
+                    入出庫漏れや入力ミス、
+                    破損・紛失などがないか確認します。
+
+                    差異がある場合は、
+                    原因を調査したうえで適切に修正しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  商品はいつ資産として計上しますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    決算日に棚卸を行い、
+                    まだ販売していない商品の金額を
+                    商品として資産計上します。
+
+                    これにより、
+                    当期の売上原価を適切に計算できます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  商品を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  販売する目的で仕入れた品物か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  外部から仕入れた商品か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  決算日時点で在庫として残っているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  製品や原材料、貯蔵品ではないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  棚卸数量と帳簿残高が一致しているか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li>
+                <a href="#summary">
+                  <span>
+                    01
+                  </span>
+                  まずは一言で
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>
+                    02
+                  </span>
+                  使用例
+                </a>
+              </li>
+
+              <li>
+                <a href="#judgment">
+                  <span>
+                    03
+                  </span>
+                  判断ポイント
+                </a>
+              </li>
+
+              <li>
+                <a href="#amount">
+                  <span>
+                    04
+                  </span>
+                  金額の考え方
+                </a>
+              </li>
+
+              <li>
+                <a href="#journal">
+                  <span>
+                    05
+                  </span>
+                  仕訳例
+                </a>
+              </li>
+
+              <li>
+                <a href="#difference">
+                  <span>
+                    06
+                  </span>
+                  似た科目との違い
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>
+                    07
+                  </span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#check">
+                  <span>
+                    08
+                  </span>
+                  最終チェック
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">
+          ホーム
+        </a>
+
+        <a href="../index.html#search">
+          逆引き検索
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../index.html#columns">
+          初心者コラム
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

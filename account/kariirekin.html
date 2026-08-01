@@ -1,0 +1,1498 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="借入金とは何か、どのような取引を借入金として処理するのか、仕訳例や未払金・買掛金との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    借入金とは？該当するもの・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          借入金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            負債の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            借入金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            かりいれきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            銀行や信用金庫、個人などから
+            事業資金として借りたお金を
+            管理するときに使用する負債の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              負債
+            </span>
+
+            <span>
+              資金調達
+            </span>
+
+            <span>
+              元本返済
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            銀行などから借りた<br>
+            将来返済する必要があるお金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            返済額のうち、
+            元本と利息は分けて処理します。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                借入金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                銀行や信用金庫、個人などから
+                事業資金として借りたお金のうち、
+                将来返済する必要がある金額を
+                管理する負債の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              借入金は、
+              事業資金として外部から借りた
+              次のようなお金を管理するときに使用します。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    銀行からの融資
+                  </h3>
+
+                  <p>
+                    運転資金や設備資金として
+                    銀行から借りたお金
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    信用金庫・公的機関からの借入れ
+                  </h3>
+
+                  <p>
+                    信用金庫や日本政策金融公庫などから
+                    融資を受けた場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    役員・個人からの借入れ
+                  </h3>
+
+                  <p>
+                    役員や事業関係者などから
+                    事業資金を借りた場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    設備購入のための借入れ
+                  </h3>
+
+                  <p>
+                    車両、機械、店舗設備などを
+                    購入するために借りたお金
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                借入金は、
+                将来返済する必要がある元本を管理する科目です。
+
+                返済時に支払う利息は、
+                支払利息など別の勘定科目で処理します。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              借入金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    返済する必要があるお金か
+                  </h3>
+
+                  <p>
+
+                    銀行や信用金庫、役員などから受け取ったお金に、
+                    将来返済する義務があるかを確認します。
+
+                    返済する必要がある元本は、
+                    借入金として処理することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    借入先と契約内容を確認する
+                  </h3>
+
+                  <p>
+
+                    金融機関や役員、個人など、
+                    誰から借りたお金であるかを確認します。
+
+                    借入金額、返済期間、返済日、
+                    利率などは契約書や返済予定表で
+                    確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    元本と利息を分けているか
+                  </h3>
+
+                  <p>
+
+                    借入金の返済額には、
+                    借りた元本と利息が含まれることがあります。
+
+                    元本部分は借入金を減らし、
+                    利息部分は支払利息などの
+                    費用として処理します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    返済期間に合った科目を使用しているか
+                  </h3>
+
+                  <p>
+
+                    返済期限によって、
+                    短期借入金や長期借入金などに
+                    分けて管理することがあります。
+
+                    決算日時点の返済予定を確認し、
+                    会社の会計ルールに従って処理しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              口座へ入金されたらすべて借入金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  普通預金口座へお金が入金されても、
+                  その理由によって使用する勘定科目は異なります。
+
+                </p>
+
+                <p>
+
+                  将来返済する必要がある融資金は借入金、
+                  商品やサービスの代金は売上や売掛金、
+                  返済義務のない出資金は資本金など、
+                  入金の内容を確認して判断します。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    将来返済する必要がある
+                  </span>
+
+                  <strong>
+                    借入金
+                  </strong>
+
+                  <p>
+                    銀行融資、役員からの借入れなど
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    返済する必要がない
+                  </span>
+
+                  <strong>
+                    他の勘定科目
+                  </strong>
+
+                  <p>
+                    売上、資本金など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※入金されたという事実だけで判断せず、
+              契約書、返済予定表、入金内容、
+              返済義務の有無を確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              借入金の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  銀行から事業資金を借り入れた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                銀行から事業資金1,000,000円を借り入れ、
+                普通預金口座へ入金されました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="銀行から事業資金を借り入れたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        1,000,000円
+                      </td>
+
+                      <td>
+                        借入金
+                      </td>
+
+                      <td>
+                        1,000,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  借入金が普通預金口座へ入金されたため、
+                  借方に「普通預金」を記載します。
+
+                  将来返済する義務が発生するため、
+                  貸方には「借入金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  借入金の元本と利息を返済した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                借入金の元本100,000円と
+                利息5,000円の合計105,000円を
+                普通預金から支払いました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="借入金の元本と利息を返済したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        借入金<br>
+                        支払利息
+                      </td>
+
+                      <td>
+                        100,000円<br>
+                        5,000円
+                      </td>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        105,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  元本100,000円の返済によって
+                  借入金という負債が減少するため、
+                  借方に「借入金」を記載します。
+
+                  利息5,000円は「支払利息」として費用計上し、
+                  普通預金から支払った合計額を
+                  貸方に記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  借入金との違い 01
+                </p>
+
+                <h3>
+                  未払金
+                </h3>
+
+                <p>
+
+                  未払金は、
+                  備品や消耗品などを購入し、
+                  まだ代金を支払っていない場合に
+                  使用する負債の勘定科目です。
+
+                  借入金は、
+                  銀行や個人などからお金そのものを
+                  借りた場合に使用します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  お金を借りたのか、購入代金を後払いにしたのか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  借入金との違い 02
+                </p>
+
+                <h3>
+                  買掛金
+                </h3>
+
+                <p>
+
+                  買掛金は、
+                  商品や原材料など、
+                  本業の仕入れによって発生した
+                  未払い代金を管理する勘定科目です。
+
+                  借入金は、
+                  商品の購入ではなく、
+                  事業資金などを借りた際に使用します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  本業の仕入れによる未払いか、資金を借りたのか
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  借入金との違い 03
+                </p>
+
+                <h3>
+                  資本金
+                </h3>
+
+                <p>
+
+                  資本金は、
+                  株主などから出資を受けた資金であり、
+                  原則として返済義務はありません。
+
+                  一方、借入金は、
+                  将来返済する義務があるため、
+                  負債として管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  返済義務があるかどうか
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              借入金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  借入金と未払金はどう違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    借入金は、
+                    銀行や個人などからお金を借りた場合に
+                    使用します。
+
+                    一方、未払金は、
+                    備品や設備などを購入し、
+                    まだ代金を支払っていない場合に
+                    使用する勘定科目です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  借入金を返済すると費用になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    元本の返済は、
+                    借入金という負債が減るだけなので
+                    費用にはなりません。
+
+                    費用になるのは、
+                    利息として支払う
+                    「支払利息」の部分です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  短期借入金と長期借入金は何が違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    一般的には、
+                    返済期限が1年以内のものは短期借入金、
+                    1年を超えるものは長期借入金として
+                    区分して管理します。
+
+                    会社の会計方針に従って処理しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  借入金の残高はどう管理しますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    金融機関から受け取る返済予定表や
+                    借入契約書をもとに、
+                    元本残高や返済日、
+                    利息の金額を確認します。
+
+                    帳簿残高とも定期的に照合し、
+                    相違がないか確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  借入金を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  将来返済する義務があるお金か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  借入先・契約内容を確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  元本と利息を分けて処理しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  未払金や買掛金など他の勘定科目ではないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  返済予定表と帳簿残高が一致しているか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li><a href="#summary"><span>01</span>まずは一言で</a></li>
+              <li><a href="#examples"><span>02</span>使用例</a></li>
+              <li><a href="#judgment"><span>03</span>判断ポイント</a></li>
+              <li><a href="#amount"><span>04</span>金額の考え方</a></li>
+              <li><a href="#journal"><span>05</span>仕訳例</a></li>
+              <li><a href="#difference"><span>06</span>似た科目との違い</a></li>
+              <li><a href="#faq"><span>07</span>よくある疑問</a></li>
+              <li><a href="#check"><span>08</span>最終チェック</a></li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#search">逆引き検索</a>
+        <a href="../dictionary.html">勘定科目辞典</a>
+        <a href="../index.html#columns">初心者コラム</a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

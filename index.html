@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="経理初心者の『これどうする？』をやさしく解決するWebサイトです。勘定科目、仕訳、消費税などを分かりやすく案内します。">
+  <title>経理の相棒｜経理初心者のためのやさしい検索サイト</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner wrapper">
+      <a href="#top" class="logo" aria-label="経理の相棒 トップページ">
+        <span class="logo__icon" aria-hidden="true">
+          <span class="logo__calculator">
+            <span class="logo__screen"></span>
+            <span class="logo__buttons"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+          </span>
+        </span>
+        <span class="logo__text">
+          <span class="logo__name">経理の相棒</span>
+          <span class="logo__sub">BEGINNER ACCOUNTING GUIDE</span>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="global-navigation" class="navigation" aria-label="メインメニュー">
+        <ul>
+          <li><a href="#services">できること</a></li>
+          <li><a href="#columns">初心者コラム</a></li>
+          <li><a href="#about">このサイトについて</a></li>
+          <li><a href="#roadmap">制作ロードマップ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__orb hero__orb--one"></div>
+      <div class="hero__orb hero__orb--two"></div>
+      <div class="wrapper hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span></span>経理初心者のための案内所</p>
+          <h1>経理の「これどうする？」を、<br><em>すぐ解決。</em></h1>
+          <p class="hero__lead">買ったもの、上司に言われた言葉、迷った仕訳。<br>むずかしい経理を、検索からやさしく案内します。</p>
+
+          <div class="search-panel">
+  <p class="search-label">購入したもの・取引内容から調べる</p>
+
+  <h2>この支払い、何の勘定科目？</h2>
+
+  <p class="search-description">
+    購入したものや取引内容を、短い言葉で入力してください。
+  </p>
+
+<div class="search-panel__row">
+  <input
+    type="search"
+    id="main-search"
+    placeholder="例：パソコン、電車代、取引先との食事"
+    autocomplete="off"
+  >
+
+  <div
+    id="suggestions"
+    class="suggestions"
+  ></div>
+
+  <button
+    type="button"
+    id="search-button"
+  >
+    勘定科目を調べる
+  </button>
+</div>
+
+<div class="search-examples">
+  <span>検索例：</span>
+
+  <button type="button" data-keyword="パソコン">
+    パソコン
+  </button>
+
+  <button type="button" data-keyword="電車代">
+    電車代
+  </button>
+
+  <button type="button" data-keyword="コピー用紙">
+    コピー用紙
+  </button>
+
+  <button type="button" data-keyword="取引先との食事">
+    取引先との食事
+  </button>
+</div>
+
+<div
+  id="search-message"
+  class="search-message"
+  aria-live="polite"
+></div></div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="desk-card desk-card--main">
+            <p>ACCOUNTING NOTE</p>
+            <div class="note-line"></div><div class="note-line note-line--short"></div>
+            <div class="mini-grid"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="desk-card desk-card--calc">
+            <div class="calc-screen">12,450</div>
+            <div class="calc-buttons"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="desk-card desk-card--tag">DEBIT<br><strong>借方</strong></div>
+          <div class="desk-card desk-card--tag2">CREDIT<br><strong>貸方</strong></div>
+        </div>
+      </div>
+      <a href="#services" class="scroll-guide">SCROLL<span></span></a>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="wrapper">
+        <header class="section-heading">
+          <p>SERVICES</p>
+          <h2>経理の相棒でできること</h2>
+          <span>経理初心者が迷いやすいポイントを、4つの機能で分かりやすく案内します。</span>
+        </header>
+
+        <div class="service-grid">
+          <article class="service-card service-card--featured">
+            <div class="service-card__top"><span>01</span><b>メイン機能</b></div>
+            <div class="service-card__icon">⌕</div>
+            <p class="service-card__ruby">これって何費？</p>
+            <h3>勘定科目逆引き</h3>
+            <p>購入したものやサービス名を入力すると、考えられる勘定科目を複数表示します。</p>
+            <div class="service-card__example"><span>例</span>パソコン → 消耗品費・工具器具備品</div>
+            <button type="button" data-demo="パソコン">試してみる <span>→</span></button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top"><span>02</span><b>DICTIONARY</b></div>
+            <div class="service-card__icon">Aa</div>
+            <p class="service-card__ruby">この科目って何？</p>
+            <h3>勘定科目辞典</h3>
+            <p>科目の意味、使う場面、似た科目との違いを初心者向けに整理します。</p>
+            <div class="service-card__example"><span>例</span>通信費と支払手数料の違い</div>
+            <button type="button" data-demo="通信費">検索例を見る <span>→</span></button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top"><span>03</span><b>JOURNAL</b></div>
+            <div class="service-card__icon">↔</div>
+            <p class="service-card__ruby">仕訳が分からない</p>
+            <h3>仕訳案内</h3>
+            <p>取引内容から一般的な仕訳例と、借方・貸方の考え方を案内します。</p>
+            <div class="service-card__example"><span>例</span>電車代を現金で払った</div>
+            <button type="button" data-demo="電車代">仕訳例を見る <span>→</span></button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top"><span>04</span><b>TAX</b></div>
+            <div class="service-card__icon">%</div>
+            <p class="service-card__ruby">課税区分で迷う</p>
+            <h3>消費税ガイド</h3>
+            <p>課税・非課税・不課税・対象外の違いを、身近な例から確認できます。</p>
+            <div class="service-card__example"><span>例</span>切手・家賃・保険料</div>
+            <button type="button" data-demo="切手">区分例を見る <span>→</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="columns" class="section columns">
+      <div class="wrapper">
+        <header class="section-heading section-heading--left">
+          <p>BEGINNER COLUMNS</p>
+          <h2>最初につまずきやすいこと</h2>
+          <span>似ている言葉や、判断に迷いやすいポイントを短く解説します。</span>
+        </header>
+
+        <div class="column-grid">
+          <article class="column-card">
+            <div class="column-card__visual">LEASE <span></span> INSTALLMENT</div>
+            <div class="column-card__body"><small>COLUMN 01</small><h3>リース料と割賦の違い</h3><p>「借りる」と「分割で買う」の違いを、契約と会計処理の視点から整理します。</p><button type="button" data-demo="リース料">関連ワードを検索 ↗</button></div>
+          </article>
+          <article class="column-card">
+            <div class="column-card__visual">TAXABLE <span></span> EXEMPT</div>
+            <div class="column-card__body"><small>COLUMN 02</small><h3>課税・非課税・不課税の違い</h3><p>名前が似ていても意味は別。消費税を考える最初の整理ポイントです。</p><button type="button" data-demo="非課税">関連ワードを検索 ↗</button></div>
+          </article>
+          <article class="column-card">
+            <div class="column-card__visual">EXPENSE <span></span> ASSET</div>
+            <div class="column-card__body"><small>COLUMN 03</small><h3>消耗品費と備品の違い</h3><p>金額や使用期間によって処理が変わることがある、パソコンなどで迷いやすい違いです。</p><button type="button" data-demo="消耗品費">関連ワードを検索 ↗</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="wrapper about__inner">
+        <div><p class="about__english">ABOUT</p><h2>経理を、もう少し<br>分かりやすく。</h2></div>
+        <div class="about__content">
+          <p class="about__lead">「経理の相棒」は、経理初心者が仕事中に感じる小さな疑問を、すぐに調べられるWebサイトを目指しています。</p>
+          <p>専門用語が多く、正解がひとつとは限らない経理の世界。だからこそ断定しすぎず、一般的な考え方や複数の可能性を示しながら、やさしく伝えることを大切にします。</p>
+          <div class="about-points">
+            <div><span>01</span><h3>初心者目線</h3><p>難しい言葉をできるだけ使わず説明。</p></div>
+            <div><span>02</span><h3>複数候補</h3><p>状況により処理が変わる点も案内。</p></div>
+            <div><span>03</span><h3>実務につながる</h3><p>次に確認することまで分かる設計。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+      <div class="wrapper">
+        <header class="section-heading section-heading--left"><p>ROADMAP</p><h2>全7回で育てるサイト</h2><span>見た目だけで終わらず、検索データや実務コンテンツを順番に追加します。</span></header>
+        <ol class="roadmap-list">
+          <li class="current"><span>01</span><div><b>今回</b><h3>サイトの設計・デザイン</h3><p>トップページ、共通デザイン、スマートフォン対応</p></div></li>
+          <li><span>02</span><div><h3>勘定科目辞典</h3><p>検索、カテゴリー、科目の詳細解説</p></div></li>
+          <li><span>03</span><div><h3>勘定科目逆引き</h3><p>購入物から勘定科目候補を検索</p></div></li>
+          <li><span>04</span><div><h3>仕訳</h3><p>取引内容から仕訳例を確認</p></div></li>
+          <li><span>05</span><div><h3>消費税</h3><p>課税区分の考え方を確認</p></div></li>
+          <li><span>06</span><div><h3>公開用ページ・SEO</h3><p>免責事項、プライバシーポリシー、検索対策</p></div></li>
+          <li><span>07</span><div><h3>正式公開版 v1.0</h3><p>全機能の統合、動作確認、公開準備</p></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper footer__inner">
+      <div><a href="#top" class="logo logo--footer"><span class="logo__icon" aria-hidden="true"><span class="logo__calculator"><span class="logo__screen"></span><span class="logo__buttons"><span></span><span></span><span></span><span></span><span></span><span></span></span></span></span><span class="logo__text"><span class="logo__name">経理の相棒</span><span class="logo__sub">BEGINNER ACCOUNTING GUIDE</span></span></a><p>経理の「これどうする？」を、すぐ解決。</p></div>
+      <nav aria-label="フッターメニュー"><a href="#services">できること</a><a href="#columns">初心者コラム</a><a href="#about">このサイトについて</a><a href="#roadmap">ロードマップ</a></nav>
+    </div>
+    <div class="footer__bottom"><div class="wrapper"><p>© 2026 経理の相棒</p><a href="#top">PAGE TOP ↑</a></div></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

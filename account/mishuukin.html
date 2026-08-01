@@ -1,0 +1,1502 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="未収金とは何か、どのような取引を未収金として処理するのか、仕訳例や売掛金・未収収益との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    未収金とは？該当する取引・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          未収金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            資産の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            未収金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            みしゅうきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            固定資産の売却など、
+            会社の本業以外の取引で発生した
+            まだ受け取っていない代金を
+            管理するときに使用する資産の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              資産
+            </span>
+
+            <span>
+              本業以外
+            </span>
+
+            <span>
+              未回収代金
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            本業以外の取引で発生した<br>
+            まだ受け取っていないお金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            商品販売やサービス提供による未回収代金は、
+            売掛金を使用することが一般的です。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                未収金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                固定資産の売却など、
+                会社の通常の営業取引以外で発生した
+                まだ受け取っていない金額を
+                管理する資産の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              未収金は、
+              会社の本業以外の取引で発生し、
+              代金を後日受け取る
+              次のような場合に使用されることがあります。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    固定資産の売却代金
+                  </h3>
+
+                  <p>
+                    車両や備品などを売却し、
+                    代金を後日受け取る場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    有価証券の売却代金
+                  </h3>
+
+                  <p>
+                    保有していた有価証券を売却し、
+                    代金がまだ入金されていない場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    保険金などの未入金額
+                  </h3>
+
+                  <p>
+                    受け取る金額が確定した保険金などが、
+                    まだ入金されていない場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    本業以外の未回収代金
+                  </h3>
+
+                  <p>
+                    商品販売やサービス提供以外の取引で、
+                    後日受け取る予定となっている代金
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                未収金は、
+                本業以外の取引で発生した
+                まだ受け取っていない代金です。
+
+                商品販売やサービス提供など、
+                本業の売上による未回収代金は
+                売掛金を使用することが一般的です。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              未収金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    本業以外の取引で発生した代金か
+                  </h3>
+
+                  <p>
+
+                    固定資産の売却や保険金など、
+                    商品販売やサービス提供以外の取引によって
+                    発生した代金であるかを確認します。
+
+                    本業による未回収代金は、
+                    売掛金を使用することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    受け取る金額が確定しているか
+                  </h3>
+
+                  <p>
+
+                    売却金額や保険金など、
+                    将来受け取る金額が
+                    契約や通知書などによって
+                    確定しているかを確認します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    入金はまだされていないか
+                  </h3>
+
+                  <p>
+
+                    未収金は、
+                    代金を受け取る権利はあるものの、
+                    まだ実際には入金されていない状態で使用します。
+
+                    入金後は未収金を減らす仕訳を行います。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    売掛金との違いを確認したか
+                  </h3>
+
+                  <p>
+
+                    本業による未回収代金は売掛金、
+                    本業以外の未回収代金は未収金が
+                    一般的な使い分けです。
+
+                    まずは取引内容を確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              後で入金されるお金はすべて未収金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  後日入金される予定のお金でも、
+                  取引内容によって使用する勘定科目は異なります。
+
+                </p>
+
+                <p>
+
+                  本業による売上なら売掛金、
+                  本業以外の取引なら未収金、
+                  利息なら未収収益を使用することがあります。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    本業以外の未回収代金
+                  </span>
+
+                  <strong>
+                    未収金
+                  </strong>
+
+                  <p>
+                    固定資産の売却・保険金など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    本業による未回収代金
+                  </span>
+
+                  <strong>
+                    売掛金
+                  </strong>
+
+                  <p>
+                    商品販売・サービス提供など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※未収金と売掛金はどちらも「まだ受け取っていないお金」ですが、
+              本業か本業以外かによって使用する勘定科目が異なります。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              未収金の仕訳例
+            </h2>
+
+
+<!-- 仕訳例1 -->
+<article class="journal-example">
+
+  <div class="journal-example__header">
+
+    <span>
+      仕訳例 01
+    </span>
+
+    <h3>
+      不要になった備品を売却し、代金は後日受け取ることになった
+    </h3>
+
+  </div>
+
+
+  <p class="journal-example__description">
+
+    使用していた備品50,000円を売却し、
+    代金は後日受け取ることになりました。
+
+  </p>
+
+
+  <div
+    class="journal-table-wrapper"
+    role="region"
+    aria-label="備品を売却し、代金を後日受け取るときの仕訳"
+    tabindex="0"
+  >
+
+    <table class="journal-table">
+
+      <thead>
+
+        <tr>
+
+          <th scope="col">
+            借方科目
+          </th>
+
+          <th scope="col">
+            借方金額
+          </th>
+
+          <th scope="col">
+            貸方科目
+          </th>
+
+          <th scope="col">
+            貸方金額
+          </th>
+
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr>
+
+          <td>
+            未収金
+          </td>
+
+          <td>
+            50,000円
+          </td>
+
+          <td>
+            雑収入
+          </td>
+
+          <td>
+            50,000円
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+  <div class="journal-example__explanation">
+
+    <span>
+      解説
+    </span>
+
+    <p>
+
+      本業以外の取引で発生した代金を
+      後日受け取るため、
+      借方は「未収金」となります。
+
+      後日入金された時点で、
+      未収金を減らして処理します。
+
+    </p>
+
+  </div>
+
+</article>
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  未収金が普通預金へ入金された
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                後日、
+                未収金300,000円が
+                普通預金へ入金されました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="未収金が入金されたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        300,000円
+                      </td>
+
+                      <td>
+                        未収金
+                      </td>
+
+                      <td>
+                        300,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  普通預金へ入金されたため、
+                  借方に「普通預金」を記載します。
+
+                  未収金を回収したため、
+                  貸方の「未収金」を減らします。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未収金との違い 01
+                </p>
+
+                <h3>
+                  売掛金
+                </h3>
+
+                <p>
+
+                  売掛金は、
+                  商品の販売やサービスの提供など、
+                  本業の営業活動で発生した
+                  未回収の代金を管理する資産の勘定科目です。
+
+                  一方、未収金は、
+                  固定資産の売却など
+                  本業以外の取引で発生した
+                  未回収の代金を管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  本業の取引か、本業以外の取引か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未収金との違い 02
+                </p>
+
+                <h3>
+                  未収収益
+                </h3>
+
+                <p>
+
+                  未収収益は、
+                  利息や家賃など、
+                  一定期間の経過によって発生した収益のうち、
+                  まだ受け取っていない金額を管理する勘定科目です。
+
+                  未収金は、
+                  売却代金や保険金など、
+                  本業以外の取引によって発生した
+                  未回収の代金を管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  継続的な収益か、取引による未回収代金か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  未収金との違い 03
+                </p>
+
+                <h3>
+                  前払金
+                </h3>
+
+                <p>
+
+                  前払金は、
+                  商品やサービスを受け取る前に
+                  先に支払ったお金を管理する資産の勘定科目です。
+
+                  未収金は、
+                  将来受け取る予定のお金を管理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  将来受け取るお金か、先に支払ったお金か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              未収金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  売掛金と未収金は何が違いますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    最も大きな違いは、
+                    本業の取引かどうかです。
+
+                    商品販売やサービス提供による未回収代金は
+                    売掛金、
+                    固定資産の売却など
+                    本業以外の取引による未回収代金は
+                    未収金を使用します。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  未収金はいつ計上しますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    代金を受け取る権利が確定し、
+                    まだ入金されていない時点で
+                    計上します。
+
+                    実際に入金されたら、
+                    未収金を減らす仕訳を行います。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  保険金も未収金になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    保険会社から支払われる金額が確定し、
+                    まだ入金されていない場合は、
+                    未収金として処理することがあります。
+
+                    実際の処理は、
+                    保険金の内容や会社の会計方針によって
+                    異なる場合があります。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  未収金は資産ですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    はい。
+
+                    将来お金を受け取る権利があるため、
+                    未収金は貸借対照表では
+                    資産として表示されます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  未収金を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  本業以外の取引で発生した代金か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  受け取る金額が確定しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  まだ入金されていないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  売掛金や未収収益ではないか確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  契約書や売却資料などを確認したか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li><a href="#summary"><span>01</span>まずは一言で</a></li>
+              <li><a href="#examples"><span>02</span>使用例</a></li>
+              <li><a href="#judgment"><span>03</span>判断ポイント</a></li>
+              <li><a href="#amount"><span>04</span>金額の考え方</a></li>
+              <li><a href="#journal"><span>05</span>仕訳例</a></li>
+              <li><a href="#difference"><span>06</span>似た科目との違い</a></li>
+              <li><a href="#faq"><span>07</span>よくある疑問</a></li>
+              <li><a href="#check"><span>08</span>最終チェック</a></li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#search">逆引き検索</a>
+        <a href="../dictionary.html">勘定科目辞典</a>
+        <a href="../index.html#columns">初心者コラム</a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

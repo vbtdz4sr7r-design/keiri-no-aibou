@@ -1,0 +1,2422 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>勘定科目辞典 | 経理の相棒</title>
+
+  <meta
+    name="description"
+    content="経理初心者向けの勘定科目辞典です。資産・負債・純資産・収益・費用など、よく使われる勘定科目をわかりやすく紹介します。"
+  >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 今使っているCSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- dictionary.html専用CSS -->
+  <style>
+    /* ==============================
+       勘定科目辞典専用
+    ============================== */
+
+    .dictionary-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 95px;
+      background:
+        linear-gradient(
+          135deg,
+          #f9fbfd 0%,
+          #eff6fc 56%,
+          #f8fafc 100%
+        );
+    }
+
+    .dictionary-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .42;
+      background-image:
+        linear-gradient(
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        );
+      background-size: 42px 42px;
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 94%
+      );
+    }
+
+    .dictionary-hero__inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .dictionary-hero__copy {
+      max-width: 720px;
+    }
+
+    .dictionary-hero__copy h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 1.25;
+      letter-spacing: -.04em;
+    }
+
+    .dictionary-hero__copy h1 em {
+      color: var(--blue);
+      font-style: normal;
+    }
+
+    .dictionary-hero__lead {
+      margin: 24px 0 0;
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    .dictionary-hero__note {
+      position: relative;
+      padding: 32px;
+      border: 1px solid rgba(220, 229, 239, .95);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .dictionary-hero__note::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 22px;
+      width: 50px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--light-blue);
+    }
+
+    .dictionary-hero__note small {
+      display: block;
+      margin-top: 16px;
+      font-size: .65rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+      color: var(--blue);
+    }
+
+    .dictionary-hero__note strong {
+      display: block;
+      margin-top: 14px;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      color: var(--navy);
+    }
+
+    .dictionary-hero__note p {
+      margin: 10px 0 0;
+      color: var(--gray);
+      font-size: .82rem;
+    }
+
+    .breadcrumb {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .breadcrumb__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: .75rem;
+      color: var(--gray);
+    }
+
+    .breadcrumb__list li:not(:last-child)::after {
+      content: "/";
+      margin-left: 8px;
+      color: #b1bdca;
+    }
+
+    .breadcrumb__list a:hover {
+      color: var(--blue);
+    }
+
+    .dictionary {
+      background: var(--pale);
+    }
+
+    .dictionary-tools {
+      margin-bottom: 42px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 35px rgba(20, 35, 59, .06);
+    }
+
+    .dictionary-search {
+      position: relative;
+    }
+
+    .dictionary-search label {
+      display: block;
+      margin-bottom: 9px;
+      font-size: .75rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .dictionary-search__row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+
+    .dictionary-search input {
+      width: 100%;
+      min-width: 0;
+      padding: 15px 17px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      outline: 0;
+      color: var(--ink);
+      background: #fbfdff;
+    }
+
+    .dictionary-search input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(63, 119, 181, .12);
+    }
+
+    .dictionary-search__button {
+      min-width: 105px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 13px;
+      color: #fff;
+      font-weight: 800;
+      background: var(--navy);
+      box-shadow: 0 8px 18px rgba(31, 63, 105, .2);
+    }
+
+    .dictionary-search__button:hover {
+      background: var(--blue);
+    }
+
+    .dictionary-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .dictionary-filter {
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 800;
+      color: var(--navy);
+      background: #fff;
+      transition:
+        color .2s,
+        border-color .2s,
+        background .2s;
+    }
+
+    .dictionary-filter:hover,
+    .dictionary-filter.is-active {
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .dictionary-status {
+      min-height: 27px;
+      margin: 15px 0 0;
+      font-size: .78rem;
+      color: var(--gray);
+    }
+
+    .dictionary-category {
+      margin-top: 64px;
+    }
+
+    .dictionary-category:first-of-type {
+      margin-top: 0;
+    }
+
+    .dictionary-category__heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 23px;
+    }
+
+    .dictionary-category__number {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      flex-shrink: 0;
+      place-items: center;
+      border-radius: 14px;
+      font: 900 .74rem/1 monospace;
+      color: var(--blue);
+      background: var(--light-blue);
+    }
+
+    .dictionary-category__heading h2 {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.35;
+    }
+
+    .dictionary-category__heading p {
+      margin: 3px 0 0;
+      color: var(--gray);
+      font-size: .78rem;
+    }
+
+    .dictionary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .account-card {
+      position: relative;
+      min-height: 230px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 35px rgba(20, 35, 59, .06);
+      transition:
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
+    }
+
+    .account-card:hover {
+      transform: translateY(-6px);
+      border-color: #b8d2e8;
+      box-shadow: var(--shadow);
+    }
+
+    .account-card[hidden] {
+      display: none;
+    }
+
+    .account-card__link {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+    }
+
+    .account-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .account-card__category {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: .62rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      color: var(--blue);
+      background: var(--light-blue);
+    }
+
+    .account-card__arrow {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--navy);
+      background: #fff;
+      transition:
+        transform .25s,
+        color .25s,
+        border-color .25s,
+        background .25s;
+    }
+
+    .account-card:hover .account-card__arrow {
+      transform: translate(3px, -3px);
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .account-card__ruby {
+      margin: 25px 0 3px;
+      font-size: .67rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      color: var(--blue);
+    }
+
+    .account-card h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.5;
+    }
+
+    .account-card__description {
+      margin: 10px 0 0;
+      color: var(--gray);
+      font-size: .83rem;
+      line-height: 1.75;
+    }
+
+    .account-card__example {
+      margin: auto 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: .7rem;
+      color: var(--gray);
+    }
+
+    .account-card__example span {
+      margin-right: 7px;
+      font-weight: 900;
+      color: var(--blue);
+    }
+
+    .dictionary-empty {
+      display: none;
+      padding: 45px 25px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--gray);
+      background: #fff;
+    }
+
+    .dictionary-empty.is-visible {
+      display: block;
+    }
+
+    .dictionary-empty strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .dictionary-guide {
+      background: #fff;
+    }
+
+    .dictionary-guide__inner {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .dictionary-guide__copy h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.4;
+    }
+
+    .dictionary-guide__copy p {
+      color: var(--gray);
+    }
+
+    .dictionary-guide__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 15px;
+      padding: 13px 20px;
+      border-radius: 13px;
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      background: var(--navy);
+      box-shadow: 0 8px 18px rgba(31, 63, 105, .2);
+    }
+
+    .dictionary-guide__link span {
+      transition: transform .25s;
+    }
+
+    .dictionary-guide__link:hover span {
+      transform: translateX(4px);
+    }
+
+    .dictionary-guide__points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .dictionary-guide__point {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 17px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--pale);
+    }
+
+    .dictionary-guide__point > span {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      font: 900 .72rem/1 monospace;
+      color: var(--blue);
+      background: var(--light-blue);
+    }
+
+    .dictionary-guide__point h3,
+    .dictionary-guide__point p {
+      margin: 0;
+    }
+
+    .dictionary-guide__point h3 {
+      font-size: 1rem;
+    }
+
+    .dictionary-guide__point p {
+      margin-top: 3px;
+      color: var(--gray);
+      font-size: .78rem;
+    }
+
+    @media (max-width: 900px) {
+      .dictionary-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .dictionary-hero__note {
+        max-width: 520px;
+      }
+
+      .dictionary-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dictionary-guide__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .dictionary-hero {
+        padding: 70px 0 68px;
+      }
+
+      .dictionary-hero__copy h1 {
+        font-size: clamp(2.25rem, 11vw, 3.5rem);
+      }
+
+      .dictionary-hero__lead br {
+        display: none;
+      }
+
+      .dictionary-hero__note {
+        padding: 26px;
+        border-radius: 21px;
+      }
+
+      .dictionary-tools {
+        padding: 17px;
+      }
+
+      .dictionary-search__row {
+        grid-template-columns: 1fr;
+      }
+
+      .dictionary-search__button {
+        min-height: 51px;
+      }
+
+      .dictionary-filter {
+        padding: 7px 12px;
+      }
+
+      .dictionary-category {
+        margin-top: 50px;
+      }
+
+      .dictionary-category__heading {
+        align-items: flex-start;
+      }
+
+      .dictionary-category__number {
+        width: 43px;
+        height: 43px;
+      }
+
+      .dictionary-category__heading h2 {
+        font-size: 1.35rem;
+      }
+
+      .dictionary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .account-card,
+      .account-card__link {
+        min-height: 215px;
+      }
+
+      .account-card__link {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==============================
+       ヘッダー
+  ============================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a class="logo" href="index.html" aria-label="経理の相棒 トップページへ">
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+        <span class="logo__text">
+          <span class="logo__name">経理の相棒</span>
+          <span class="logo__sub">ACCOUNTING PARTNER</span>
+        </span>
+
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" aria-label="メインメニュー">
+
+        <ul>
+          <li>
+            <a href="index.html">ホーム</a>
+          </li>
+
+          <li>
+            <a href="index.html#search">逆引き検索</a>
+          </li>
+
+          <li>
+            <a href="dictionary.html">勘定科目辞典</a>
+          </li>
+
+          <li>
+            <a href="index.html#columns">初心者コラム</a>
+          </li>
+
+          <li>
+            <a href="index.html#about">このサイトについて</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==============================
+         パンくずリスト
+    ============================== -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+
+      <ol class="breadcrumb__list wrapper">
+        <li>
+          <a href="index.html">ホーム</a>
+        </li>
+
+        <li aria-current="page">
+          勘定科目辞典
+        </li>
+      </ol>
+
+    </nav>
+
+
+    <!-- ==============================
+         メインビジュアル
+    ============================== -->
+    <section class="dictionary-hero">
+
+      <div class="dictionary-hero__inner wrapper">
+
+        <div class="dictionary-hero__copy">
+
+          <p class="eyebrow">
+            <span></span>
+            ACCOUNTING DICTIONARY
+          </p>
+
+          <h1>
+            むずかしい勘定科目を、<br>
+            <em>やさしく学べる辞典。</em>
+          </h1>
+
+          <p class="dictionary-hero__lead">
+            経理でよく使われる勘定科目を、初心者にもわかりやすく解説。<br>
+            意味や使用例、間違えやすい科目を一つずつ確認できます。
+          </p>
+
+        </div>
+
+        <div class="dictionary-hero__note" aria-hidden="true">
+
+          <small>ACCOUNTING NOTE</small>
+
+          <strong>
+            調べる。わかる。<br>
+            仕事で使える。
+          </strong>
+
+          <p>
+            勘定科目の意味だけではなく、実務での判断ポイントまでまとめます。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         勘定科目一覧
+    ============================== -->
+    <section class="dictionary section">
+
+      <div class="wrapper">
+
+        <div class="section-heading">
+
+          <p>ACCOUNT LIST</p>
+
+          <h2>勘定科目を探す</h2>
+
+          <span>
+            科目名やキーワードを入力するか、分類を選択してください。
+          </span>
+
+        </div>
+
+
+        <!-- 検索・分類ボタン -->
+        <div class="dictionary-tools">
+
+          <div class="dictionary-search">
+
+            <label for="dictionary-search">
+              勘定科目を検索
+            </label>
+
+            <div class="dictionary-search__row">
+
+              <input
+                id="dictionary-search"
+                type="search"
+                placeholder="例：消耗品費、電車代、売上"
+                autocomplete="off"
+              >
+
+              <button
+                class="dictionary-search__button"
+                id="dictionary-search-button"
+                type="button"
+              >
+                検索
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="dictionary-filters"
+            aria-label="勘定科目の分類"
+          >
+
+            <button
+              class="dictionary-filter is-active"
+              type="button"
+              data-category="all"
+            >
+              すべて
+            </button>
+
+            <button
+              class="dictionary-filter"
+              type="button"
+              data-category="asset"
+            >
+              資産
+            </button>
+
+            <button
+              class="dictionary-filter"
+              type="button"
+              data-category="liability"
+            >
+              負債
+            </button>
+
+            <button
+              class="dictionary-filter"
+              type="button"
+              data-category="net-assets"
+            >
+              純資産
+            </button>
+
+            <button
+              class="dictionary-filter"
+              type="button"
+              data-category="revenue"
+            >
+              収益
+            </button>
+
+            <button
+              class="dictionary-filter"
+              type="button"
+              data-category="expense"
+            >
+              費用
+            </button>
+
+          </div>
+
+          <p
+            class="dictionary-status"
+            id="dictionary-status"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+
+        <!-- 検索結果なし -->
+        <div
+          class="dictionary-empty"
+          id="dictionary-empty"
+        >
+          <strong>該当する勘定科目が見つかりませんでした。</strong>
+
+          別の言葉や、短いキーワードで検索してみてください。
+        </div>
+
+
+        <!-- ==============================
+             資産
+        ============================== -->
+        <section
+          class="dictionary-category"
+          data-category-section="asset"
+        >
+
+          <div class="dictionary-category__heading">
+
+            <span class="dictionary-category__number">
+              01
+            </span>
+
+            <div>
+              <h2>資産</h2>
+              <p>会社が保有している現金・預金・商品・備品など</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-grid">
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="現金 お金 手元 小口現金"
+            >
+              <a
+                class="account-card__link"
+                href="account/genkin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">げんきん</p>
+
+                <h3>現金</h3>
+
+                <p class="account-card__description">
+                  紙幣や硬貨など、会社が手元で保有しているお金を表します。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  小口現金・店舗のレジ金
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="普通預金 銀行口座 通帳 振込"
+            >
+              <a
+                class="account-card__link"
+                href="account/futsuyokin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">ふつうよきん</p>
+
+                <h3>普通預金</h3>
+
+                <p class="account-card__description">
+                  銀行の普通預金口座に預けているお金を管理する科目です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  売上の入金・銀行振込
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="売掛金 売上 未回収 請求書 掛取引"
+            >
+              <a
+                class="account-card__link"
+                href="account/urikakekin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">うりかけきん</p>
+
+                <h3>売掛金</h3>
+
+                <p class="account-card__description">
+                  商品やサービスを提供したものの、まだ受け取っていない代金です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  翌月入金の売上
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="前払費用 前払い 家賃 保険料 サービス"
+            >
+              <a
+                class="account-card__link"
+                href="account/maebaraihiyou.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">まえばらいひよう</p>
+
+                <h3>前払費用</h3>
+
+                <p class="account-card__description">
+                  将来受けるサービスについて、先に支払った費用を管理します。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  前払いした家賃・保険料
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="工具器具備品 固定資産 パソコン 机 椅子 備品"
+            >
+              <a
+                class="account-card__link"
+                href="account/kougukigubihin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">こうぐきぐびひん</p>
+
+                <h3>工具器具備品</h3>
+
+                <p class="account-card__description">
+                  長期間使用するパソコン、机、椅子などの備品を管理します。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  パソコン・オフィス家具
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="asset"
+              data-keywords="商品 在庫 仕入れ 販売 棚卸"
+            >
+              <a
+                class="account-card__link"
+                href="account/shouhin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しょうひん</p>
+
+                <h3>商品</h3>
+
+                <p class="account-card__description">
+                  販売する目的で仕入れ、決算日時点で保有しているものです。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  店舗や通販の在庫
+                </p>
+
+              </a>
+            </article>
+
+            <!-- 未収金 -->
+<article
+  class="account-card"
+  data-category="asset"
+  data-keywords="未収金 未回収 本業以外 保険金 固定資産 売却"
+>
+  <a
+    class="account-card__link"
+    href="account/mishuukin.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">資産</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">みしゅうきん</p>
+
+    <h3>未収金</h3>
+
+    <p class="account-card__description">
+      本業以外で発生した、まだ受け取っていないお金です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      固定資産の売却代金など
+    </p>
+
+  </a>
+</article>
+
+
+<!-- 前払金 -->
+<article
+  class="account-card"
+  data-category="asset"
+  data-keywords="前払金 手付金 内金 前払い 商品 備品"
+>
+  <a
+    class="account-card__link"
+    href="account/maebaraikin.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">資産</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">まえばらいきん</p>
+
+    <h3>前払金</h3>
+
+    <p class="account-card__description">
+      商品などを受け取る前に支払った手付金や内金です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      商品の手付金
+    </p>
+
+  </a>
+</article>
+          </div>
+
+        </section>
+
+
+        <!-- ==============================
+             負債
+        ============================== -->
+        <section
+          class="dictionary-category"
+          data-category-section="liability"
+        >
+
+          <div class="dictionary-category__heading">
+
+            <span class="dictionary-category__number">
+              02
+            </span>
+
+            <div>
+              <h2>負債</h2>
+              <p>今後支払う必要がある代金や借入金など</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-grid">
+
+            <article
+              class="account-card"
+              data-category="liability"
+              data-keywords="買掛金 仕入 未払い 掛取引"
+            >
+              <a
+                class="account-card__link"
+                href="account/kaikakekin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">負債</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">かいかけきん</p>
+
+                <h3>買掛金</h3>
+
+                <p class="account-card__description">
+                  商品や材料を仕入れたものの、まだ支払っていない代金です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  翌月支払いの仕入代金
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="liability"
+              data-keywords="未払金 備品 経費 未払い 請求書"
+            >
+              <a
+                class="account-card__link"
+                href="account/mibaraikin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">負債</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">みばらいきん</p>
+
+                <h3>未払金</h3>
+
+                <p class="account-card__description">
+                  商品の仕入れ以外で発生した、まだ支払っていない代金です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  備品や設備の後払い
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="liability"
+              data-keywords="未払費用 給料 家賃 利息 未払い"
+            >
+              <a
+                class="account-card__link"
+                href="account/mibaraihiyou.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">負債</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">みばらいひよう</p>
+
+                <h3>未払費用</h3>
+
+                <p class="account-card__description">
+                  継続的なサービスを受けたものの、まだ支払っていない費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  給与・家賃・借入金利息
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="liability"
+              data-keywords="預り金 源泉所得税 社会保険料 給与 天引き"
+            >
+              <a
+                class="account-card__link"
+                href="account/azukarikin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">負債</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">あずかりきん</p>
+
+                <h3>預り金</h3>
+
+                <p class="account-card__description">
+                  従業員などから一時的に預かり、後から納付するお金です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  源泉所得税・社会保険料
+                </p>
+
+              </a>
+            </article>
+<!-- 借入金 -->
+<article
+  class="account-card"
+  data-category="liability"
+  data-keywords="借入金 銀行 融資 借金 返済"
+>
+  <a
+    class="account-card__link"
+    href="account/kariirekin.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">負債</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">かりいれきん</p>
+
+    <h3>借入金</h3>
+
+    <p class="account-card__description">
+      銀行などから借りた、返済する必要があるお金です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      銀行融資
+    </p>
+
+  </a>
+</article>
+
+
+<!-- 前受金 -->
+<article
+  class="account-card"
+  data-category="liability"
+  data-keywords="前受金 前払い 予約金 手付金 サービス"
+>
+  <a
+    class="account-card__link"
+    href="account/maeukekin.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">負債</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">まえうけきん</p>
+
+    <h3>前受金</h3>
+
+    <p class="account-card__description">
+      商品やサービスを提供する前に受け取ったお金です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      予約金・前受代金
+    </p>
+
+  </a>
+</article>
+          </div>
+
+        </section>
+
+
+        <!-- ==============================
+             純資産
+        ============================== -->
+        <section
+          class="dictionary-category"
+          data-category-section="net-assets"
+        >
+
+          <div class="dictionary-category__heading">
+
+            <span class="dictionary-category__number">
+              03
+            </span>
+
+            <div>
+              <h2>純資産</h2>
+              <p>資産から負債を差し引いた、会社の正味の財産</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-grid">
+
+            <article
+              class="account-card"
+              data-category="net-assets"
+              data-keywords="資本金 出資 設立 株主"
+            >
+              <a
+                class="account-card__link"
+                href="account/shihonkin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">純資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しほんきん</p>
+
+                <h3>資本金</h3>
+
+                <p class="account-card__description">
+                  会社設立時などに、株主や経営者から出資されたお金です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  会社設立時の出資金
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="net-assets"
+              data-keywords="繰越利益剰余金 利益 黒字 赤字 累積"
+            >
+              <a
+                class="account-card__link"
+                href="account/kurikoshirieki.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">純資産</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">くりこしりえきじょうよきん</p>
+
+                <h3>繰越利益剰余金</h3>
+
+                <p class="account-card__description">
+                  会社がこれまでに積み上げてきた利益や損失を表します。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  前期までの利益の累積
+                </p>
+
+              </a>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==============================
+             収益
+        ============================== -->
+        <section
+          class="dictionary-category"
+          data-category-section="revenue"
+        >
+
+          <div class="dictionary-category__heading">
+
+            <span class="dictionary-category__number">
+              04
+            </span>
+
+            <div>
+              <h2>収益</h2>
+              <p>商品やサービスの提供などによって得た利益のもと</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-grid">
+
+            <article
+              class="account-card"
+              data-category="revenue"
+              data-keywords="売上高 売上 商品 サービス 販売"
+            >
+              <a
+                class="account-card__link"
+                href="account/uriagedaka.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">収益</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">うりあげだか</p>
+
+                <h3>売上高</h3>
+
+                <p class="account-card__description">
+                  本業の商品販売やサービス提供によって得た収益です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  商品販売・サービス料金
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="revenue"
+              data-keywords="受取利息 利息 銀行 預金"
+            >
+              <a
+                class="account-card__link"
+                href="account/uketoririsoku.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">収益</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">うけとりりそく</p>
+
+                <h3>受取利息</h3>
+
+                <p class="account-card__description">
+                  預金などによって会社が受け取った利息を処理します。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  普通預金の利息
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="revenue"
+              data-keywords="雑収入 少額 返金 助成金 自動販売機"
+            >
+              <a
+                class="account-card__link"
+                href="account/zatsushunyu.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">収益</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">ざつしゅうにゅう</p>
+
+                <h3>雑収入</h3>
+
+                <p class="account-card__description">
+                  本業以外で発生した、金額や重要性が比較的小さい収入です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  少額の返金・自販機収入
+                </p>
+
+              </a>
+            </article>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==============================
+             費用
+        ============================== -->
+        <section
+          class="dictionary-category"
+          data-category-section="expense"
+        >
+
+          <div class="dictionary-category__heading">
+
+            <span class="dictionary-category__number">
+              05
+            </span>
+
+            <div>
+              <h2>費用</h2>
+              <p>会社が事業活動を行うために支払ったさまざまな経費</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-grid">
+<!-- 仕入 -->
+<article
+  class="account-card"
+  data-category="expense"
+  data-keywords="仕入 商品 在庫 買掛金 卸 原価"
+>
+  <a
+    class="account-card__link"
+    href="account/shiire.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">費用</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">しいれ</p>
+
+    <h3>仕入</h3>
+
+    <p class="account-card__description">
+      販売する商品を購入したときに使用する勘定科目です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      販売商品の購入
+    </p>
+
+  </a>
+</article>
+
+
+<!-- 給料手当 -->
+<article
+  class="account-card"
+  data-category="expense"
+  data-keywords="給料手当 給与 賃金 残業代 手当"
+>
+  <a
+    class="account-card__link"
+    href="account/kyuryouteate.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">費用</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">きゅうりょうてあて</p>
+
+    <h3>給料手当</h3>
+
+    <p class="account-card__description">
+      従業員へ支払う給料や各種手当を管理する勘定科目です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      基本給・残業手当
+    </p>
+
+  </a>
+</article>
+
+
+<!-- 租税公課 -->
+<article
+  class="account-card"
+  data-category="expense"
+  data-keywords="租税公課 印紙税 固定資産税 自動車税 税金"
+>
+  <a
+    class="account-card__link"
+    href="account/sozeikouka.html"
+  >
+
+    <div class="account-card__top">
+      <span class="account-card__category">費用</span>
+      <span class="account-card__arrow">↗</span>
+    </div>
+
+    <p class="account-card__ruby">そぜいこうか</p>
+
+    <h3>租税公課</h3>
+
+    <p class="account-card__description">
+      事業で支払う税金や公的な負担金を管理する勘定科目です。
+    </p>
+
+    <p class="account-card__example">
+      <span>例</span>
+      印紙税・固定資産税
+    </p>
+
+  </a>
+</article>
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="消耗品費 文房具 パソコン 備品 コピー用紙 USB"
+            >
+              <a
+                class="account-card__link"
+                href="account/shoumouhinhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しょうもうひんひ</p>
+
+                <h3>消耗品費</h3>
+
+                <p class="account-card__description">
+                  文房具や少額の備品など、業務で使用する消耗品の費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  ノート・電卓・少額備品
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="旅費交通費 電車 バス タクシー 出張 新幹線 宿泊"
+            >
+              <a
+                class="account-card__link"
+                href="account/ryohikoutsuuhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">りょひこうつうひ</p>
+
+                <h3>旅費交通費</h3>
+
+                <p class="account-card__description">
+                  業務上の移動や出張にかかった交通費、宿泊費などです。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  電車・バス・出張宿泊費
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="通信費 電話 インターネット Wi-Fi 切手 郵便"
+            >
+              <a
+                class="account-card__link"
+                href="account/tsuushinhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">つうしんひ</p>
+
+                <h3>通信費</h3>
+
+                <p class="account-card__description">
+                  電話、インターネット、郵便などの通信に関する費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  携帯料金・Wi-Fi・切手
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="水道光熱費 電気 ガス 水道"
+            >
+              <a
+                class="account-card__link"
+                href="account/suidoukounetsuhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">すいどうこうねつひ</p>
+
+                <h3>水道光熱費</h3>
+
+                <p class="account-card__description">
+                  事務所や店舗で使用した電気・ガス・水道などの費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  電気代・水道代・ガス代
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="地代家賃 家賃 オフィス 店舗 駐車場 倉庫"
+            >
+              <a
+                class="account-card__link"
+                href="account/chidaiyachin.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">ちだいやちん</p>
+
+                <h3>地代家賃</h3>
+
+                <p class="account-card__description">
+                  事務所、店舗、倉庫、駐車場などを借りるための費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  オフィス家賃・駐車場代
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="接待交際費 取引先 会食 贈答品 お中元 お歳暮"
+            >
+              <a
+                class="account-card__link"
+                href="account/settai.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">せったいこうさいひ</p>
+
+                <h3>接待交際費</h3>
+
+                <p class="account-card__description">
+                  取引先などとの関係を築くために支出した費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  取引先との会食・贈答品
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="会議費 会議 打ち合わせ 飲食 コーヒー"
+            >
+              <a
+                class="account-card__link"
+                href="account/kaigihi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">かいぎひ</p>
+
+                <h3>会議費</h3>
+
+                <p class="account-card__description">
+                  社内外の会議や打ち合わせのために発生した費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  会議室・打ち合わせの飲み物
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="福利厚生費 従業員 健康診断 社員旅行 慶弔"
+            >
+              <a
+                class="account-card__link"
+                href="account/fukurikouseihi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">ふくりこうせいひ</p>
+
+                <h3>福利厚生費</h3>
+
+                <p class="account-card__description">
+                  従業員の福利厚生を目的として、会社が負担する費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  健康診断・社員旅行
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="広告宣伝費 広告 SNS チラシ ホームページ"
+            >
+              <a
+                class="account-card__link"
+                href="account/koukokusendenhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">こうこくせんでんひ</p>
+
+                <h3>広告宣伝費</h3>
+
+                <p class="account-card__description">
+                  商品や会社を広く宣伝するために支払った費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  Web広告・チラシ・SNS広告
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="支払手数料 振込手数料 決済手数料 仲介手数料"
+            >
+              <a
+                class="account-card__link"
+                href="account/shiharaitesuryou.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しはらいてすうりょう</p>
+
+                <h3>支払手数料</h3>
+
+                <p class="account-card__description">
+                  銀行振込や各種サービスの利用に伴って発生する手数料です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  振込手数料・決済手数料
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="修繕費 修理 メンテナンス 故障 原状回復"
+            >
+              <a
+                class="account-card__link"
+                href="account/shuuzenhi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しゅうぜんひ</p>
+
+                <h3>修繕費</h3>
+
+                <p class="account-card__description">
+                  建物や設備を元の状態に戻すための修理・維持費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  パソコン修理・設備の補修
+                </p>
+
+              </a>
+            </article>
+
+
+            <article
+              class="account-card"
+              data-category="expense"
+              data-keywords="新聞図書費 本 書籍 新聞 雑誌 電子書籍"
+            >
+              <a
+                class="account-card__link"
+                href="account/shinbuntoshohi.html"
+              >
+
+                <div class="account-card__top">
+                  <span class="account-card__category">費用</span>
+                  <span class="account-card__arrow">↗</span>
+                </div>
+
+                <p class="account-card__ruby">しんぶんとしょひ</p>
+
+                <h3>新聞図書費</h3>
+
+                <p class="account-card__description">
+                  業務に必要な新聞、書籍、雑誌などを購入した費用です。
+                </p>
+
+                <p class="account-card__example">
+                  <span>例</span>
+                  専門書・新聞・電子書籍
+                </p>
+
+              </a>
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         逆引き検索への案内
+    ============================== -->
+    <section class="dictionary-guide section">
+
+      <div class="dictionary-guide__inner wrapper">
+
+        <div class="dictionary-guide__copy">
+
+          <p class="about__english">
+            REVERSE SEARCH
+          </p>
+
+          <h2>
+            科目名がわからないときは、<br>
+            買ったもので検索。
+          </h2>
+
+          <p>
+            「パソコン」「電車代」「Amazon」など、実際に購入したものやサービスから候補となる勘定科目を探せます。
+          </p>
+
+          <a
+            class="dictionary-guide__link"
+            href="index.html#search"
+          >
+            逆引き検索を使う
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="dictionary-guide__points">
+
+          <div class="dictionary-guide__point">
+
+            <span>01</span>
+
+            <div>
+              <h3>買ったものから検索</h3>
+              <p>勘定科目の名前を知らなくても調べられます。</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-guide__point">
+
+            <span>02</span>
+
+            <div>
+              <h3>候補をわかりやすく表示</h3>
+              <p>処理が複数考えられる場合も判断ポイントを確認できます。</p>
+            </div>
+
+          </div>
+
+
+          <div class="dictionary-guide__point">
+
+            <span>03</span>
+
+            <div>
+              <h3>辞典で詳しく学ぶ</h3>
+              <p>検索後は該当する勘定科目の詳しい説明へ進めます。</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==============================
+       フッター
+  ============================== -->
+  <footer class="footer">
+
+    <div class="footer__inner wrapper">
+
+      <div>
+
+        <a
+          class="logo logo--footer"
+          href="index.html"
+          aria-label="経理の相棒 トップページへ"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+          <span class="logo__text">
+            <span class="logo__name">経理の相棒</span>
+            <span class="logo__sub">ACCOUNTING PARTNER</span>
+          </span>
+
+        </a>
+
+        <p>
+          経理初心者の「わからない」に、<br>
+          やさしく寄り添う学習サイト。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="index.html">ホーム</a>
+
+        <a href="index.html#search">逆引き検索</a>
+
+        <a href="dictionary.html">勘定科目辞典</a>
+
+        <a href="index.html#columns">初心者コラム</a>
+
+        <a href="index.html#about">このサイトについて</a>
+
+        <a href="index.html#roadmap">今後の予定</a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <p>
+          ACCOUNTING PARTNER
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ==============================
+       共通JavaScript
+  ============================== -->
+  <script src="js/script.js"></script>
+
+
+  <!-- ==============================
+       辞典ページ専用JavaScript
+  ============================== -->
+  <script>
+    'use strict';
+
+    const dictionaryInput =
+      document.querySelector('#dictionary-search');
+
+    const dictionarySearchButton =
+      document.querySelector('#dictionary-search-button');
+
+    const dictionaryFilters =
+      document.querySelectorAll('.dictionary-filter');
+
+    const accountCards =
+      document.querySelectorAll('.account-card');
+
+    const categorySections =
+      document.querySelectorAll('[data-category-section]');
+
+    const dictionaryStatus =
+      document.querySelector('#dictionary-status');
+
+    const dictionaryEmpty =
+      document.querySelector('#dictionary-empty');
+
+    let selectedCategory = 'all';
+
+
+    function normalizeText(text) {
+      return text
+        .toLowerCase()
+        .replace(/\s+/g, '');
+    }
+
+
+    function filterAccounts() {
+      const query = normalizeText(dictionaryInput.value);
+
+      let visibleCount = 0;
+
+
+      accountCards.forEach((card) => {
+        const category = card.dataset.category;
+
+        const searchTarget = normalizeText(
+          `${card.textContent} ${card.dataset.keywords || ''}`
+        );
+
+        const matchesCategory =
+          selectedCategory === 'all' ||
+          category === selectedCategory;
+
+        const matchesQuery =
+          query === '' ||
+          searchTarget.includes(query);
+
+        const shouldShow =
+          matchesCategory && matchesQuery;
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+      });
+
+
+      categorySections.forEach((section) => {
+        const visibleCards =
+          section.querySelectorAll(
+            '.account-card:not([hidden])'
+          );
+
+        section.hidden = visibleCards.length === 0;
+      });
+
+
+      dictionaryEmpty.classList.toggle(
+        'is-visible',
+        visibleCount === 0
+      );
+
+
+      if (query === '' && selectedCategory === 'all') {
+        dictionaryStatus.textContent = '';
+        return;
+      }
+
+
+      dictionaryStatus.textContent =
+        `${visibleCount}件の勘定科目が見つかりました。`;
+    }
+
+
+    dictionarySearchButton.addEventListener(
+      'click',
+      filterAccounts
+    );
+
+
+    dictionaryInput.addEventListener(
+      'input',
+      filterAccounts
+    );
+
+
+    dictionaryInput.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          filterAccounts();
+        }
+      }
+    );
+
+
+    dictionaryFilters.forEach((button) => {
+      button.addEventListener('click', () => {
+        selectedCategory = button.dataset.category;
+
+        dictionaryFilters.forEach((filterButton) => {
+          filterButton.classList.remove('is-active');
+        });
+
+        button.classList.add('is-active');
+
+        filterAccounts();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

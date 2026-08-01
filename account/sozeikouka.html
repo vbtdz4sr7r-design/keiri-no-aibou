@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="租税公課とは何か、どのような税金や公的負担を租税公課として処理するのか、仕訳例や法人税等との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    租税公課とは？該当する税金・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          租税公課
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            費用の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            租税公課
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            そぜいこうか
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            事業に関係して支払う税金や、
+            国・地方公共団体などへ支払う
+            公的な負担金を管理するときに使用する
+            費用の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              費用
+            </span>
+
+            <span>
+              税金
+            </span>
+
+            <span>
+              公的負担
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            事業に関係して支払う<br>
+            税金や公的な負担金。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            税金なら何でも租税公課になるわけではなく、
+            法人税などは別の勘定科目で処理します。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                租税公課とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                事業に関係して支払う税金や、
+                国・地方公共団体などへ支払う
+                公的な負担金を管理する
+                費用の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              租税公課は、
+              事業に関係して支払う
+              次のような税金や公的負担金に
+              使用されることがあります。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    固定資産税
+                  </h3>
+
+                  <p>
+                    会社が所有する土地や建物などに対して
+                    支払う税金
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    自動車税
+                  </h3>
+
+                  <p>
+                    会社が所有する車両について
+                    支払う税金
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    印紙税
+                  </h3>
+
+                  <p>
+                    契約書や領収書などへ貼付する
+                    収入印紙にかかる税金
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    登録免許税など
+                  </h3>
+
+                  <p>
+                    登記や登録などの手続きに伴って
+                    支払う税金や公的負担金
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                租税公課には、
+                事業に関係する税金や
+                公的な負担金を計上します。
+
+                ただし、
+                法人税や住民税などは
+                「法人税、住民税及び事業税」など、
+                別の勘定科目で処理することが一般的です。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              租税公課か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    事業に関係して支払う税金か
+                  </h3>
+
+                  <p>
+
+                    会社が所有する土地や建物、
+                    車両などに対して支払う税金や、
+                    事業上の手続きに伴って支払う税金であるかを
+                    確認します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    法人税など別の科目ではないか
+                  </h3>
+
+                  <p>
+
+                    法人税、法人住民税、
+                    法人事業税などは、
+                    租税公課ではなく
+                    「法人税、住民税及び事業税」などで
+                    処理することが一般的です。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    消費税の処理方法を確認しているか
+                  </h3>
+
+                  <p>
+
+                    消費税は、
+                    会社が採用している税込経理方式や
+                    税抜経理方式によって
+                    仕訳方法が異なります。
+
+                    会計方針を確認して判断しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    罰金や延滞税ではないか
+                  </h3>
+
+                  <p>
+
+                    交通反則金や税金の延滞税などは、
+                    会計上は租税公課として処理する場合がありますが、
+                    税務上は損金にならないことがあります。
+
+                    内容を確認して処理しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              支払った税金はすべて租税公課？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  必ずではありません。
+                </p>
+
+                <p>
+
+                  税金の種類によって、
+                  使用する勘定科目は異なります。
+
+                </p>
+
+                <p>
+
+                  固定資産税や自動車税、
+                  印紙税などは租税公課として
+                  処理することがありますが、
+                  法人税や法人住民税などは
+                  別の勘定科目を使用することが一般的です。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    事業に関係する税金・公的負担
+                  </span>
+
+                  <strong>
+                    租税公課
+                  </strong>
+
+                  <p>
+                    固定資産税・自動車税・印紙税など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    所得に対して課される税金
+                  </span>
+
+                  <strong>
+                    別の勘定科目
+                  </strong>
+
+                  <p>
+                    法人税・法人住民税など
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※税金という名称だけで判断せず、
+              税金の種類、課税対象、
+              会社の会計方針を確認してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              租税公課の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  固定資産税を普通預金から支払った
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                会社が所有する建物について、
+                固定資産税120,000円を
+                普通預金から支払いました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="固定資産税を支払ったときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        租税公課
+                      </td>
+
+                      <td>
+                        120,000円
+                      </td>
+
+                      <td>
+                        普通預金
+                      </td>
+
+                      <td>
+                        120,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  事業用の建物にかかる固定資産税を支払ったため、
+                  借方に「租税公課」を記載します。
+
+                  普通預金から支払ったため、
+                  貸方には「普通預金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  収入印紙を現金で購入した
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                契約書へ貼付する収入印紙10,000円分を
+                現金で購入し、
+                すぐに使用しました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="収入印紙を購入して使用したときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        租税公課
+                      </td>
+
+                      <td>
+                        10,000円
+                      </td>
+
+                      <td>
+                        現金
+                      </td>
+
+                      <td>
+                        10,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  契約書へ使用する収入印紙は
+                  印紙税にあたるため、
+                  借方に「租税公課」を記載します。
+
+                  現金で購入したため、
+                  貸方には「現金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+          <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  租税公課との違い 01
+                </p>
+
+                <h3>
+                  法人税、住民税及び事業税
+                </h3>
+
+                <p>
+
+                  法人税や法人住民税など、
+                  会社の所得に対して課される税金は、
+                  一般的に
+                  「法人税、住民税及び事業税」
+                  などの勘定科目で処理します。
+
+                  一方、
+                  租税公課は、
+                  固定資産税や自動車税など、
+                  事業活動に関係する税金や
+                  公的負担金を管理する勘定科目です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  所得に対する税金か、事業活動に関する税金か
+
+                </div>
+
+              </article>
+
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  租税公課との違い 02
+                </p>
+
+                <h3>
+                  支払手数料
+                </h3>
+
+                <p>
+
+                  支払手数料は、
+                  行政機関や金融機関などへ支払う
+                  各種手数料を管理する
+                  費用の勘定科目です。
+
+                  一方、
+                  税金や法令に基づいて支払う
+                  公的負担金は、
+                  一般的に租税公課として
+                  処理します。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  手数料か、公的な税金・負担金か
+
+                </div>
+
+              </article>
+
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  租税公課との違い 03
+                </p>
+
+                <h3>
+                  通信費
+                </h3>
+
+                <p>
+
+                  郵便切手やレターパックなど、
+                  郵便料金として支払うものは
+                  一般的に通信費として処理します。
+
+                  一方、
+                  契約書などへ貼付する収入印紙は、
+                  印紙税にあたるため、
+                  租税公課として処理することが一般的です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  郵便料金か、印紙税か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              租税公課のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  税金なら何でも租税公課になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    いいえ。
+
+                    固定資産税や自動車税、
+                    印紙税などは
+                    一般的に租税公課で処理しますが、
+                    法人税や法人住民税などは
+                    別の勘定科目で処理することが
+                    一般的です。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  消費税も租税公課になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    必ずではありません。
+
+                    消費税は、
+                    税込経理方式・税抜経理方式など、
+                    会社の会計方針によって
+                    処理方法が異なります。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  収入印紙はいつ租税公課になりますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    契約書などへ貼付して
+                    使用した収入印紙は、
+                    一般的に租税公課として
+                    処理します。
+
+                    購入時ではなく、
+                    使用時に費用計上する会社もあるため、
+                    会計方針を確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  租税公課はどの財務諸表に表示されますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    租税公課は
+                    費用の勘定科目であり、
+                    一般的には
+                    損益計算書（PL）の
+                    販売費及び一般管理費などに
+                    表示されます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  租税公課を使う前に確認
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  事業活動に関係する税金や公的負担金か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  法人税や法人住民税ではないか確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  消費税の会計処理方法を確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  手数料ではなく税金・公的負担金であることを確認したか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  会社の会計方針に沿った処理になっているか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、
+              適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li><a href="#summary"><span>01</span>まずは一言で</a></li>
+              <li><a href="#examples"><span>02</span>使用例</a></li>
+              <li><a href="#judgment"><span>03</span>判断ポイント</a></li>
+              <li><a href="#amount"><span>04</span>金額の考え方</a></li>
+              <li><a href="#journal"><span>05</span>仕訳例</a></li>
+              <li><a href="#difference"><span>06</span>似た科目との違い</a></li>
+              <li><a href="#faq"><span>07</span>よくある疑問</a></li>
+              <li><a href="#check"><span>08</span>最終チェック</a></li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#search">逆引き検索</a>
+        <a href="../dictionary.html">勘定科目辞典</a>
+        <a href="../index.html#columns">初心者コラム</a>
+
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

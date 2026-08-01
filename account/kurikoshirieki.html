@@ -1,0 +1,1497 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="繰越利益剰余金とは何か、どのような金額を繰越利益剰余金として管理するのか、仕訳例や資本金・利益準備金との違いを経理初心者向けにやさしく解説します。"
+  >
+
+  <title>
+    繰越利益剰余金とは？増減する場面・仕訳例を解説｜勘定科目辞典｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは account フォルダの中に置くため、
+    ひとつ上の階層にある css フォルダへ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    次に作る、勘定科目詳細ページ専用CSSです。
+  -->
+  <link rel="stylesheet" href="../css/account-detail.css">
+</head>
+
+
+<body class="account-detail-page">
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#search">
+              逆引き検索
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#columns">
+              初心者コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../index.html#about">
+              このサイトについて
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- =========================
+         パンくずリスト
+    ========================== -->
+    <nav
+      class="account-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../dictionary.html">
+            勘定科目辞典
+          </a>
+        </li>
+
+        <li aria-current="page">
+          繰越利益剰余金
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- =========================
+         メインビジュアル
+    ========================== -->
+    <section class="account-hero">
+
+      <div class="wrapper account-hero__inner">
+
+        <div class="account-hero__content">
+
+          <p class="account-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            純資産の勘定科目
+
+          </p>
+
+
+          <h1 class="account-hero__title">
+            繰越利益剰余金
+          </h1>
+
+
+          <p class="account-hero__ruby">
+            くりこしりえきじょうよきん
+          </p>
+
+
+          <p class="account-hero__lead">
+
+            会社がこれまでの事業活動で得た利益のうち、
+            配当などに使用せず、
+            社内に積み立てて翌期以降へ繰り越した金額を
+            管理するときに使用する純資産の勘定科目です。
+
+          </p>
+
+
+          <div class="account-hero__tags">
+
+            <span>
+              純資産
+            </span>
+
+            <span>
+              利益の累積
+            </span>
+
+            <span>
+              翌期へ繰り越し
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側のメモカード -->
+        <aside class="account-hero__memo">
+
+          <p class="account-hero__memo-label">
+            BEGINNER'S MEMO
+          </p>
+
+          <p class="account-hero__memo-main">
+            過去の利益や損失を<br>
+            積み重ねて管理する科目。
+          </p>
+
+          <div class="account-hero__memo-line"></div>
+
+          <p class="account-hero__memo-sub">
+            利益が積み上がると増え、
+            赤字や配当などによって減ることがあります。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         本文エリア
+    ========================== -->
+    <section class="section account-main">
+
+      <div class="wrapper account-layout">
+
+
+        <!-- =====================
+             左側：本文
+        ====================== -->
+        <div class="account-content">
+
+
+          <!-- まずは一言で -->
+          <section
+            id="summary"
+            class="account-section account-section--summary"
+          >
+
+            <p class="account-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="account-section__title">
+              まずは一言でいうと
+            </h2>
+
+
+            <div class="account-answer-card">
+
+              <p class="account-answer-card__label">
+                繰越利益剰余金とは
+              </p>
+
+              <p class="account-answer-card__text">
+
+                会社が過去から積み上げてきた利益や損失のうち、
+                配当などに使用せず、
+                翌期以降へ繰り越している金額を
+                管理する純資産の勘定科目です。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- どんなものに使う？ -->
+          <section
+            id="examples"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="account-section__title">
+              どんなものに使う？
+            </h2>
+
+            <p class="account-section__lead">
+
+              繰越利益剰余金は、
+              会社がこれまでに得た利益や発生した損失を
+              翌期以降へ繰り越して管理するときに使用します。
+
+            </p>
+
+
+            <ul class="account-example-grid">
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    当期純利益の振り替え
+                  </h3>
+
+                  <p>
+                    決算で確定した当期純利益を
+                    翌期へ繰り越す場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    過去から積み上がった利益
+                  </h3>
+
+                  <p>
+                    過去の事業年度で得た利益のうち、
+                    社内に残している金額
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    配当による減少
+                  </h3>
+
+                  <p>
+                    株主への配当を行い、
+                    繰越利益剰余金を取り崩す場合
+                  </p>
+
+                </div>
+
+              </li>
+
+
+              <li class="account-example-card">
+
+                <span class="account-example-card__number">
+                  04
+                </span>
+
+                <div>
+
+                  <h3>
+                    当期純損失の振り替え
+                  </h3>
+
+                  <p>
+                    決算で赤字となり、
+                    当期純損失を翌期へ繰り越す場合
+                  </p>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+
+            <div class="account-mini-note">
+
+              <span class="account-mini-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                繰越利益剰余金は、
+                会社の銀行口座にある現金そのものではありません。
+
+                過去から積み重なった利益や損失を表す、
+                純資産の一部です。
+
+              </p>
+
+            </div>
+
+          </section>
+                    <!-- 判断ポイント -->
+          <section
+            id="judgment"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JUDGMENT
+            </p>
+
+            <h2 class="account-section__title">
+              繰越利益剰余金か迷ったときの判断ポイント
+            </h2>
+
+
+            <div class="judgment-list">
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  01
+                </p>
+
+                <div>
+
+                  <h3>
+                    過去の利益や損失の累積額か
+                  </h3>
+
+                  <p>
+
+                    過去の事業年度から積み重なった
+                    利益や損失を表す金額であるかを確認します。
+
+                    当期の売上や費用を
+                    直接記録するための勘定科目ではありません。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  02
+                </p>
+
+                <div>
+
+                  <h3>
+                    決算で確定した利益や損失か
+                  </h3>
+
+                  <p>
+
+                    当期の収益と費用を集計し、
+                    決算で確定した当期純利益または
+                    当期純損失であるかを確認します。
+
+                    決算振替によって、
+                    繰越利益剰余金の増減として処理します。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  03
+                </p>
+
+                <div>
+
+                  <h3>
+                    配当や利益処分による増減か
+                  </h3>
+
+                  <p>
+
+                    株主への配当や
+                    利益準備金への積み立てなどによって、
+                    繰越利益剰余金が減少することがあります。
+
+                    株主総会の決議内容や
+                    利益処分の資料を確認しましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="judgment-card">
+
+                <p class="judgment-card__number">
+                  04
+                </p>
+
+                <div>
+
+                  <h3>
+                    株主資本等変動計算書と一致しているか
+                  </h3>
+
+                  <p>
+
+                    繰越利益剰余金の期首残高、
+                    当期中の増減額、
+                    期末残高が正しくつながっているかを確認します。
+
+                    決算書や総勘定元帳とも
+                    照合しておきましょう。
+
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 金額の考え方 -->
+          <section
+            id="amount"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              AMOUNT GUIDE
+            </p>
+
+            <h2 class="account-section__title">
+              利益が出たらすべて繰越利益剰余金？
+            </h2>
+
+
+            <div class="amount-guide">
+
+              <div class="amount-guide__main">
+
+                <p class="amount-guide__answer">
+                  決算後に反映されます。
+                </p>
+
+                <p>
+
+                  日々の取引で利益が発生するたびに、
+                  繰越利益剰余金を直接増やすわけではありません。
+
+                </p>
+
+                <p>
+
+                  売上や費用をそれぞれの勘定科目で記録し、
+                  決算で確定した当期純利益または当期純損失を
+                  繰越利益剰余金へ振り替えます。
+
+                </p>
+
+              </div>
+
+
+              <div class="amount-guide__comparison">
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    決算前の収益・費用
+                  </span>
+
+                  <strong>
+                    各勘定科目
+                  </strong>
+
+                  <p>
+                    売上、仕入、給料手当、地代家賃など
+                  </p>
+
+                </div>
+
+
+                <div class="amount-guide__arrow" aria-hidden="true">
+                  →
+                </div>
+
+
+                <div class="amount-guide__item">
+
+                  <span>
+                    決算で確定した利益・損失
+                  </span>
+
+                  <strong>
+                    繰越利益剰余金
+                  </strong>
+
+                  <p>
+                    当期純利益または当期純損失の振り替え
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <p class="account-caution">
+
+              ※繰越利益剰余金の増減は、
+              決算振替、配当、利益準備金への積み立てなど、
+              それぞれの内容を確認して処理してください。
+
+            </p>
+
+          </section>
+
+
+
+          <!-- 仕訳例 -->
+          <section
+            id="journal"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              JOURNAL ENTRY
+            </p>
+
+            <h2 class="account-section__title">
+              繰越利益剰余金の仕訳例
+            </h2>
+
+
+            <!-- 仕訳例1 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 01
+                </span>
+
+                <h3>
+                  当期純利益を繰越利益剰余金へ振り替えた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                決算の結果、
+                当期純利益500,000円が確定し、
+                繰越利益剰余金へ振り替えました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="当期純利益を繰越利益剰余金へ振り替えたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        損益
+                      </td>
+
+                      <td>
+                        500,000円
+                      </td>
+
+                      <td>
+                        繰越利益剰余金
+                      </td>
+
+                      <td>
+                        500,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  決算で確定した当期純利益を
+                  翌期以降へ繰り越すため、
+                  借方に「損益」を記載します。
+
+                  純資産である繰越利益剰余金が増加するため、
+                  貸方に「繰越利益剰余金」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 仕訳例2 -->
+            <article class="journal-example">
+
+              <div class="journal-example__header">
+
+                <span>
+                  仕訳例 02
+                </span>
+
+                <h3>
+                  当期純損失を繰越利益剰余金へ振り替えた
+                </h3>
+
+              </div>
+
+
+              <p class="journal-example__description">
+
+                決算の結果、
+                当期純損失200,000円が確定し、
+                繰越利益剰余金へ振り替えました。
+
+              </p>
+
+
+              <div
+                class="journal-table-wrapper"
+                role="region"
+                aria-label="当期純損失を繰越利益剰余金へ振り替えたときの仕訳"
+                tabindex="0"
+              >
+
+                <table class="journal-table">
+
+                  <thead>
+
+                    <tr>
+                      <th scope="col">
+                        借方科目
+                      </th>
+
+                      <th scope="col">
+                        借方金額
+                      </th>
+
+                      <th scope="col">
+                        貸方科目
+                      </th>
+
+                      <th scope="col">
+                        貸方金額
+                      </th>
+                    </tr>
+
+                  </thead>
+
+
+                  <tbody>
+
+                    <tr>
+
+                      <td>
+                        繰越利益剰余金
+                      </td>
+
+                      <td>
+                        200,000円
+                      </td>
+
+                      <td>
+                        損益
+                      </td>
+
+                      <td>
+                        200,000円
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+
+              <div class="journal-example__explanation">
+
+                <span>
+                  解説
+                </span>
+
+                <p>
+
+                  決算で当期純損失が確定したため、
+                  純資産である繰越利益剰余金が減少します。
+
+                  借方に「繰越利益剰余金」、
+                  貸方に「損益」を記載します。
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </section>
+                    <!-- 似ている勘定科目 -->
+          <section
+            id="difference"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              DIFFERENCE
+            </p>
+
+            <h2 class="account-section__title">
+              間違えやすい勘定科目との違い
+            </h2>
+
+
+            <div class="difference-grid">
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  繰越利益剰余金との違い 01
+                </p>
+
+                <h3>
+                  資本金
+                </h3>
+
+                <p>
+
+                  資本金は、
+                  株主や出資者から払い込まれた
+                  会社の元手となる資金です。
+
+                  一方、繰越利益剰余金は、
+                  会社が営業活動によって積み上げた
+                  利益や損失の累積額を管理する
+                  純資産の勘定科目です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  出資による資金か、営業活動による利益の累積か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  繰越利益剰余金との違い 02
+                </p>
+
+                <h3>
+                  利益準備金
+                </h3>
+
+                <p>
+
+                  利益準備金は、
+                  会社法などに基づき、
+                  配当時などに積み立てる利益剰余金の一部です。
+
+                  繰越利益剰余金は、
+                  配当前後の利益の残高や
+                  当期純利益・当期純損失の振替先となる
+                  勘定科目です。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  法令等に基づき積み立てる金額か、利益の累積額か
+
+                </div>
+
+              </article>
+
+
+              <article class="difference-card">
+
+                <p class="difference-card__label">
+                  繰越利益剰余金との違い 03
+                </p>
+
+                <h3>
+                  当期純利益
+                </h3>
+
+                <p>
+
+                  当期純利益は、
+                  1年間の経営成績として計算された利益です。
+
+                  決算で確定した後、
+                  繰越利益剰余金へ振り替えられることで、
+                  翌期以降へ利益が引き継がれます。
+
+                </p>
+
+                <div class="difference-card__point">
+
+                  <span>
+                    判断の軸
+                  </span>
+
+                  当期だけの利益か、累積した利益か
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- よくある疑問 -->
+          <section
+            id="faq"
+            class="account-section"
+          >
+
+            <p class="account-section__english">
+              FAQ
+            </p>
+
+            <h2 class="account-section__title">
+              繰越利益剰余金のよくある疑問
+            </h2>
+
+
+            <div class="account-faq-list">
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  繰越利益剰余金は現金と同じですか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    いいえ。
+
+                    繰越利益剰余金は、
+                    利益や損失の累積額を表す純資産であり、
+                    現金や普通預金そのものではありません。
+
+                    利益があっても、
+                    現金が同じ金額だけ残っているとは限りません。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  繰越利益剰余金がマイナスになることはありますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    はい。
+
+                    赤字が続いた場合や、
+                    配当などによって利益剰余金が減少した場合は、
+                    繰越利益剰余金がマイナスになることがあります。
+
+                    これを「繰越欠損金」と呼ぶこともあります。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  売上が増えると繰越利益剰余金も増えますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    売上が増えただけでは増えません。
+
+                    売上から仕入や経費などを差し引き、
+                    決算で当期純利益が確定した後、
+                    繰越利益剰余金へ振り替えられます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+
+
+              <details class="account-faq">
+
+                <summary>
+
+                  <span class="account-faq__question">
+                    Q
+                  </span>
+
+                  繰越利益剰余金はどこで確認できますか？
+
+                  <span
+                    class="account-faq__icon"
+                    aria-hidden="true"
+                  ></span>
+
+                </summary>
+
+
+                <div class="account-faq__answer">
+
+                  <span>
+                    A
+                  </span>
+
+                  <p>
+
+                    貸借対照表や
+                    株主資本等変動計算書で確認できます。
+
+                    また、
+                    総勘定元帳や決算書を確認すると、
+                    増減の内容も把握できます。
+
+                  </p>
+
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終チェック -->
+          <section
+            id="check"
+            class="account-section account-section--check"
+          >
+
+            <div class="final-check">
+
+              <div class="final-check__heading">
+
+                <p>
+                  FINAL CHECK
+                </p>
+
+                <h2>
+                  繰越利益剰余金を確認するときのポイント
+                </h2>
+
+              </div>
+
+
+              <ul class="final-check__list">
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  過去から累積した利益や損失か
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  決算で確定した利益・損失を反映しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  配当や利益処分の内容を反映しているか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  資本金や利益準備金など他の純資産科目と混同していないか
+                </li>
+
+                <li>
+                  <span aria-hidden="true"></span>
+                  株主資本等変動計算書や貸借対照表と一致しているか
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="account-disclaimer">
+
+            <p class="account-disclaimer__title">
+              ご利用にあたって
+            </p>
+
+            <p>
+
+              このページは、経理初心者向けに一般的な処理方法を
+              分かりやすく説明したものです。
+
+              実際の会計処理や税務上の取り扱いは、
+              取引内容、会社の会計方針、適用する制度などにより
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 下部ナビ -->
+          <div class="account-page-navigation">
+
+            <a
+              href="../dictionary.html"
+              class="account-page-navigation__back"
+            >
+
+              <span aria-hidden="true">
+                ←
+              </span>
+
+              勘定科目一覧へ戻る
+
+            </a>
+
+
+            <a
+              href="../index.html#search"
+              class="account-page-navigation__search"
+            >
+
+              逆引き検索を使う
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             右側：目次
+        ====================== -->
+        <aside class="account-sidebar">
+
+          <p class="account-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="account-sidebar__title">
+            このページの内容
+          </h2>
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="account-sidebar__list">
+
+              <li><a href="#summary"><span>01</span>まずは一言で</a></li>
+              <li><a href="#examples"><span>02</span>使用例</a></li>
+              <li><a href="#judgment"><span>03</span>判断ポイント</a></li>
+              <li><a href="#amount"><span>04</span>金額の考え方</a></li>
+              <li><a href="#journal"><span>05</span>仕訳例</a></li>
+              <li><a href="#difference"><span>06</span>似た科目との違い</a></li>
+              <li><a href="#faq"><span>07</span>よくある疑問</a></li>
+              <li><a href="#check"><span>08</span>最終チェック</a></li>
+
+            </ol>
+
+          </nav>
+
+
+          <div class="account-sidebar__support">
+
+            <p>
+              購入したものから<br>
+              勘定科目を探したい？
+            </p>
+
+            <a href="../index.html#search">
+
+              逆引き検索へ
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html">ホーム</a>
+        <a href="../index.html#search">逆引き検索</a>
+        <a href="../dictionary.html">勘定科目辞典</a>
+        <a href="../index.html#columns">初心者コラム</a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    accountフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>
