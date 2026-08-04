@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="経理初心者の『これどうする？』をやさしく解決するWebサイトです。勘定科目、仕訳、消費税などを分かりやすく案内します。">
-  <title>経理の相棒｜経理初心者のためのやさしい検索サイト</title>
+  <title>経理の相棒｜経理初心者のための検索サイト</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,10 +41,10 @@
             <a href="dictionary.html">勘定科目辞典</a>
           </li>
 
-          <li>
+          <!-- <li> 
             <a href="index.html#columns">初心者コラム</a>
           </li>
-
+-->
           <li>
             <a href="index.html#about">このサイトについて</a>
           </li>
@@ -61,7 +61,7 @@
         <div class="hero__copy">
           <p class="eyebrow"><span></span>経理初心者のための案内所</p>
           <h1>経理の「これどうする？」を、<br><em>すぐ解決。</em></h1>
-          <p class="hero__lead">買ったもの、上司に言われた言葉、迷った仕訳。<br>むずかしい経理を、検索からやさしく案内します。</p>
+          <p class="hero__lead">買ったもの、取引内容、迷った仕訳。<br>むずかしい経理を、検索からわかりやすく案内します。</p>
 
           <div class="search-panel">
   <p class="search-label">購入したもの・取引内容から調べる</p>
@@ -168,6 +168,7 @@
   勘定科目辞典を見る <span>→</span>
 </a>          </article>
 
+<!-------------------------------------------------------ー仕訳案内・消費税ガイドコメントアウト
           <article class="service-card">
             <div class="service-card__top"><span>03</span><b>JOURNAL</b></div>
             <div class="service-card__icon">↔</div>
@@ -187,10 +188,128 @@
             <div class="service-card__example"><span>例</span>切手・家賃・保険料</div>
             <button type="button" data-demo="切手">区分例を見る <span>→</span></button>
           </article>
+           -->
+          <article
+  class="service-card service-card--coming-soon"
+  aria-label="仕訳案内は現在公開準備中です"
+>
+
+  <div class="service-card__top">
+    <span>03</span>
+    <b>JOURNAL</b>
+  </div>
+
+  <div class="service-card__icon">
+    ↔
+  </div>
+
+  <p class="service-card__ruby">
+    仕訳が分からない
+  </p>
+
+  <h3>
+    仕訳案内
+  </h3>
+
+  <p>
+    取引内容から一般的な仕訳例と、
+    借方・貸方の考え方を案内します。
+  </p>
+
+  <div class="service-card__example">
+    <span>例</span>
+    電車代を現金で払った
+  </div>
+
+  <p class="service-card__disabled-link">
+    公開準備中 <span>→</span>
+  </p>
+
+
+  <!-- 公開準備中の表示 -->
+  <div
+    class="service-card__coming-soon"
+    aria-hidden="true"
+  >
+
+    <div class="service-card__coming-soon-inner">
+
+      <p class="service-card__coming-soon-english">
+        COMING SOON
+      </p>
+
+      <strong>
+        公開準備中
+      </strong>
+
+
+    </div>
+
+  </div>
+
+</article>
+<article
+  class="service-card service-card--coming-soon"
+  aria-label="消費税ガイドは現在公開準備中です"
+>
+
+  <div class="service-card__top">
+    <span>04</span>
+    <b>TAX</b>
+  </div>
+
+  <div class="service-card__icon">
+    %
+  </div>
+
+  <p class="service-card__ruby">
+    課税区分で迷う
+  </p>
+
+  <h3>
+    消費税ガイド
+  </h3>
+
+  <p>
+    課税・非課税・不課税・対象外の違いを、
+    身近な例から確認できます。
+  </p>
+
+  <div class="service-card__example">
+    <span>例</span>
+    切手・家賃・保険料
+  </div>
+
+  <p class="service-card__disabled-link">
+    公開準備中 <span>→</span>
+  </p>
+
+
+  <!-- 公開準備中の表示 -->
+  <div
+    class="service-card__coming-soon"
+    aria-hidden="true"
+  >
+
+    <div class="service-card__coming-soon-inner">
+
+      <p class="service-card__coming-soon-english">
+        COMING SOON
+      </p>
+
+      <strong>
+        公開準備中
+      </strong>
+
+    </div>
+
+  </div>
+
+</article>
         </div>
       </div>
     </section>
-
+<!-- 
     <section id="columns" class="section columns">
       <div class="wrapper">
         <header class="section-heading section-heading--left">
@@ -215,7 +334,7 @@
         </div>
       </div>
     </section>
-
+ -->
     <section id="about" class="section about">
       <div class="wrapper about__inner">
         <div><p class="about__english">ABOUT</p><h2>経理を、もう少し<br>分かりやすく。</h2></div>
@@ -235,8 +354,8 @@
 
   <footer class="footer">
     <div class="wrapper footer__inner">
-      <div><a href="#top" class="logo logo--footer"><span class="logo__icon" aria-hidden="true"><span class="logo__calculator"><span class="logo__screen"></span><span class="logo__buttons"><span></span><span></span><span></span><span></span><span></span><span></span></span></span></span><span class="logo__text"><span class="logo__name">経理の相棒</span><span class="logo__sub">BEGINNER ACCOUNTING GUIDE</span></span></a><p>経理の「これどうする？」を、すぐ解決。</p></div>
-      <nav aria-label="フッターメニュー"><a href="#services">できること</a><a href="#columns">初心者コラム</a><a href="#about">このサイトについて</a></nav>
+      <div><a href="#top" class="logo logo--footer"><span class="logo__icon" aria-hidden="true"><span class="logo__calculator"><span class="logo__screen"></span><span class="logo__buttons"><span></span><span></span><span></span><span></span><span></span><span></span></span></span></span><span class="logo__text"><span class="logo__name">経理の相棒</span><span class="logo__sub">BEGINNER ACCOUNTING GUIDE</span></span></a><p>経理初心者の「これどうする？」を、すぐ解決。</p></div>
+      <nav aria-label="フッターメニュー"><a href="index.html">逆引き検索</a><a href="dictionary.html">勘定科目辞典</a><!-- <a href="#columns">初心者コラム</a>--><a href="#about">このサイトについて</a></nav> 
     </div>
     <div class="footer__bottom"><div class="wrapper"><p>© 2026 経理の相棒</p><a href="#top">PAGE TOP ↑</a></div></div>
   </footer>

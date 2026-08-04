@@ -387,6 +387,127 @@ button {
 .footer__bottom > div { display: flex; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; font-size: .72rem; }
 .footer__bottom p { margin: 0; }
 
+/* ==============================
+   公開準備中のサービスカード
+============================== */
+
+.service-card--coming-soon {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+
+/* カード内の元の内容を薄くする */
+.service-card--coming-soon
+  > *:not(.service-card__coming-soon) {
+  opacity: .34;
+  filter: grayscale(.15);
+}
+
+
+/* 既存のクリック範囲を無効化 */
+.service-card--coming-soon
+  > button::before,
+.service-card--coming-soon
+  > a::before {
+  content: none;
+}
+
+
+/* カード全体に重ねる半透明レイヤー */
+.service-card__coming-soon {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  border-radius: inherit;
+  background: rgba(240, 246, 252, .7);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+
+/* 中央の案内カード */
+.service-card__coming-soon-inner {
+  width: min(100%, 285px);
+  padding: 24px 22px;
+  border: 1px solid rgba(63, 119, 181, .22);
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, .94);
+  box-shadow:
+    0 14px 35px rgba(31, 63, 105, .12);
+}
+
+
+/* COMING SOON */
+.service-card__coming-soon-english {
+  margin: 0;
+  color: var(--blue);
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+
+/* 公開準備中 */
+.service-card__coming-soon-inner strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+
+
+/* 補足メッセージ */
+.service-card__coming-soon-inner span {
+  display: block;
+  margin-top: 8px;
+  color: var(--gray);
+  font-size: .75rem;
+  line-height: 1.75;
+}
+
+
+/* 元の下部表示 */
+.service-card__disabled-link {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--gray);
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+
+/* 準備中カードではホバー演出を止める */
+.service-card--coming-soon:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: 0 12px 35px rgba(20, 35, 59, .06);
+}
+
+
+@media (max-width: 640px) {
+
+  .service-card__coming-soon {
+    padding: 18px;
+  }
+
+  .service-card__coming-soon-inner {
+    padding: 20px 17px;
+  }
+
+  .service-card__coming-soon-inner span br {
+    display: none;
+  }
+
+}
+
 @media (max-width: 900px) {
   .header {
     position: fixed;
