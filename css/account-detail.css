@@ -277,8 +277,15 @@
 
 .account-content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   min-width: 0;
   gap: 30px;
+}
+.account-section,
+.journal-example,
+.journal-table-wrapper {
+  min-width: 0;
+  max-width: 100%;
 }
 
 
@@ -949,23 +956,19 @@
    最終チェック
 ================================================== */
 
-.account-section--check {
+.account-section--check{
   padding: 0;
-  overflow: hidden;
   border: none;
+  background: transparent;
+  box-shadow: none;
+ 
 }
-
-.final-check {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  background:
-    linear-gradient(
-      135deg,
-      var(--navy, #183153),
-      #234b73
-    );
+.final-check{
+  background: var(--navy);
+  border-radius: 22px;
+  overflow: hidden;
+  
 }
-
 .final-check__heading {
   padding: 34px;
   border-right: 1px solid rgba(255, 255, 255, 0.14);
@@ -1412,11 +1415,20 @@
   .account-answer-card {
     padding: 26px 20px 29px;
   }
+  .account-section--summary{
+    overflow:hidden;
+}
 
   .account-answer-card__text {
     font-size: 0.92rem;
     line-height: 1.9;
   }
+  .account-answer-card{
+    margin-bottom:0;
+}
+.account-section--summary{
+    padding-bottom:0;
+}
 
 
   /* 使用例 */
@@ -1631,5 +1643,32 @@
     width: 38px;
     height: 38px;
   }
+  /* ==================================================
+   スマホ：一言回答の青背景をカード幅いっぱいにする
+================================================== */
 
+@media (max-width: 640px) {
+
+  .account-section.account-section--summary {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+}
+/* 最終チェックだけ左右の余白をなくす */
+.account-section.account-section--check {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.account-section.account-section--check .final-check {
+  width: 100%;
+  margin: 0;
+  background: var(--navy, #183153);
+  border-radius: 22px;
+  overflow: hidden;
+}
 }
