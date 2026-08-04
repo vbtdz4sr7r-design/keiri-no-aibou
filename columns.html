@@ -1,0 +1,2084 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="経理初心者がつまずきやすい疑問を、やさしく解説する経理コラムです。借方・貸方の基本や、似ている勘定科目の違い、経理実務の考え方を分かりやすく紹介します。"
+  >
+
+  <title>
+    経理コラム｜経理の疑問をやさしく解説｜経理の相棒
+  </title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- ==============================
+       初心者コラム一覧ページ専用CSS
+  ============================== -->
+  <style>
+
+    /* ==============================
+       パンくずリスト
+    ============================== */
+
+    .column-breadcrumb {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .column-breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--gray);
+      font-size: .75rem;
+    }
+
+    .column-breadcrumb li:not(:last-child)::after {
+      content: "/";
+      margin-left: 8px;
+      color: #b1bdca;
+    }
+
+    .column-breadcrumb a:hover {
+      color: var(--blue);
+    }
+
+
+    /* ==============================
+       メインビジュアル
+    ============================== */
+
+    .column-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 95px;
+      background:
+        linear-gradient(
+          135deg,
+          #f9fbfd 0%,
+          #eef6fc 55%,
+          #f8fafc 100%
+        );
+    }
+
+    .column-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .42;
+      background-image:
+        linear-gradient(
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        );
+      background-size: 42px 42px;
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 94%
+        );
+    }
+
+    .column-hero__orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .column-hero__orb--one {
+      top: -100px;
+      right: 7%;
+      width: 300px;
+      height: 300px;
+      background:
+        radial-gradient(
+          circle at 35% 35%,
+          rgba(255, 255, 255, .96),
+          rgba(135, 186, 226, .28) 48%,
+          rgba(63, 119, 181, .07) 73%
+        );
+    }
+
+    .column-hero__orb--two {
+      bottom: -140px;
+      left: 2%;
+      width: 270px;
+      height: 270px;
+      background:
+        radial-gradient(
+          circle at 40% 35%,
+          rgba(255, 255, 255, .92),
+          rgba(191, 216, 237, .31) 50%,
+          rgba(63, 119, 181, .06) 75%
+        );
+    }
+
+    .column-hero__inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 370px;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .column-hero__copy {
+      max-width: 760px;
+    }
+
+    .column-hero__copy h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 1.25;
+      letter-spacing: -.04em;
+    }
+
+    .column-hero__copy h1 em {
+      color: var(--blue);
+      font-style: normal;
+    }
+
+    .column-hero__lead {
+      margin: 24px 0 0;
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 2;
+    }
+
+
+    /* 右側のノートカード */
+
+    .column-hero__note {
+      position: relative;
+      padding: 32px;
+      border: 1px solid rgba(220, 229, 239, .95);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .93);
+      box-shadow: var(--shadow);
+      transform: rotate(1.8deg);
+    }
+
+    .column-hero__note::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 23px;
+      width: 52px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--light-blue);
+    }
+
+    .column-hero__note small {
+      display: block;
+      margin-top: 16px;
+      color: var(--blue);
+      font-size: .65rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+    }
+
+    .column-hero__note strong {
+      display: block;
+      margin-top: 14px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.55;
+    }
+
+    .column-hero__note p {
+      margin: 11px 0 0;
+      color: var(--gray);
+      font-size: .82rem;
+      line-height: 1.8;
+    }
+
+    .column-hero__note-line {
+      height: 1px;
+      margin: 22px 0;
+      background: var(--line);
+    }
+
+    .column-hero__note-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .column-hero__note-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--gray);
+      font-size: .76rem;
+    }
+
+    .column-hero__note-list li::before {
+      content: "";
+      position: absolute;
+      top: .55em;
+      left: 1px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+
+    /* ==============================
+       コラム一覧
+    ============================== */
+
+    .column-list-section {
+      background: var(--pale);
+    }
+
+
+    /* 検索・絞り込み */
+
+    .column-tools {
+      margin-bottom: 43px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow:
+        0 12px 35px rgba(20, 35, 59, .06);
+    }
+
+    .column-search label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: .75rem;
+      font-weight: 800;
+    }
+
+    .column-search__row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+
+    .column-search input {
+      width: 100%;
+      min-width: 0;
+      padding: 15px 17px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      outline: 0;
+      color: var(--ink);
+      background: #fbfdff;
+    }
+
+    .column-search input:focus {
+      border-color: var(--blue);
+      box-shadow:
+        0 0 0 4px rgba(63, 119, 181, .12);
+    }
+
+    .column-search__button {
+      min-width: 105px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 13px;
+      color: #fff;
+      font-weight: 800;
+      background: var(--navy);
+      box-shadow:
+        0 8px 18px rgba(31, 63, 105, .2);
+    }
+
+    .column-search__button:hover {
+      background: var(--blue);
+    }
+
+    .column-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .column-filter {
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: .75rem;
+      font-weight: 800;
+      background: #fff;
+      transition:
+        color .2s,
+        border-color .2s,
+        background .2s;
+    }
+
+    .column-filter:hover,
+    .column-filter.is-active {
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .column-status {
+      min-height: 27px;
+      margin: 15px 0 0;
+      color: var(--gray);
+      font-size: .78rem;
+    }
+
+
+    /* コラムカード */
+
+    .column-list-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .beginner-column-card {
+      position: relative;
+      min-height: 390px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow:
+        0 12px 35px rgba(20, 35, 59, .06);
+      transition:
+        transform .25s,
+        border-color .25s,
+        box-shadow .25s;
+    }
+
+    .beginner-column-card:hover {
+      transform: translateY(-6px);
+      border-color: #b8d2e8;
+      box-shadow: var(--shadow);
+    }
+
+    .beginner-column-card[hidden] {
+      display: none;
+    }
+
+    .beginner-column-card__link {
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+    }
+
+    .beginner-column-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .beginner-column-card__category {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: .62rem;
+      font-weight: 900;
+      letter-spacing: .07em;
+      background: var(--light-blue);
+    }
+
+    .beginner-column-card__number {
+      color: #b2bfcc;
+      font: 900 .7rem/1 monospace;
+      letter-spacing: .08em;
+    }
+
+
+    /* カード上部の図解 */
+
+    .beginner-column-card__visual {
+      position: relative;
+      min-height: 115px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 17px;
+      color: var(--navy);
+      background:
+        linear-gradient(
+          135deg,
+          #f5f9fd,
+          #eaf3fa
+        );
+    }
+
+    .beginner-column-card__visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .48;
+      background-image:
+        linear-gradient(
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(63, 119, 181, .08) 1px,
+          transparent 1px
+        );
+      background-size: 25px 25px;
+    }
+
+    .beginner-column-card__comparison {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      text-align: center;
+    }
+
+    .beginner-column-card__comparison strong {
+      display: grid;
+      min-width: 82px;
+      min-height: 48px;
+      place-items: center;
+      padding: 8px 12px;
+      border: 1px solid rgba(63, 119, 181, .18);
+      border-radius: 12px;
+      color: var(--navy);
+      font-size: .78rem;
+      background: rgba(255, 255, 255, .9);
+      box-shadow:
+        0 7px 18px rgba(31, 63, 105, .07);
+    }
+
+    .beginner-column-card__comparison span {
+      color: var(--blue);
+      font-size: .72rem;
+      font-weight: 900;
+    }
+
+
+    /* カード本文 */
+
+    .beginner-column-card__english {
+      margin: 22px 0 0;
+      color: var(--blue);
+      font-size: .64rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .beginner-column-card h2 {
+      margin: 7px 0 0;
+      font-size: 1.2rem;
+      line-height: 1.55;
+    }
+
+    .beginner-column-card__description {
+      margin: 10px 0 0;
+      color: var(--gray);
+      font-size: .8rem;
+      line-height: 1.8;
+    }
+
+    .beginner-column-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 13px;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .beginner-column-card__footer span:first-child {
+      color: var(--gray);
+      font-size: .7rem;
+      font-weight: 800;
+    }
+
+    .beginner-column-card__arrow {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--navy);
+      background: #fff;
+      transition:
+        transform .25s,
+        color .25s,
+        border-color .25s,
+        background .25s;
+    }
+
+    .beginner-column-card:hover
+    .beginner-column-card__arrow {
+      transform: translate(3px, -3px);
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+
+    /* 公開準備中カード */
+
+    .beginner-column-card--coming-soon {
+      cursor: default;
+    }
+
+    .beginner-column-card--coming-soon:hover {
+      transform: none;
+      border-color: var(--line);
+      box-shadow:
+        0 12px 35px rgba(20, 35, 59, .06);
+    }
+
+    .beginner-column-card--coming-soon
+    > *:not(.beginner-column-card__coming-soon) {
+      opacity: .34;
+      filter: grayscale(.1);
+    }
+
+    .beginner-column-card__coming-soon {
+      position: absolute;
+      z-index: 5;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background:
+        rgba(240, 246, 252, .72);
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+    }
+
+    .beginner-column-card__coming-soon-inner {
+      width: min(100%, 250px);
+      padding: 23px 20px;
+      border: 1px solid rgba(63, 119, 181, .22);
+      border-radius: 17px;
+      text-align: center;
+      background:
+        rgba(255, 255, 255, .95);
+      box-shadow:
+        0 14px 35px rgba(31, 63, 105, .12);
+    }
+
+    .beginner-column-card__coming-soon-inner small {
+      display: block;
+      color: var(--blue);
+      font-size: .63rem;
+      font-weight: 900;
+      letter-spacing: .17em;
+    }
+
+    .beginner-column-card__coming-soon-inner strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: 1.08rem;
+    }
+
+    .beginner-column-card__coming-soon-inner p {
+      margin: 8px 0 0;
+      color: var(--gray);
+      font-size: .74rem;
+      line-height: 1.75;
+    }
+
+
+    /* 検索結果なし */
+
+    .column-empty {
+      display: none;
+      padding: 45px 25px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--gray);
+      background: #fff;
+    }
+
+    .column-empty.is-visible {
+      display: block;
+    }
+
+    .column-empty strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+
+    /* ==============================
+       このコラムで目指すこと
+    ============================== */
+
+    .column-guide {
+      background: #fff;
+    }
+
+    .column-guide__inner {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .column-guide__copy h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.4;
+    }
+
+    .column-guide__copy p {
+      color: var(--gray);
+      line-height: 1.9;
+    }
+
+    .column-guide__points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .column-guide__point {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 17px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--pale);
+    }
+
+    .column-guide__point > span {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border-radius: 14px;
+      color: var(--blue);
+      font: 900 .72rem/1 monospace;
+      background: var(--light-blue);
+    }
+
+    .column-guide__point h3,
+    .column-guide__point p {
+      margin: 0;
+    }
+
+    .column-guide__point h3 {
+      font-size: 1rem;
+    }
+
+    .column-guide__point p {
+      margin-top: 3px;
+      color: var(--gray);
+      font-size: .78rem;
+    }
+
+
+    /* ==============================
+       レスポンシブ
+    ============================== */
+
+    @media (max-width: 900px) {
+
+      .column-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .column-hero__note {
+        max-width: 540px;
+      }
+
+      .column-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .column-guide__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+    }
+
+
+    @media (max-width: 640px) {
+
+      .column-hero {
+        padding: 70px 0 68px;
+      }
+
+      .column-hero__copy h1 {
+        font-size:
+          clamp(2.25rem, 11vw, 3.5rem);
+      }
+
+      .column-hero__lead br {
+        display: none;
+      }
+
+      .column-hero__note {
+        padding: 26px;
+        border-radius: 21px;
+      }
+
+      .column-tools {
+        padding: 17px;
+      }
+
+      .column-search__row {
+        grid-template-columns: 1fr;
+      }
+
+      .column-search__button {
+        min-height: 51px;
+      }
+
+      .column-filter {
+        padding: 7px 12px;
+      }
+
+      .column-list-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .beginner-column-card,
+      .beginner-column-card__link {
+        min-height: 365px;
+      }
+
+      .beginner-column-card__link {
+        padding: 22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- ==============================
+       ヘッダー
+  ============================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span
+          class="logo__icon"
+          aria-hidden="true"
+        >
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="index.html#search">
+              勘定科目逆引き
+            </a>
+          </li>
+
+          <li>
+            <a href="dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="columns.html">
+              経理コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="tax.html">
+              消費税ガイド
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- ==============================
+         パンくずリスト
+    ============================== -->
+    <nav
+      class="column-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li aria-current="page">
+          初心者コラム
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- ==============================
+         メインビジュアル
+    ============================== -->
+    <section class="column-hero">
+
+      <div
+        class="column-hero__orb
+               column-hero__orb--one"
+      ></div>
+
+      <div
+        class="column-hero__orb
+               column-hero__orb--two"
+      ></div>
+
+
+      <div class="column-hero__inner wrapper">
+
+        <div class="column-hero__copy">
+
+          <p class="eyebrow">
+
+            <span></span>
+
+            BEGINNER COLUMNS
+
+          </p>
+
+          <h1>
+            点と点がつながると、<br>
+            <em>経理はもっと分かりやすい。</em>
+          </h1>
+
+          <p class="column-hero__lead">
+
+            似ている勘定科目の違いや、
+            借方・貸方の考え方など、<br>
+
+            経理初心者が最初につまずきやすい疑問を
+            一つずつやさしく解説します。
+
+          </p>
+
+        </div>
+
+
+
+        <aside
+          class="column-hero__note"
+          aria-label="初心者コラムについて"
+        >
+
+          <small>
+            ACCOUNTING NOTE
+          </small>
+
+          <strong>
+            暗記するのではなく、<br>
+            理由から理解する。
+          </strong>
+
+          <p>
+            「どうしてこの処理になるのか」が分かると、経理の知識は自然につながっていきます。
+          </p>
+
+          <div class="column-hero__note-line"></div>
+
+          <ul class="column-hero__note-list">
+
+            <li>
+              似ている勘定科目を比較
+            </li>
+
+            <li>
+              実務で迷うポイントを整理
+            </li>
+
+            <li>
+              簿記の基本をやさしく解説
+            </li>
+
+          </ul>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         初心者コラム一覧
+    ============================== -->
+    <section
+      class="section column-list-section"
+    >
+
+      <div class="wrapper">
+
+        <div class="section-heading">
+
+          <p>
+            COLUMN LIST
+          </p>
+
+          <h2>
+            知りたいテーマから探す
+          </h2>
+
+          <span>
+            キーワードを入力するか、コラムの分類を選択してください。
+          </span>
+
+        </div>
+
+
+
+        <!-- 検索・分類ボタン -->
+        <div class="column-tools">
+
+          <div class="column-search">
+
+            <label for="column-search-input">
+              初心者コラムを検索
+            </label>
+
+            <div class="column-search__row">
+
+              <input
+                id="column-search-input"
+                type="search"
+                placeholder="例：借方、売掛金、前払金"
+                autocomplete="off"
+              >
+
+              <button
+                class="column-search__button"
+                id="column-search-button"
+                type="button"
+              >
+                検索
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="column-filters"
+            aria-label="初心者コラムの分類"
+          >
+
+            <button
+              class="column-filter is-active"
+              type="button"
+              data-column-category="all"
+            >
+              すべて
+            </button>
+
+            <button
+              class="column-filter"
+              type="button"
+              data-column-category="basic"
+            >
+              簿記の基本
+            </button>
+
+            <button
+              class="column-filter"
+              type="button"
+              data-column-category="difference"
+            >
+              科目の違い
+            </button>
+
+            <button
+              class="column-filter"
+              type="button"
+              data-column-category="practice"
+            >
+              実務の疑問
+            </button>
+
+          </div>
+
+
+          <p
+            class="column-status"
+            id="column-status"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+
+
+        <!-- 検索結果なし -->
+        <div
+          class="column-empty"
+          id="column-empty"
+        >
+
+          <strong>
+            該当する初心者コラムが見つかりませんでした。
+          </strong>
+
+          別の言葉や、短いキーワードで検索してみてください。
+
+        </div>
+
+
+
+        <!-- コラムカード一覧 -->
+        <div class="column-list-grid">
+
+
+          <!-- コラム01 -->
+          <article
+            class="beginner-column-card"
+            data-column-category="basic"
+            data-column-keywords="借方 貸方 左右 簿記 基本 仕訳"
+          >
+
+            <a
+              class="beginner-column-card__link"
+              href="column/debit-credit.html"
+            >
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  簿記の基本
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 01
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    借方
+                  </strong>
+
+                  <span>
+                    ↔
+                  </span>
+
+                  <strong>
+                    貸方
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                DEBIT &amp; CREDIT
+              </p>
+
+              <h2>
+                借方・貸方って、結局どういう意味？
+              </h2>
+
+              <p class="beginner-column-card__description">
+                「左と右」と覚えるだけでは分かりにくい借方・貸方を、資産・費用・収益の動きから整理します。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  約5分で読めます
+                </span>
+
+                <span class="beginner-column-card__arrow">
+                  ↗
+                </span>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- コラム02 -->
+          <article
+            class="beginner-column-card"
+            data-column-category="difference"
+            data-column-keywords="売掛金 未収金 違い 本業 売上 未回収"
+          >
+
+            <a
+              class="beginner-column-card__link"
+              href="column/urikakekin-mishuukin.html"
+            >
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  科目の違い
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 02
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    売掛金
+                  </strong>
+
+                  <span>
+                    VS
+                  </span>
+
+                  <strong>
+                    未収金
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                ACCOUNTS RECEIVABLE
+              </p>
+
+              <h2>
+                売掛金と未収金の違い
+              </h2>
+
+              <p class="beginner-column-card__description">
+                どちらも「まだ受け取っていないお金」。本業の取引かどうかという判断軸から違いを解説します。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  約4分で読めます
+                </span>
+
+                <span class="beginner-column-card__arrow">
+                  ↗
+                </span>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- コラム03 -->
+          <article
+            class="beginner-column-card"
+            data-column-category="difference"
+            data-column-keywords="買掛金 未払金 違い 仕入 後払い 支払義務"
+          >
+
+            <a
+              class="beginner-column-card__link"
+              href="column/kaikakekin-mibaraikin.html"
+            >
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  科目の違い
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 03
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    買掛金
+                  </strong>
+
+                  <span>
+                    VS
+                  </span>
+
+                  <strong>
+                    未払金
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                ACCOUNTS PAYABLE
+              </p>
+
+              <h2>
+                買掛金と未払金の違い
+              </h2>
+
+              <p class="beginner-column-card__description">
+                どちらも後日支払うお金ですが、商品の仕入れか、それ以外の取引かによって使用する科目が変わります。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  約4分で読めます
+                </span>
+
+                <span class="beginner-column-card__arrow">
+                  ↗
+                </span>
+
+              </div>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- コラム04：準備中 -->
+          <article
+            class="
+              beginner-column-card
+              beginner-column-card--coming-soon
+            "
+            data-column-category="difference"
+            data-column-keywords="前払金 前払費用 違い 商品 サービス"
+            aria-label="前払金と前払費用の違いは現在公開準備中です"
+          >
+
+            <div class="beginner-column-card__link">
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  科目の違い
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 04
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    前払金
+                  </strong>
+
+                  <span>
+                    VS
+                  </span>
+
+                  <strong>
+                    前払費用
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                ADVANCE PAYMENT
+              </p>
+
+              <h2>
+                前払金と前払費用の違い
+              </h2>
+
+              <p class="beginner-column-card__description">
+                商品などの代金を先に支払った場合と、将来受けるサービス代を先に支払った場合の違いを整理します。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  公開準備中
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="beginner-column-card__coming-soon"
+              aria-hidden="true"
+            >
+
+              <div class="beginner-column-card__coming-soon-inner">
+
+                <small>
+                  COMING SOON
+                </small>
+
+                <strong>
+                  公開準備中
+                </strong>
+
+                <p>
+                  初心者にも違いが伝わるよう、現在内容を整えています。
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- コラム05：準備中 -->
+          <article
+            class="
+              beginner-column-card
+              beginner-column-card--coming-soon
+            "
+            data-column-category="practice"
+            data-column-keywords="給与 総支給額 手取り 預り金 社会保険 所得税"
+            aria-label="総支給額と手取り額の違いは現在公開準備中です"
+          >
+
+            <div class="beginner-column-card__link">
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  実務の疑問
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 05
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    総支給額
+                  </strong>
+
+                  <span>
+                    →
+                  </span>
+
+                  <strong>
+                    手取り額
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                PAYROLL BASICS
+              </p>
+
+              <h2>
+                総支給額と手取り額は何が違う？
+              </h2>
+
+              <p class="beginner-column-card__description">
+                給料手当・預り金・普通預金が、給与の仕訳でどのようにつながっているのかを解説します。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  公開準備中
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="beginner-column-card__coming-soon"
+              aria-hidden="true"
+            >
+
+              <div class="beginner-column-card__coming-soon-inner">
+
+                <small>
+                  COMING SOON
+                </small>
+
+                <strong>
+                  公開準備中
+                </strong>
+
+                <p>
+                  給与仕訳の流れを図で理解できるコラムを制作しています。
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- コラム06：準備中 -->
+          <article
+            class="
+              beginner-column-card
+              beginner-column-card--coming-soon
+            "
+            data-column-category="basic"
+            data-column-keywords="貸借対照表 損益計算書 BS PL 違い 財務諸表"
+            aria-label="貸借対照表と損益計算書の違いは現在公開準備中です"
+          >
+
+            <div class="beginner-column-card__link">
+
+              <div class="beginner-column-card__top">
+
+                <span class="beginner-column-card__category">
+                  簿記の基本
+                </span>
+
+                <span class="beginner-column-card__number">
+                  COLUMN 06
+                </span>
+
+              </div>
+
+
+              <div class="beginner-column-card__visual">
+
+                <div class="beginner-column-card__comparison">
+
+                  <strong>
+                    BS
+                  </strong>
+
+                  <span>
+                    &
+                  </span>
+
+                  <strong>
+                    PL
+                  </strong>
+
+                </div>
+
+              </div>
+
+
+              <p class="beginner-column-card__english">
+                FINANCIAL STATEMENTS
+              </p>
+
+              <h2>
+                BSとPLは何を表している？
+              </h2>
+
+              <p class="beginner-column-card__description">
+                貸借対照表と損益計算書の役割を、「ある時点」と「一定期間」という違いから整理します。
+              </p>
+
+
+              <div class="beginner-column-card__footer">
+
+                <span>
+                  公開準備中
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="beginner-column-card__coming-soon"
+              aria-hidden="true"
+            >
+
+              <div class="beginner-column-card__coming-soon-inner">
+
+                <small>
+                  COMING SOON
+                </small>
+
+                <strong>
+                  公開準備中
+                </strong>
+
+                <p>
+                  財務諸表を初めて見る人にも分かる内容を準備しています。
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         このコラムで目指すこと
+    ============================== -->
+    <section class="section column-guide">
+
+      <div class="column-guide__inner wrapper">
+
+        <div class="column-guide__copy">
+
+          <p class="about__english">
+            LEARNING GUIDE
+          </p>
+
+          <h2>
+            調べるだけで終わらず、<br>
+            理解につなげる。
+          </h2>
+
+          <p>
+            勘定科目を一つずつ覚えるだけではなく、似ている科目や取引の流れと結び付けることで、経理の知識は少しずつ自分のものになります。
+          </p>
+
+        </div>
+
+
+        <div class="column-guide__points">
+
+          <article class="column-guide__point">
+
+            <span>
+              01
+            </span>
+
+            <div>
+
+              <h3>
+                似ているものを比較する
+              </h3>
+
+              <p>
+                違いを並べて確認することで、判断の基準を身につけます。
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="column-guide__point">
+
+            <span>
+              02
+            </span>
+
+            <div>
+
+              <h3>
+                理由から理解する
+              </h3>
+
+              <p>
+                結論だけではなく、なぜその処理になるのかまで解説します。
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="column-guide__point">
+
+            <span>
+              03
+            </span>
+
+            <div>
+
+              <h3>
+                実務へつなげる
+              </h3>
+
+              <p>
+                会計ソフトや実際の帳簿で迷いにくくなる知識を目指します。
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ==============================
+       フッター
+  ============================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="index.html"
+          class="logo logo--footer"
+        >
+
+          <span
+            class="logo__icon"
+            aria-hidden="true"
+          >
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="index.html#search">
+          勘定科目逆引き
+        </a>
+
+        <a href="dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="columns.html">
+          初心者コラム
+        </a>
+
+        <a href="tax.html">
+          消費税ガイド
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- 共通JavaScript -->
+  <script src="js/script.js"></script>
+
+
+  <!-- ==============================
+       初心者コラム一覧専用JavaScript
+  ============================== -->
+  <script>
+    'use strict';
+
+
+    const columnSearchInput =
+      document.querySelector(
+        '#column-search-input'
+      );
+
+    const columnSearchButton =
+      document.querySelector(
+        '#column-search-button'
+      );
+
+    const columnFilters =
+      document.querySelectorAll(
+        '.column-filter'
+      );
+
+    const beginnerColumnCards =
+      document.querySelectorAll(
+        '.beginner-column-card'
+      );
+
+    const columnStatus =
+      document.querySelector(
+        '#column-status'
+      );
+
+    const columnEmpty =
+      document.querySelector(
+        '#column-empty'
+      );
+
+
+    let selectedColumnCategory =
+      'all';
+
+
+    function normalizeColumnText(text) {
+
+      return text
+        .toLowerCase()
+        .replace(/[　\s]/g, '')
+        .replace(/[・／/]/g, '')
+        .replace(/[！!？?。、,.]/g, '');
+
+    }
+
+
+    function filterBeginnerColumns() {
+
+      const query =
+        normalizeColumnText(
+          columnSearchInput.value
+        );
+
+
+      let visibleCount = 0;
+
+
+      beginnerColumnCards.forEach(
+        (card) => {
+
+          const category =
+            card.dataset.columnCategory;
+
+          const searchTarget =
+            normalizeColumnText(
+              `
+                ${card.textContent}
+                ${card.dataset.columnKeywords || ''}
+              `
+            );
+
+
+          const matchesCategory =
+            selectedColumnCategory === 'all' ||
+            category === selectedColumnCategory;
+
+
+          const matchesQuery =
+            query === '' ||
+            searchTarget.includes(query);
+
+
+          const shouldShow =
+            matchesCategory &&
+            matchesQuery;
+
+
+          card.hidden =
+            !shouldShow;
+
+
+          if (shouldShow) {
+            visibleCount += 1;
+          }
+
+        }
+      );
+
+
+      columnEmpty.classList.toggle(
+        'is-visible',
+        visibleCount === 0
+      );
+
+
+      if (
+        query === '' &&
+        selectedColumnCategory === 'all'
+      ) {
+
+        columnStatus.textContent = '';
+
+        return;
+
+      }
+
+
+      columnStatus.textContent =
+        `${visibleCount}件の初心者コラムが見つかりました。`;
+
+    }
+
+
+    columnSearchButton?.addEventListener(
+      'click',
+      filterBeginnerColumns
+    );
+
+
+    columnSearchInput?.addEventListener(
+      'input',
+      filterBeginnerColumns
+    );
+
+
+    columnSearchInput?.addEventListener(
+      'keydown',
+      (event) => {
+
+        if (event.key === 'Enter') {
+
+          event.preventDefault();
+
+          filterBeginnerColumns();
+
+        }
+
+      }
+    );
+
+
+    columnFilters.forEach(
+      (button) => {
+
+        button.addEventListener(
+          'click',
+          () => {
+
+            selectedColumnCategory =
+              button.dataset.columnCategory;
+
+
+            columnFilters.forEach(
+              (filterButton) => {
+
+                filterButton.classList.remove(
+                  'is-active'
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              'is-active'
+            );
+
+
+            filterBeginnerColumns();
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

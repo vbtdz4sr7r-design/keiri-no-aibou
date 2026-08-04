@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="借方・貸方とは何かを、経理初心者向けに3分で分かるように解説します。仕訳の左右や、資産・費用・負債・収益の増減を図と具体例で確認できます。"
+  >
+
+  <title>
+    借方・貸方って、結局どういう意味？｜経理コラム｜経理の相棒
+  </title>
+
+  <!--
+    このHTMLは column フォルダの中に置くため、
+    ひとつ上の階層へ戻る「../」を付けます。
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/column-detail.css">
+</head>
+
+
+<body>
+
+  <!-- =========================
+       ヘッダー
+  ========================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="../index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="../index.html#search">
+              勘定科目逆引き
+            </a>
+          </li>
+
+          <li>
+            <a href="../dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="../columns.html">
+              経理コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="../tax.html">
+              消費税ガイド
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- パンくずリスト -->
+    <nav
+      class="column-detail-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="../index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li>
+          <a href="../columns.html">
+            経理コラム
+          </a>
+        </li>
+
+        <li aria-current="page">
+          借方・貸方って、結局どういう意味？
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- メインビジュアル -->
+    <section class="column-detail-hero">
+
+      <div
+        class="
+          column-detail-hero__orb
+          column-detail-hero__orb--one
+        "
+      ></div>
+
+      <div
+        class="
+          column-detail-hero__orb
+          column-detail-hero__orb--two
+        "
+      ></div>
+
+
+      <div class="column-detail-hero__inner wrapper">
+
+        <div>
+
+          <p class="column-detail-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            経理コラム
+
+          </p>
+
+
+          <h1>
+            借方・貸方って、<br>
+            <em>結局どういう意味？</em>
+          </h1>
+
+
+          <p class="column-detail-hero__lead">
+
+            「借方は左、貸方は右」と覚えたけれど、
+            仕訳になると分からなくなる。<br>
+
+            そんな疑問を、
+            図と二つの例でシンプルに整理します。
+
+          </p>
+
+
+          <div class="column-detail-hero__meta">
+
+            <span>
+              簿記の基本
+            </span>
+
+            <span>
+              約3分で読めます
+            </span>
+
+            <span>
+              初心者向け
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <aside
+          class="column-detail-hero__visual"
+          aria-label="借方と貸方の位置"
+        >
+
+          <p class="column-detail-hero__visual-label">
+            DEBIT &amp; CREDIT
+          </p>
+
+          <p class="column-detail-hero__visual-title">
+            まずは、位置を覚えれば大丈夫。
+          </p>
+
+          <div class="column-detail-hero__visual-line"></div>
+
+
+          <div class="column-detail-comparison">
+
+            <div class="column-detail-comparison__item">
+
+              <small>
+                LEFT
+              </small>
+
+              <strong>
+                借方
+              </strong>
+
+            </div>
+
+
+            <span
+              class="column-detail-comparison__arrow"
+              aria-hidden="true"
+            >
+              ↔
+            </span>
+
+
+            <div class="column-detail-comparison__item">
+
+              <small>
+                RIGHT
+              </small>
+
+              <strong>
+                貸方
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <p class="column-detail-hero__visual-note">
+            借方は仕訳の左側、貸方は右側です。「借りる・貸す」という意味ではありません。
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 本文 -->
+    <section class="section column-detail-main">
+
+      <div class="wrapper column-detail-layout">
+
+
+        <!-- 左側：本文 -->
+        <div class="column-detail-content">
+
+
+          <!-- 一言で結論 -->
+          <section
+            id="answer"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              QUICK ANSWER
+            </p>
+
+            <h2 class="column-detail-section__title">
+              まずは、これだけで大丈夫
+            </h2>
+
+
+            <div class="column-quick-answer">
+
+              <p class="column-quick-answer__label">
+                借方・貸方とは
+              </p>
+
+              <p class="column-quick-answer__text">
+
+                借方は仕訳の左側。<br>
+                貸方は仕訳の右側です。
+
+              </p>
+
+            </div>
+
+
+            <div class="column-note">
+
+              <span class="column-note__mark">
+                !
+              </span>
+
+              <p>
+
+                借方は「お金を借りた側」、
+                貸方は「お金を貸した側」という意味ではありません。
+
+                <strong>
+                  仕訳を書く場所の名前
+                </strong>
+                と考えましょう。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 基本ルール -->
+          <section
+            id="rule"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              BASIC RULE
+            </p>
+
+            <h2 class="column-detail-section__title">
+              増えたときの基本ルール
+            </h2>
+
+            <p class="column-detail-section__lead">
+
+              勘定科目は、
+              大きく5つのグループに分かれます。
+
+              最初は、
+              次の二つに分けて覚えると分かりやすいです。
+
+            </p>
+
+
+            <div class="column-rule-grid">
+
+              <article class="column-rule-card">
+
+                <div class="column-rule-card__header">
+
+                  <small>
+                    DEBIT / LEFT
+                  </small>
+
+                  <h3>
+                    借方で増える
+                  </h3>
+
+                </div>
+
+
+                <div class="column-rule-card__body">
+
+                  <p>
+                    資産と費用は、
+                    増えたときに借方へ記載します。
+                  </p>
+
+                  <ul class="column-rule-card__list">
+
+                    <li>
+                      資産
+                    </li>
+
+                    <li>
+                      費用
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </article>
+
+
+
+              <article class="column-rule-card">
+
+                <div class="column-rule-card__header">
+
+                  <small>
+                    CREDIT / RIGHT
+                  </small>
+
+                  <h3>
+                    貸方で増える
+                  </h3>
+
+                </div>
+
+
+                <div class="column-rule-card__body">
+
+                  <p>
+                    負債・純資産・収益は、
+                    増えたときに貸方へ記載します。
+                  </p>
+
+                  <ul class="column-rule-card__list">
+
+                    <li>
+                      負債
+                    </li>
+
+                    <li>
+                      純資産
+                    </li>
+
+                    <li>
+                      収益
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </article>
+
+            </div>
+
+
+            <div class="column-note">
+
+              <span class="column-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                減ったときは反対側です。
+
+                例えば現金は資産なので、
+                増えたら借方、
+                支払って減ったら貸方になります。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 具体例 -->
+          <section
+            id="examples"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              EXAMPLES
+            </p>
+
+            <h2 class="column-detail-section__title">
+              二つの例で確認
+            </h2>
+
+
+            <!-- 例1 -->
+            <article class="column-example">
+
+              <div class="column-example__header">
+
+                <span>
+                  EXAMPLE 01
+                </span>
+
+                <h3>
+                  商品10,000円を販売し、現金を受け取った
+                </h3>
+
+              </div>
+
+
+              <div class="column-example__entry">
+
+                <div class="column-example__side">
+
+                  <div class="column-example__side-label">
+
+                    <span>
+                      借方
+                    </span>
+
+                    <strong>
+                      現金 10,000円
+                    </strong>
+
+                  </div>
+
+                  <p>
+                    現金は資産です。現金が増えたため、借方へ記載します。
+                  </p>
+
+                </div>
+
+
+                <div class="column-example__side">
+
+                  <div class="column-example__side-label">
+
+                    <span>
+                      貸方
+                    </span>
+
+                    <strong>
+                      売上高 10,000円
+                    </strong>
+
+                  </div>
+
+                  <p>
+                    売上高は収益です。収益が増えたため、貸方へ記載します。
+                  </p>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 例2 -->
+            <article class="column-example">
+
+              <div class="column-example__header">
+
+                <span>
+                  EXAMPLE 02
+                </span>
+
+                <h3>
+                  コピー用紙2,000円を現金で購入した
+                </h3>
+
+              </div>
+
+
+              <div class="column-example__entry">
+
+                <div class="column-example__side">
+
+                  <div class="column-example__side-label">
+
+                    <span>
+                      借方
+                    </span>
+
+                    <strong>
+                      消耗品費 2,000円
+                    </strong>
+
+                  </div>
+
+                  <p>
+                    消耗品費は費用です。費用が増えたため、借方へ記載します。
+                  </p>
+
+                </div>
+
+
+                <div class="column-example__side">
+
+                  <div class="column-example__side-label">
+
+                    <span>
+                      貸方
+                    </span>
+
+                    <strong>
+                      現金 2,000円
+                    </strong>
+
+                  </div>
+
+                  <p>
+                    現金は資産です。現金が減ったため、貸方へ記載します。
+                  </p>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </section>
+
+
+
+          <!-- 判断方法 -->
+          <section
+            id="steps"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              THREE STEPS
+            </p>
+
+            <h2 class="column-detail-section__title">
+              判断するときは、この3ステップ
+            </h2>
+
+
+            <div class="column-step-list">
+
+              <article class="column-step">
+
+                <span class="column-step__number">
+                  01
+                </span>
+
+                <div>
+
+                  <h3>
+                    勘定科目を確認する
+                  </h3>
+
+                  <p>
+                    現金・売上高・消耗品費など、取引で動いた勘定科目を考えます。
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="column-step">
+
+                <span class="column-step__number">
+                  02
+                </span>
+
+                <div>
+
+                  <h3>
+                    グループを確認する
+                  </h3>
+
+                  <p>
+                    資産・負債・純資産・収益・費用のどれに属するかを確認します。
+                  </p>
+
+                </div>
+
+              </article>
+
+
+              <article class="column-step">
+
+                <span class="column-step__number">
+                  03
+                </span>
+
+                <div>
+
+                  <h3>
+                    増えたか減ったかを確認する
+                  </h3>
+
+                  <p>
+                    増える側を基準にして、減った場合は反対側へ記載します。
+                  </p>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- FAQ -->
+          <section
+            id="faq"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              FAQ
+            </p>
+
+            <h2 class="column-detail-section__title">
+              よくある疑問
+            </h2>
+
+
+            <div class="column-faq-list">
+
+              <details class="column-faq">
+
+                <summary>
+                  借方は「借りたお金」という意味ですか？
+                </summary>
+
+                <div class="column-faq__answer">
+                  いいえ。現在の簿記では、借方は仕訳の左側を表す位置の名前です。
+                </div>
+
+              </details>
+
+
+              <details class="column-faq">
+
+                <summary>
+                  借方はいつも増加を表しますか？
+                </summary>
+
+                <div class="column-faq__answer">
+                  いいえ。資産・費用は借方で増えますが、負債・純資産・収益は借方で減ります。
+                </div>
+
+              </details>
+
+
+              <details class="column-faq">
+
+                <summary>
+                  仕訳はすべて丸暗記する必要がありますか？
+                </summary>
+
+                <div class="column-faq__answer">
+                  すべてを丸暗記する必要はありません。勘定科目のグループと増減を確認すると、自分で判断しやすくなります。
+                </div>
+
+              </details>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 最終まとめ -->
+          <section
+            id="summary"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              SUMMARY
+            </p>
+
+            <h2 class="column-detail-section__title">
+              最後にもう一度
+            </h2>
+
+
+            <div class="column-quick-answer">
+
+              <p class="column-quick-answer__label">
+                借方・貸方の基本
+              </p>
+
+              <p class="column-quick-answer__text">
+
+                借方は左、貸方は右。<br>
+                資産・費用は借方で増え、<br>
+                負債・純資産・収益は貸方で増えます。
+
+              </p>
+
+            </div>
+
+
+            <div class="column-note">
+
+              <span class="column-note__mark">
+                POINT
+              </span>
+
+              <p>
+
+                迷ったら、
+
+                <strong>
+                  「何の勘定科目か」→
+                  「どのグループか」→
+                  「増えたか、減ったか」
+                </strong>
+
+                の順番で確認しましょう。
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 関連ページ -->
+          <section
+            id="related"
+            class="column-detail-section"
+          >
+
+            <p class="column-detail-section__english">
+              RELATED
+            </p>
+
+            <h2 class="column-detail-section__title">
+              あわせて確認したいページ
+            </h2>
+
+
+            <div class="column-related-grid">
+
+              <a
+                href="../account/genkin.html"
+                class="column-related-card"
+              >
+
+                <small>
+                  ACCOUNT DICTIONARY
+                </small>
+
+                <h3>
+                  現金
+                </h3>
+
+                <p>
+                  現金が増えた場合と減った場合の仕訳例を確認できます。
+                </p>
+
+              </a>
+
+
+              <a
+                href="../account/uriagedaka.html"
+                class="column-related-card"
+              >
+
+                <small>
+                  ACCOUNT DICTIONARY
+                </small>
+
+                <h3>
+                  売上高
+                </h3>
+
+                <p>
+                  売上高が貸方で増える理由を確認できます。
+                </p>
+
+              </a>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- 免責事項 -->
+          <div class="column-note">
+
+            <span class="column-note__mark">
+              !
+            </span>
+
+            <p>
+
+              このコラムは、
+              経理・簿記を学び始めた方向けに、
+              一般的な考え方を分かりやすく説明したものです。
+
+              実際の会計処理は、
+              取引内容や会社の会計方針によって
+              異なる場合があります。
+
+            </p>
+
+          </div>
+
+
+
+          <!-- 一覧へ戻る -->
+          <div class="column-back-link">
+
+            <a href="../columns.html">
+              ← 経理コラム一覧へ戻る
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 右側：目次 -->
+        <aside class="column-detail-sidebar">
+
+          <p class="column-detail-sidebar__english">
+            CONTENTS
+          </p>
+
+          <h2 class="column-detail-sidebar__title">
+            このコラムの内容
+          </h2>
+
+
+          <nav aria-label="ページ内メニュー">
+
+            <ol class="column-detail-sidebar__list">
+
+              <li>
+                <a href="#answer">
+                  <span>01</span>
+                  一言で結論
+                </a>
+              </li>
+
+              <li>
+                <a href="#rule">
+                  <span>02</span>
+                  基本ルール
+                </a>
+              </li>
+
+              <li>
+                <a href="#examples">
+                  <span>03</span>
+                  二つの具体例
+                </a>
+              </li>
+
+              <li>
+                <a href="#steps">
+                  <span>04</span>
+                  判断する3ステップ
+                </a>
+              </li>
+
+              <li>
+                <a href="#faq">
+                  <span>05</span>
+                  よくある疑問
+                </a>
+              </li>
+
+              <li>
+                <a href="#summary">
+                  <span>06</span>
+                  最終まとめ
+                </a>
+              </li>
+
+              <li>
+                <a href="#related">
+                  <span>07</span>
+                  関連ページ
+                </a>
+              </li>
+
+            </ol>
+
+          </nav>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- フッター -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="../index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="../index.html#search">
+          勘定科目逆引き
+        </a>
+
+        <a href="../dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="../columns.html">
+          経理コラム
+        </a>
+
+        <a href="../tax.html">
+          消費税ガイド
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!--
+    既存のJavaScriptを使用します。
+    columnフォルダから一つ上へ戻るため ../ を付けます。
+  -->
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>
