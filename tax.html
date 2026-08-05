@@ -1,0 +1,1636 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="消費税の課税・非課税・対象外・免税の違いを、経理初心者向けに分かりやすく解説します。家賃、給与、保険料、切手、飲食料品など、実務で迷いやすい取引の税区分を確認できます。"
+  >
+
+  <title>
+    消費税ガイド｜課税・非課税・対象外の違い｜経理の相棒
+  </title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tax.css">
+</head>
+
+
+<body class="tax-page">
+
+  <!-- ==============================
+       ヘッダー
+  ============================== -->
+  <header class="header">
+
+    <div class="header__inner wrapper">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="経理の相棒 トップページ"
+      >
+
+        <span class="logo__icon" aria-hidden="true">
+
+          <span class="logo__calculator">
+
+            <span class="logo__screen"></span>
+
+            <span class="logo__buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+
+          </span>
+
+        </span>
+
+
+        <span class="logo__text">
+
+          <span class="logo__name">
+            経理の相棒
+          </span>
+
+          <span class="logo__sub">
+            BEGINNER ACCOUNTING GUIDE
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        id="global-navigation"
+        class="navigation"
+        aria-label="メインメニュー"
+      >
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              ホーム
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#top">
+              勘定科目逆引き
+            </a>
+          </li>
+
+          <li>
+            <a href="dictionary.html">
+              勘定科目辞典
+            </a>
+          </li>
+
+          <li>
+            <a href="columns.html">
+              経理コラム
+            </a>
+          </li>
+
+          <li>
+            <a href="tax.html" aria-current="page">
+              消費税ガイド
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main id="top">
+
+    <!-- ==============================
+         パンくずリスト
+    ============================== -->
+    <nav
+      class="tax-breadcrumb"
+      aria-label="パンくずリスト"
+    >
+
+      <ol class="wrapper">
+
+        <li>
+          <a href="index.html">
+            ホーム
+          </a>
+        </li>
+
+        <li aria-current="page">
+          消費税ガイド
+        </li>
+
+      </ol>
+
+    </nav>
+
+
+
+    <!-- ==============================
+         メインビジュアル
+    ============================== -->
+    <section class="tax-hero">
+
+      <div class="tax-hero__inner wrapper">
+
+        <div class="tax-hero__copy">
+
+          <p class="tax-hero__category">
+
+            <span aria-hidden="true"></span>
+
+            CONSUMPTION TAX GUIDE
+
+          </p>
+
+
+          <h1>
+            この取引、消費税は<br>
+            <em>どう考える？</em>
+          </h1>
+
+
+          <p class="tax-hero__lead">
+
+            課税・非課税・対象外・免税。<br>
+
+            名前が似ていて迷いやすい消費税区分を、
+            身近な取引例から分かりやすく整理します。
+
+          </p>
+
+
+          <div class="tax-hero__meta">
+
+            <span>
+              消費税の基本
+            </span>
+
+            <span>
+              約5分で読めます
+            </span>
+
+            <span>
+              初心者向け
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <aside
+          class="tax-hero__visual"
+          aria-label="消費税の4つの区分"
+        >
+
+          <p class="tax-hero__visual-label">
+            TAX CLASSIFICATION
+          </p>
+
+          <p class="tax-hero__visual-title">
+            まずは4つの区分を<br>
+            分けて考えます。
+          </p>
+
+          <div class="tax-hero__visual-line"></div>
+
+
+          <div class="tax-hero__visual-grid">
+
+            <div class="tax-hero__visual-item">
+              <div>
+                <small>TAXABLE</small>
+                <strong>課税</strong>
+              </div>
+            </div>
+
+            <div class="tax-hero__visual-item">
+              <div>
+                <small>NON-TAXABLE</small>
+                <strong>非課税</strong>
+              </div>
+            </div>
+
+            <div class="tax-hero__visual-item">
+              <div>
+                <small>OUT OF SCOPE</small>
+                <strong>対象外</strong>
+              </div>
+            </div>
+
+            <div class="tax-hero__visual-item">
+              <div>
+                <small>EXEMPT</small>
+                <strong>免税</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         本文
+    ============================== -->
+    <section class="section tax-main-section">
+
+      <div class="wrapper tax-content">
+
+
+        <!-- 一言で結論 -->
+        <section
+          id="answer"
+          class="tax-answer"
+        >
+
+          <div class="tax-answer__heading">
+
+            <small>
+              QUICK ANSWER
+            </small>
+
+            <h2>
+              まずは「課税対象に入る取引か」を確認
+            </h2>
+
+          </div>
+
+
+          <div class="tax-answer__body">
+
+            <p>
+
+              国内で、事業者が事業として、
+              対価を得て行う取引は、
+              原則として消費税の課税対象です。
+
+              その条件に入らない取引は
+              <strong>対象外（不課税）</strong>。
+
+              条件に入っていても、
+              法律で課税しないと決められている取引は
+              <strong>非課税</strong>です。
+
+            </p>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- 4区分 -->
+        <section id="categories">
+
+          <header class="tax-section-heading">
+
+            <p class="tax-section-heading__english">
+              FOUR CATEGORIES
+            </p>
+
+            <h2>
+              4つの消費税区分
+            </h2>
+
+            <p class="tax-section-heading__lead">
+              似ている言葉ですが、消費税がかからない理由が異なります。
+            </p>
+
+          </header>
+
+
+          <div class="tax-category-grid">
+
+
+            <!-- 課税 -->
+            <article class="tax-category-card">
+
+              <div class="tax-category-card__header">
+
+                <small>
+                  TAXABLE
+                </small>
+
+                <h3>
+                  課税
+                </h3>
+
+              </div>
+
+
+              <div class="tax-category-card__body">
+
+                <p>
+                  消費税の課税対象となり、非課税や免税にも該当しない通常の取引です。
+                </p>
+
+                <ul class="tax-category-card__examples">
+
+                  <li>
+                    事務用品の購入
+                  </li>
+
+                  <li>
+                    事務所家賃
+                  </li>
+
+                  <li>
+                    駐車場料金
+                  </li>
+
+                </ul>
+
+                <div class="tax-category-card__point">
+
+                  <span>
+                    POINT
+                  </span>
+
+                  原則として標準税率10％ですが、飲食料品など一部は軽減税率8％です。
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 非課税 -->
+            <article class="tax-category-card">
+
+              <div class="tax-category-card__header">
+
+                <small>
+                  NON-TAXABLE
+                </small>
+
+                <h3>
+                  非課税
+                </h3>
+
+              </div>
+
+
+              <div class="tax-category-card__body">
+
+                <p>
+                  課税対象には入りますが、取引の性質や社会政策上の理由から消費税を課さない取引です。
+                </p>
+
+                <ul class="tax-category-card__examples">
+
+                  <li>
+                    住宅用家賃
+                  </li>
+
+                  <li>
+                    土地の貸付け
+                  </li>
+
+                  <li>
+                    保険料・預金利息
+                  </li>
+
+                </ul>
+
+                <div class="tax-category-card__point">
+
+                  <span>
+                    POINT
+                  </span>
+
+                  「課税対象ではあるが、特別に課税しない」と考えます。
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 対象外 -->
+            <article class="tax-category-card">
+
+              <div class="tax-category-card__header">
+
+                <small>
+                  OUT OF SCOPE
+                </small>
+
+                <h3>
+                  対象外（不課税）
+                </h3>
+
+              </div>
+
+
+              <div class="tax-category-card__body">
+
+                <p>
+                  国内・事業・対価などの課税対象となる条件を満たさず、最初から消費税の対象に入らない取引です。
+                </p>
+
+                <ul class="tax-category-card__examples">
+
+                  <li>
+                    給与・賃金
+                  </li>
+
+                  <li>
+                    寄附金
+                  </li>
+
+                  <li>
+                    保険金・配当金
+                  </li>
+
+                </ul>
+
+                <div class="tax-category-card__point">
+
+                  <span>
+                    POINT
+                  </span>
+
+                  会計ソフトでは「対象外」と表示されることがあります。
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 免税 -->
+            <article class="tax-category-card">
+
+              <div class="tax-category-card__header">
+
+                <small>
+                  EXEMPT
+                </small>
+
+                <h3>
+                  免税
+                </h3>
+
+              </div>
+
+
+              <div class="tax-category-card__body">
+
+                <p>
+                  課税取引に該当しますが、輸出など一定の要件を満たすため消費税が免除される取引です。
+                </p>
+
+                <ul class="tax-category-card__examples">
+
+                  <li>
+                    商品の輸出
+                  </li>
+
+                  <li>
+                    国際輸送
+                  </li>
+
+                  <li>
+                    一定の国外向けサービス
+                  </li>
+
+                </ul>
+
+                <div class="tax-category-card__point">
+
+                  <span>
+                    POINT
+                  </span>
+
+                  非課税とは異なり、関連する課税仕入れについて仕入税額控除ができる場合があります。
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- 取引例 -->
+        <section id="transactions">
+
+          <header class="tax-section-heading">
+
+            <p class="tax-section-heading__english">
+              TRANSACTION GUIDE
+            </p>
+
+            <h2>
+              よくある取引から探す
+            </h2>
+
+            <p class="tax-section-heading__lead">
+              キーワードを入力するか、消費税区分を選択してください。
+            </p>
+
+          </header>
+
+
+          <div class="tax-tools">
+
+            <div class="tax-search">
+
+              <label for="tax-search-input">
+                取引例を検索
+              </label>
+
+              <div class="tax-search__row">
+
+                <input
+                  id="tax-search-input"
+                  type="search"
+                  placeholder="例：家賃、給与、保険料、切手"
+                  autocomplete="off"
+                >
+
+                <button
+                  id="tax-search-button"
+                  type="button"
+                >
+                  検索
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="tax-filters"
+              aria-label="消費税区分"
+            >
+
+              <button
+                class="tax-filter is-active"
+                type="button"
+                data-tax-category="all"
+              >
+                すべて
+              </button>
+
+              <button
+                class="tax-filter"
+                type="button"
+                data-tax-category="taxable"
+              >
+                課税
+              </button>
+
+              <button
+                class="tax-filter"
+                type="button"
+                data-tax-category="non-taxable"
+              >
+                非課税
+              </button>
+
+              <button
+                class="tax-filter"
+                type="button"
+                data-tax-category="out-of-scope"
+              >
+                対象外
+              </button>
+
+              <button
+                class="tax-filter"
+                type="button"
+                data-tax-category="exempt"
+              >
+                免税
+              </button>
+
+            </div>
+
+
+            <p
+              class="tax-search-status"
+              id="tax-search-status"
+              aria-live="polite"
+            ></p>
+
+          </div>
+
+
+          <div
+            class="tax-empty"
+            id="tax-empty"
+          >
+            該当する取引例が見つかりませんでした。別の短い言葉で検索してみてください。
+          </div>
+
+
+          <div class="tax-transaction-grid">
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="taxable"
+              data-tax-keywords="事務用品 文房具 コピー用紙 消耗品 購入 課税 10%"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  原則10％
+                </span>
+
+              </div>
+
+              <h3>
+                事務用品の購入
+              </h3>
+
+              <p>
+                コピー用紙や文房具など、通常の事業用購入は課税取引となるのが一般的です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                一般的な課税仕入れ
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="taxable"
+              data-tax-keywords="事務所 家賃 オフィス テナント 建物 賃貸 課税 10%"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  原則10％
+                </span>
+
+              </div>
+
+              <h3>
+                事務所家賃
+              </h3>
+
+              <p>
+                事務所・店舗など、事業用建物の家賃は課税取引となるのが一般的です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                住宅用家賃との違いに注意
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="taxable"
+              data-tax-keywords="駐車場 コインパーキング 月極 駐車料金 施設 課税 10%"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  原則10％
+                </span>
+
+              </div>
+
+              <h3>
+                駐車場料金
+              </h3>
+
+              <p>
+                区画や設備のある駐車場の利用料は、通常、課税取引に該当します。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                単なる土地貸付けとは区別
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="taxable"
+              data-tax-keywords="飲食料品 食品 弁当 テイクアウト 持ち帰り 軽減税率 8%"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  軽減8％
+                </span>
+
+              </div>
+
+              <h3>
+                持ち帰りの飲食料品
+              </h3>
+
+              <p>
+                酒類を除く飲食料品の販売は、原則として軽減税率8％の対象です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                店内飲食は原則10％
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="non-taxable"
+              data-tax-keywords="住宅 家賃 社宅 アパート マンション 居住用 非課税"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  非課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  非課税
+                </span>
+
+              </div>
+
+              <h3>
+                住宅用家賃
+              </h3>
+
+              <p>
+                契約や利用状況から住宅用であることが明らかな貸付けは、原則として非課税です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                1か月未満やホテルなどは別扱い
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="non-taxable"
+              data-tax-keywords="保険料 生命保険 損害保険 共済掛金 非課税"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  非課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  非課税
+                </span>
+
+              </div>
+
+              <h3>
+                保険料
+              </h3>
+
+              <p>
+                保険料や保険料に類する共済掛金は、非課税取引とされています。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                保険金の受取りは対象外
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="non-taxable"
+              data-tax-keywords="土地 地代 借地 賃貸 貸付け 非課税"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  非課税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  非課税
+                </span>
+
+              </div>
+
+              <h3>
+                土地の貸付け
+              </h3>
+
+              <p>
+                土地の貸付けは原則として非課税ですが、短期貸付けや施設利用を伴う場合は課税になることがあります。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                駐車場などは要確認
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="out-of-scope"
+              data-tax-keywords="給与 賃金 給料手当 賞与 アルバイト 給与手当 対象外"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  対象外
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  対象外
+                </span>
+
+              </div>
+
+              <h3>
+                給与・賃金
+              </h3>
+
+              <p>
+                従業員へ支払う給与や賃金は、消費税の課税仕入れには該当しません。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                外注費・業務委託料とは区別
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="out-of-scope"
+              data-tax-keywords="寄附 寄付 寄附金 贈与 見返りなし 対象外"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  対象外
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  対象外
+                </span>
+
+              </div>
+
+              <h3>
+                寄附金
+              </h3>
+
+              <p>
+                見返りとなる商品やサービスを受けない単なる寄附は、対価性がないため対象外です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                会費など対価がある場合は別
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="out-of-scope"
+              data-tax-keywords="保険金 事故 保険会社 補償金 受取 対象外"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  対象外
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  対象外
+                </span>
+
+              </div>
+
+              <h3>
+                保険金の受取り
+              </h3>
+
+              <p>
+                保険金は商品やサービスの対価として受け取るものではないため、通常は対象外です。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                支払う保険料は非課税
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="exempt"
+              data-tax-keywords="輸出 海外 商品 外国 販売 免税 輸出取引"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  免税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  免税
+                </span>
+
+              </div>
+
+              <h3>
+                商品の輸出
+              </h3>
+
+              <p>
+                国内から海外へ商品を輸出する取引は、一定の要件を満たすと免税になります。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                輸出証明書などの保存が必要
+              </div>
+
+            </article>
+
+
+
+            <article
+              class="tax-transaction-card"
+              data-tax-category="exempt"
+              data-tax-keywords="国際輸送 海外 運送 国際郵便 通信 免税"
+            >
+
+              <div class="tax-transaction-card__top">
+
+                <span class="tax-transaction-card__category">
+                  免税
+                </span>
+
+                <span class="tax-transaction-card__rate">
+                  免税
+                </span>
+
+              </div>
+
+              <h3>
+                国際輸送
+              </h3>
+
+              <p>
+                国内と国外の間で行われる一定の旅客・貨物輸送などは、免税取引となります。
+              </p>
+
+              <div class="tax-transaction-card__point">
+                国内移動のみの場合は原則課税
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- 3ステップ -->
+        <section id="steps">
+
+          <header class="tax-section-heading">
+
+            <p class="tax-section-heading__english">
+              THREE STEPS
+            </p>
+
+            <h2>
+              迷ったときの3ステップ
+            </h2>
+
+          </header>
+
+
+          <div class="tax-step-list">
+
+            <article class="tax-step">
+
+              <span class="tax-step__number">
+                01
+              </span>
+
+              <div>
+
+                <h3>
+                  課税対象の条件に入るか
+                </h3>
+
+                <p>
+                  国内で、事業者が事業として、対価を得て行う取引かを確認します。
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="tax-step">
+
+              <span class="tax-step__number">
+                02
+              </span>
+
+              <div>
+
+                <h3>
+                  非課税として定められていないか
+                </h3>
+
+                <p>
+                  土地・住宅家賃・保険料・利息など、法律上の非課税取引に該当しないか確認します。
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="tax-step">
+
+              <span class="tax-step__number">
+                03
+              </span>
+
+              <div>
+
+                <h3>
+                  税率と証憑を確認する
+                </h3>
+
+                <p>
+                  課税取引なら10％・8％の税率と、請求書や領収書に記載された税区分を確認します。
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- 税率 -->
+        <section id="rates">
+
+          <header class="tax-section-heading">
+
+            <p class="tax-section-heading__english">
+              TAX RATES
+            </p>
+
+            <h2>
+              10％と8％の違い
+            </h2>
+
+          </header>
+
+
+          <div class="tax-rate-box">
+
+            <article class="tax-rate-box__item">
+
+              <small>
+                STANDARD RATE
+              </small>
+
+              <strong>
+                標準税率 10％
+              </strong>
+
+              <p>
+                事務用品、サービス利用料、外食、酒類、事務所家賃など、通常の課税取引に適用されます。
+              </p>
+
+            </article>
+
+
+            <article class="tax-rate-box__item">
+
+              <small>
+                REDUCED RATE
+              </small>
+
+              <strong>
+                軽減税率 8％
+              </strong>
+
+              <p>
+                酒類・外食を除く飲食料品と、一定の定期購読新聞が対象です。
+              </p>
+
+            </article>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- FAQ -->
+        <section id="faq">
+
+          <header class="tax-section-heading">
+
+            <p class="tax-section-heading__english">
+              FAQ
+            </p>
+
+            <h2>
+              よくある疑問
+            </h2>
+
+          </header>
+
+
+          <div class="tax-faq-list">
+
+            <details class="tax-faq">
+
+              <summary>
+                非課税と対象外は、何が違いますか？
+              </summary>
+
+              <div class="tax-faq__answer">
+                非課税は課税対象に含まれるものの、法律上課税しない取引です。対象外は、国内・事業・対価などの条件を満たさず、そもそも課税対象に入らない取引です。
+              </div>
+
+            </details>
+
+
+            <details class="tax-faq">
+
+              <summary>
+                事務所家賃と住宅家賃は同じ税区分ですか？
+              </summary>
+
+              <div class="tax-faq__answer">
+                同じではありません。事務所・店舗などの事業用家賃は原則課税、一定の住宅用家賃は原則非課税です。
+              </div>
+
+            </details>
+
+
+            <details class="tax-faq">
+
+              <summary>
+                切手を購入したときは課税ですか？
+              </summary>
+
+              <div class="tax-faq__answer">
+                郵便切手類は、原則として購入時は課税仕入れに該当せず、郵便サービスを受けた時点で課税仕入れとなります。ただし、一定の継続処理など実務上の取扱いもあるため、会社の処理方法を確認してください。
+              </div>
+
+            </details>
+
+
+            <details class="tax-faq">
+
+              <summary>
+                給与と外注費は同じ対象外ですか？
+              </summary>
+
+              <div class="tax-faq__answer">
+                給与・賃金は通常対象外ですが、独立した事業者へ支払う業務委託料や外注費は、課税取引となることがあります。契約や働き方の実態を確認する必要があります。
+              </div>
+
+            </details>
+
+
+            <details class="tax-faq">
+
+              <summary>
+                軽減税率8％なら非課税ということですか？
+              </summary>
+
+              <div class="tax-faq__answer">
+                いいえ。軽減税率8％は課税取引です。消費税がかからない非課税取引とは異なります。
+              </div>
+
+            </details>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- 注意 -->
+        <div class="tax-note">
+
+          <span class="tax-note__mark">
+            !
+          </span>
+
+          <p>
+
+            同じ名称の支払いでも、
+            契約内容・利用目的・取引相手・証憑の記載によって
+            税区分が変わることがあります。
+
+            <strong>
+              勘定科目だけで税区分を決めず、
+              実際の取引内容を確認することが大切です。
+            </strong>
+
+          </p>
+
+        </div>
+
+
+
+        <!-- 免責事項 -->
+        <div class="tax-disclaimer">
+
+          <strong>
+            ご利用にあたって
+          </strong>
+
+          <p>
+            このページは、経理初心者向けに消費税の一般的な考え方を分かりやすく説明したものです。実際の税務処理は、取引内容、契約条件、適用時期、会社の処理方法などによって異なる場合があります。判断に迷う場合は、税理士や所轄税務署などへご確認ください。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ==============================
+       フッター
+  ============================== -->
+  <footer class="footer">
+
+    <div class="wrapper footer__inner">
+
+      <div>
+
+        <a
+          href="index.html"
+          class="logo logo--footer"
+        >
+
+          <span class="logo__icon" aria-hidden="true">
+
+            <span class="logo__calculator">
+
+              <span class="logo__screen"></span>
+
+              <span class="logo__buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+
+            </span>
+
+          </span>
+
+
+          <span class="logo__text">
+
+            <span class="logo__name">
+              経理の相棒
+            </span>
+
+            <span class="logo__sub">
+              BEGINNER ACCOUNTING GUIDE
+            </span>
+
+          </span>
+
+        </a>
+
+
+        <p>
+          経理初心者の「これどうする？」を、すぐ解決。
+        </p>
+
+      </div>
+
+
+      <nav aria-label="フッターメニュー">
+
+        <a href="index.html">
+          勘定科目逆引き
+        </a>
+
+        <a href="dictionary.html">
+          勘定科目辞典
+        </a>
+
+        <a href="columns.html">
+          経理コラム
+        </a>
+
+        <a href="tax.html">
+          消費税ガイド
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+      <div class="wrapper">
+
+        <p>
+          © 2026 経理の相棒
+        </p>
+
+        <a href="#top">
+          PAGE TOP ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- 共通JavaScript -->
+  <script src="js/script.js"></script>
+
+
+  <!-- 消費税ガイド専用JavaScript -->
+  <script>
+    'use strict';
+
+
+    const taxSearchInput =
+      document.querySelector('#tax-search-input');
+
+    const taxSearchButton =
+      document.querySelector('#tax-search-button');
+
+    const taxFilters =
+      document.querySelectorAll('.tax-filter');
+
+    const taxTransactionCards =
+      document.querySelectorAll('.tax-transaction-card');
+
+    const taxSearchStatus =
+      document.querySelector('#tax-search-status');
+
+    const taxEmpty =
+      document.querySelector('#tax-empty');
+
+
+    let selectedTaxCategory = 'all';
+
+
+    function normalizeTaxText(text) {
+
+      return String(text)
+        .toLowerCase()
+        .replace(/[　\s]/g, '')
+        .replace(/[・／/]/g, '')
+        .replace(/[！!？?。、,.％%]/g, '');
+
+    }
+
+
+    function filterTaxTransactions() {
+
+      const query =
+        normalizeTaxText(taxSearchInput?.value || '');
+
+      let visibleCount = 0;
+
+
+      taxTransactionCards.forEach((card) => {
+
+        const category =
+          card.dataset.taxCategory || '';
+
+        const searchTarget =
+          normalizeTaxText(
+            `${card.textContent} ${card.dataset.taxKeywords || ''}`
+          );
+
+        const matchesCategory =
+          selectedTaxCategory === 'all' ||
+          category === selectedTaxCategory;
+
+        const matchesQuery =
+          query === '' ||
+          searchTarget.includes(query);
+
+        const shouldShow =
+          matchesCategory && matchesQuery;
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+
+      });
+
+
+      taxEmpty?.classList.toggle(
+        'is-visible',
+        visibleCount === 0
+      );
+
+
+      if (
+        query === '' &&
+        selectedTaxCategory === 'all'
+      ) {
+
+        if (taxSearchStatus) {
+          taxSearchStatus.textContent = '';
+        }
+
+        return;
+
+      }
+
+
+      if (taxSearchStatus) {
+
+        taxSearchStatus.textContent =
+          `${visibleCount}件の取引例が見つかりました。`;
+
+      }
+
+    }
+
+
+    taxSearchButton?.addEventListener(
+      'click',
+      filterTaxTransactions
+    );
+
+
+    taxSearchInput?.addEventListener(
+      'input',
+      filterTaxTransactions
+    );
+
+
+    taxSearchInput?.addEventListener(
+      'keydown',
+      (event) => {
+
+        if (event.key === 'Enter') {
+
+          event.preventDefault();
+
+          filterTaxTransactions();
+
+        }
+
+      }
+    );
+
+
+    taxFilters.forEach((button) => {
+
+      button.addEventListener('click', () => {
+
+        selectedTaxCategory =
+          button.dataset.taxCategory || 'all';
+
+
+        taxFilters.forEach((filterButton) => {
+
+          filterButton.classList.remove('is-active');
+
+        });
+
+
+        button.classList.add('is-active');
+
+        filterTaxTransactions();
+
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,955 @@
+/* ==================================================
+   消費税ガイド
+   tax.css
+================================================== */
+
+
+/* ==================================================
+   ページ全体
+================================================== */
+
+.tax-page {
+  color: var(--navy, #183153);
+  background-color: #f7f9fc;
+}
+
+.tax-page main {
+  overflow: hidden;
+}
+
+.tax-page a {
+  text-decoration: none;
+}
+
+.tax-page section[id] {
+  scroll-margin-top: 105px;
+}
+
+
+/* ==================================================
+   パンくずリスト
+================================================== */
+
+.tax-breadcrumb {
+  padding: 16px 0;
+  border-top: 1px solid #e5ebf2;
+  border-bottom: 1px solid #e5ebf2;
+  background-color: #ffffff;
+}
+
+.tax-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tax-breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: #7b8798;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.tax-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 8px;
+  color: #b7c1ce;
+}
+
+.tax-breadcrumb a {
+  color: #5c6d82;
+}
+
+.tax-breadcrumb a:hover {
+  color: var(--blue, #3978b8);
+}
+
+
+/* ==================================================
+   メインビジュアル
+================================================== */
+
+.tax-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 86px;
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f0f6fb 52%,
+      #e8f2fa 100%
+    );
+}
+
+.tax-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(
+      rgba(57, 120, 184, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(57, 120, 184, 0.08) 1px,
+      transparent 1px
+    );
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.tax-hero::after {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(57, 120, 184, 0.11);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(57, 120, 184, 0.035),
+    0 0 0 110px rgba(57, 120, 184, 0.022);
+  pointer-events: none;
+}
+
+.tax-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 370px;
+  gap: 70px;
+  align-items: center;
+}
+
+.tax-hero__copy {
+  min-width: 0;
+}
+
+.tax-hero__category {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  color: var(--blue, #3978b8);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.tax-hero__category span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--blue, #3978b8);
+}
+
+.tax-hero h1 {
+  margin: 18px 0 0;
+  color: var(--navy, #183153);
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  line-height: 1.3;
+  letter-spacing: -0.045em;
+}
+
+.tax-hero h1 em {
+  color: var(--blue, #3978b8);
+  font-style: normal;
+}
+
+.tax-hero__lead {
+  margin: 24px 0 0;
+  color: #5e6d7f;
+  font-size: 0.98rem;
+  line-height: 2;
+}
+
+.tax-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.tax-hero__meta span {
+  padding: 7px 12px;
+  border: 1px solid rgba(57, 120, 184, 0.17);
+  border-radius: 999px;
+  color: var(--blue, #3978b8);
+  background-color: rgba(255, 255, 255, 0.77);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* 右側カード */
+
+.tax-hero__visual {
+  position: relative;
+  padding: 31px;
+  border: 1px solid rgba(193, 210, 226, 0.9);
+  border-radius: 27px;
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 24px 60px rgba(29, 55, 85, 0.12);
+  transform: rotate(1.4deg);
+}
+
+.tax-hero__visual::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 78px;
+  height: 21px;
+  border: 1px solid rgba(202, 216, 228, 0.7);
+  background-color: rgba(225, 235, 244, 0.8);
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.tax-hero__visual-label {
+  margin: 0;
+  color: var(--blue, #3978b8);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.tax-hero__visual-title {
+  margin: 13px 0 0;
+  font-size: 1.24rem;
+  line-height: 1.65;
+}
+
+.tax-hero__visual-line {
+  height: 1px;
+  margin: 21px 0;
+  background-color: #dce5ee;
+}
+
+.tax-hero__visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.tax-hero__visual-item {
+  display: grid;
+  min-height: 74px;
+  place-items: center;
+  padding: 12px 8px;
+  border: 1px solid #dce6ef;
+  border-radius: 13px;
+  text-align: center;
+  background-color: #f5f9fc;
+}
+
+.tax-hero__visual-item small {
+  display: block;
+  color: #7390aa;
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.tax-hero__visual-item strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--navy, #183153);
+  font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   本文共通
+================================================== */
+
+.tax-main-section {
+  background-color: #f7f9fc;
+}
+
+.tax-content {
+  display: grid;
+  gap: 72px;
+}
+
+.tax-section-heading {
+  margin-bottom: 28px;
+}
+
+.tax-section-heading__english {
+  margin: 0;
+  color: var(--blue, #3978b8);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+}
+
+.tax-section-heading h2 {
+  position: relative;
+  margin: 9px 0 0;
+  padding-left: 17px;
+  color: var(--navy, #183153);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.5;
+}
+
+.tax-section-heading h2::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  bottom: 0.2em;
+  left: 0;
+  width: 4px;
+  border-radius: 999px;
+  background-color: var(--blue, #3978b8);
+}
+
+.tax-section-heading__lead {
+  margin: 17px 0 0;
+  color: #657487;
+  line-height: 1.95;
+}
+
+
+/* ==================================================
+   一言で結論
+================================================== */
+
+.tax-answer {
+  overflow: hidden;
+  border-radius: 24px;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy, #183153),
+      #28547f
+    );
+  box-shadow:
+    0 16px 40px rgba(29, 55, 85, 0.13);
+}
+
+.tax-answer__heading {
+  padding: 31px 34px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.tax-answer__heading small {
+  color: #acd0ea;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+}
+
+.tax-answer__heading h2 {
+  margin: 9px 0 0;
+  color: #ffffff;
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+.tax-answer__body {
+  padding: 27px 34px 33px;
+}
+
+.tax-answer__body p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.94rem;
+  line-height: 2;
+}
+
+.tax-answer__body strong {
+  color: #d5ebfa;
+}
+
+
+/* ==================================================
+   4区分
+================================================== */
+
+.tax-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tax-category-card {
+  overflow: hidden;
+  border: 1px solid #dce5ee;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow:
+    0 12px 32px rgba(35, 57, 83, 0.055);
+}
+
+.tax-category-card__header {
+  padding: 21px 23px;
+  border-bottom: 1px solid #dfe7ef;
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbfe,
+      #edf5fb
+    );
+}
+
+.tax-category-card__header small {
+  display: block;
+  color: var(--blue, #3978b8);
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.tax-category-card__header h3 {
+  margin: 7px 0 0;
+  font-size: 1.25rem;
+}
+
+.tax-category-card__body {
+  padding: 23px;
+}
+
+.tax-category-card__body > p {
+  margin: 0;
+  color: #667589;
+  font-size: 0.83rem;
+  line-height: 1.9;
+}
+
+.tax-category-card__examples {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tax-category-card__examples li {
+  padding: 10px 12px;
+  border-radius: 11px;
+  color: #435e78;
+  background-color: #f2f7fb;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.tax-category-card__point {
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid #e3eaf1;
+  color: #62768a;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.tax-category-card__point span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--blue, #3978b8);
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+
+/* ==================================================
+   取引例の検索・絞り込み
+================================================== */
+
+.tax-tools {
+  padding: 24px;
+  border: 1px solid #dce5ee;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow:
+    0 12px 32px rgba(35, 57, 83, 0.05);
+}
+
+.tax-search label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--navy, #183153);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.tax-search__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.tax-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 17px;
+  border: 1px solid #d7e1ea;
+  border-radius: 13px;
+  outline: none;
+  color: var(--navy, #183153);
+  background-color: #fbfdff;
+}
+
+.tax-search input:focus {
+  border-color: var(--blue, #3978b8);
+  box-shadow:
+    0 0 0 4px rgba(57, 120, 184, 0.11);
+}
+
+.tax-search button {
+  min-width: 105px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 13px;
+  color: #ffffff;
+  background-color: var(--navy, #183153);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tax-search button:hover {
+  background-color: var(--blue, #3978b8);
+}
+
+.tax-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.tax-filter {
+  padding: 8px 14px;
+  border: 1px solid #d8e2eb;
+  border-radius: 999px;
+  color: var(--navy, #183153);
+  background-color: #ffffff;
+  font-size: 0.73rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tax-filter:hover,
+.tax-filter.is-active {
+  color: #ffffff;
+  border-color: var(--blue, #3978b8);
+  background-color: var(--blue, #3978b8);
+}
+
+.tax-search-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: #718093;
+  font-size: 0.76rem;
+}
+
+
+/* 取引カード */
+
+.tax-transaction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.tax-transaction-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 21px;
+  border: 1px solid #dfe7ef;
+  border-radius: 18px;
+  background-color: #ffffff;
+  box-shadow:
+    0 11px 28px rgba(35, 57, 83, 0.045);
+}
+
+.tax-transaction-card[hidden] {
+  display: none;
+}
+
+.tax-transaction-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tax-transaction-card__category {
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: var(--blue, #3978b8);
+  background-color: #eaf3fa;
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+.tax-transaction-card__rate {
+  color: #7d8b9c;
+  font-size: 0.64rem;
+  font-weight: 800;
+}
+
+.tax-transaction-card h3 {
+  margin: 17px 0 0;
+  font-size: 1.03rem;
+  line-height: 1.55;
+}
+
+.tax-transaction-card > p {
+  margin: 9px 0 0;
+  color: #68778a;
+  font-size: 0.77rem;
+  line-height: 1.82;
+}
+
+.tax-transaction-card__point {
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid #e5ebf1;
+  color: #526b82;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.tax-empty {
+  display: none;
+  margin-top: 25px;
+  padding: 35px 22px;
+  border: 1px solid #dce5ee;
+  border-radius: 18px;
+  text-align: center;
+  color: #6d7c8e;
+  background-color: #ffffff;
+}
+
+.tax-empty.is-visible {
+  display: block;
+}
+
+
+/* ==================================================
+   判断する3ステップ
+================================================== */
+
+.tax-step-list {
+  display: grid;
+  gap: 14px;
+}
+
+.tax-step {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 22px;
+  border: 1px solid #dfe7ef;
+  border-radius: 18px;
+  background-color: #ffffff;
+}
+
+.tax-step__number {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 15px;
+  color: var(--blue, #3978b8);
+  background-color: #eaf3fa;
+  font: 900 0.7rem/1 monospace;
+}
+
+.tax-step h3 {
+  margin: 2px 0 0;
+  font-size: 1rem;
+}
+
+.tax-step p {
+  margin: 5px 0 0;
+  color: #68778a;
+  font-size: 0.79rem;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   税率
+================================================== */
+
+.tax-rate-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  border: 1px solid #dce5ee;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.tax-rate-box__item {
+  padding: 27px;
+}
+
+.tax-rate-box__item:first-child {
+  border-right: 1px solid #dce5ee;
+}
+
+.tax-rate-box__item small {
+  color: var(--blue, #3978b8);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.tax-rate-box__item strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 1.45rem;
+}
+
+.tax-rate-box__item p {
+  margin: 10px 0 0;
+  color: #68778a;
+  font-size: 0.79rem;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   FAQ
+================================================== */
+
+.tax-faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tax-faq {
+  overflow: hidden;
+  border: 1px solid #dfe7ef;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.tax-faq summary {
+  position: relative;
+  padding: 19px 52px 19px 21px;
+  color: var(--navy, #183153);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.7;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tax-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.tax-faq summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  color: var(--blue, #3978b8);
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+}
+
+.tax-faq[open] summary {
+  background-color: #f4f8fb;
+}
+
+.tax-faq[open] summary::after {
+  content: "−";
+}
+
+.tax-faq__answer {
+  padding: 0 21px 20px;
+  color: #647487;
+  font-size: 0.79rem;
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   注意・免責
+================================================== */
+
+.tax-note {
+  display: flex;
+  gap: 14px;
+  padding: 20px 22px;
+  border: 1px solid #d9e5ef;
+  border-radius: 16px;
+  background-color: #eef6fb;
+}
+
+.tax-note__mark {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--blue, #3978b8);
+  font-size: 0.64rem;
+  font-weight: 900;
+}
+
+.tax-note p {
+  margin: 0;
+  color: #5b7085;
+  font-size: 0.78rem;
+  line-height: 1.85;
+}
+
+.tax-note strong {
+  color: var(--navy, #183153);
+}
+
+.tax-disclaimer {
+  padding: 21px 23px;
+  border: 1px solid #dfe6ed;
+  border-radius: 16px;
+  background-color: #f1f5f8;
+}
+
+.tax-disclaimer strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.78rem;
+}
+
+.tax-disclaimer p {
+  margin: 0;
+  color: #718092;
+  font-size: 0.7rem;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   レスポンシブ
+================================================== */
+
+@media (max-width: 900px) {
+
+  .tax-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .tax-hero__visual {
+    max-width: 540px;
+  }
+
+  .tax-transaction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .tax-page section[id] {
+    scroll-margin-top: 85px;
+  }
+
+  .tax-hero {
+    padding: 66px 0 64px;
+  }
+
+  .tax-hero h1 {
+    font-size: clamp(2.3rem, 10.5vw, 3.5rem);
+  }
+
+  .tax-hero__lead br {
+    display: none;
+  }
+
+  .tax-hero__visual {
+    padding: 24px 21px;
+    border-radius: 21px;
+  }
+
+  .tax-content {
+    gap: 56px;
+  }
+
+  .tax-answer__heading {
+    padding: 24px 21px 20px;
+  }
+
+  .tax-answer__heading h2 {
+    font-size: 1.22rem;
+  }
+
+  .tax-answer__body {
+    padding: 21px 21px 25px;
+  }
+
+  .tax-category-grid,
+  .tax-transaction-grid,
+  .tax-rate-box {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-category-card__header,
+  .tax-category-card__body {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .tax-tools {
+    padding: 18px;
+  }
+
+  .tax-search__row {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-search button {
+    min-height: 49px;
+  }
+
+  .tax-step {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px 16px;
+  }
+
+  .tax-step__number {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tax-rate-box__item:first-child {
+    border-right: none;
+    border-bottom: 1px solid #dce5ee;
+  }
+
+  .tax-note {
+    display: block;
+  }
+
+  .tax-note p {
+    margin-top: 10px;
+  }
+
+}
