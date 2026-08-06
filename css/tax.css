@@ -727,7 +727,120 @@
   line-height: 1.85;
 }
 
+/* ==================================================
+   迷いやすい取引の比較
+================================================== */
 
+.tax-comparison-list {
+  display: grid;
+  gap: 19px;
+}
+
+.tax-comparison {
+  overflow: hidden;
+  border: 1px solid #dce5ee;
+  border-radius: 21px;
+  background-color: #ffffff;
+  box-shadow:
+    0 12px 32px rgba(35, 57, 83, 0.055);
+}
+
+.tax-comparison__heading {
+  padding: 21px 24px;
+  border-bottom: 1px solid #dfe7ef;
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbfe,
+      #edf5fb
+    );
+}
+
+.tax-comparison__heading span {
+  display: block;
+  color: var(--blue, #3978b8);
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.tax-comparison__heading h3 {
+  margin: 7px 0 0;
+  color: var(--navy, #183153);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.tax-comparison__body {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+  gap: 17px;
+  align-items: stretch;
+  padding: 25px;
+}
+
+.tax-comparison__item {
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #dfe7ef;
+  border-radius: 16px;
+  background-color: #f9fbfd;
+}
+
+.tax-comparison__label {
+  display: inline-flex;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--blue, #3978b8);
+  background-color: #e7f2fa;
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.tax-comparison__item h4 {
+  margin: 13px 0 0;
+  color: var(--navy, #183153);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.tax-comparison__item > p:not(.tax-comparison__label) {
+  margin: 9px 0 0;
+  color: #68778a;
+  font-size: 0.79rem;
+  line-height: 1.85;
+}
+
+.tax-comparison__versus {
+  display: grid;
+  place-items: center;
+  color: var(--blue, #3978b8);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.tax-comparison__point {
+  padding: 18px 24px 21px;
+  border-top: 1px solid #dfe7ef;
+  color: #596f84;
+  background-color: #f5f9fc;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.tax-comparison__point span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--blue, #3978b8);
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
 /* ==================================================
    FAQ
 ================================================== */
@@ -951,5 +1064,27 @@
   .tax-note p {
     margin-top: 10px;
   }
+/* 迷いやすい取引の比較 */
 
+.tax-comparison__heading {
+  padding: 19px 20px;
+}
+
+.tax-comparison__body {
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 18px;
+}
+
+.tax-comparison__item {
+  padding: 18px;
+}
+
+.tax-comparison__versus {
+  min-height: 26px;
+}
+
+.tax-comparison__point {
+  padding: 16px 20px 19px;
+}
 }
